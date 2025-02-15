@@ -36,7 +36,7 @@
     
     ul, .info {
         list-style-type: disc;
-        margin-left: 20px;
+   
         font-size: 16px;
     }
     

@@ -20,8 +20,12 @@ $baseURL = base_url(); // URL gốc
   <link href="<?php echo base_url('frontend/css/main.css') ?>" rel="stylesheet">
   <link href="<?php echo base_url('frontend/css/responsive.css') ?>" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -45,9 +49,12 @@ $baseURL = base_url(); // URL gốc
           <div class="col-sm-6">
             <div class="contactinfo">
               <ul class="nav nav-pills">
-                <li><a style="font-weight:600;"><i class="fa fa-phone"></i> 0888888888</a></li>
-                <li><a style="font-weight:600;"><i class="fa fa-envelope"></i> npcshop123@gmail.com</a></li>
-                <li><a style="font-weight:600;"><i class="fa fa-location-arrow"></i> 241 Điện Biên, Lộc Hoà,
+                <li><a style="font-weight:600; "><i style="font-size: 12px;" class="fa fa-phone"></i> 0888888888</a>
+                </li>
+                <li><a style="font-weight:600; "><i style="font-size: 12px;" class="fa fa-envelope"></i>
+                    npcshop123@gmail.com</a></li>
+                <li><a style="font-weight:600; "><i style="font-size: 12px;" class="fa fa-location-arrow"></i> 241 Điện
+                    Biên, Lộc Hoà,
                     Nam Định, Việt Nam</a></li>
               </ul>
             </div>
@@ -55,11 +62,11 @@ $baseURL = base_url(); // URL gốc
           <div class="col-sm-6">
             <div class="social-icons pull-right">
               <ul class="nav navbar-nav">
-                <li><a href="/"><i class="fa fa-facebook"></i></a>
+                <li><a href="/"><i class="fa-brands fa-facebook"></i></i></a>
                 </li>
-                <li><a href="/"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="/"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="/"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="/"><i class="fa-brands fa-google"></i></a></li>
+                <li><a href="/"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="/"><i class="fa-brands fa-instagram"></i></a></li>
               </ul>
             </div>
           </div>
@@ -78,15 +85,15 @@ $baseURL = base_url(); // URL gốc
             </div>
           </div>
           <div class="col-sm-5">
-    <div class="search_box pull-right">
-        <form autocomplete="off" action="<?php echo base_url('tim-kiem') ?>" method="GET">
-            <input name="keyword" type="text" placeholder="Tìm kiếm sản phẩm..." />
-            <button type="submit">
-                <i class="fa fa-search"></i>
-            </button>
-        </form>
-    </div>
-</div>
+            <div class="search_box pull-right">
+              <form autocomplete="off" action="<?php echo base_url('tim-kiem') ?>" method="GET">
+                <input name="keyword" type="text" placeholder="Tìm kiếm sản phẩm..." />
+                <button type="submit">
+                  <i class="fa fa-search"></i>
+                </button>
+              </form>
+            </div>
+          </div>
 
 
           <div class="col-sm-4">
@@ -112,7 +119,7 @@ $baseURL = base_url(); // URL gốc
     <div class=" header-bottom">
       <div class="container">
         <div class="row">
-          <div class="col-sm-7">
+          <div class="col-sm-12">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -121,35 +128,43 @@ $baseURL = base_url(); // URL gốc
                 <span class="icon-bar"></span>
               </button>
             </div>
-            <div class="mainmenu pull-left">
-              <ul class="nav navbar-nav collapse navbar-collapse">
-                <li class="<?= ($currentURL == $baseURL || $currentURL == $baseURL . '/') ? 'active' : '' ?>">
-                  <a href="<?php echo $baseURL ?>">Trang chủ</a>
-                </li>
-                <li class="dropdown <?= (strpos($currentURL, 'danh-muc') !== false) ? 'active' : '' ?>">
-                  <a href="#">Khám phá<i class="fa fa-angle-down"></i></a>
-                  <ul role="menu" class="sub-menu">
-                    <?php if (!empty($category)) {
-                      foreach ($category as $key => $cate) { ?>
-                        <li><a href="<?php echo base_url('danh-muc/' . $cate->id) ?>"><?php echo $cate->title ?></a>
-                        </li>
-                      <?php }
-                    } ?>
-                  </ul>
-                </li>
-                <li class="<?= ($currentURL == $baseURL . 'information') ? 'active' : '' ?>">
-                  <a href="<?php echo base_url('/information') ?>">Về NPC Shop</a>
-                </li>
-                <li class="<?= ($currentURL == $baseURL . 'contact') ? 'active' : '' ?>">
-                  <a href="<?php echo base_url('/contact') ?>">Liên hệ</a>
-                </li>
-                <li class="<?= ($currentURL == $baseURL . 'huong-dan') ? 'active' : '' ?>">
-                  <a href="<?php echo base_url('/huong-dan') ?>">Hướng dẫn</a>
-                </li>
-              </ul>
+            <div class="mainmenu d-flex">
+              <!-- Phần danh mục sản phẩm luôn hiển thị -->
+              <div class="categories">
+                <div class="categoriesSection">
+                  <h4><i class="fa-solid fa-bars" style="font-size: 15px; margin-right:4px"></i> Danh mục sản phẩm</h4>
+                </div>
+                <ul class="category-list">
+                  <?php if (!empty($category)) {
+                    foreach ($category as $cate) { ?>
+                      <li><a
+                          href="<?php echo base_url('danh-muc/' . $cate->id) ?>"><?php echo htmlspecialchars($cate->title, ENT_QUOTES, 'UTF-8') ?></a>
+                      </li>
+                    <?php }
+                  } ?>
+                </ul>
+              </div>
+
+
+              <!-- Phần menu phụ (Về NPC Shop, Liên hệ, Hướng dẫn) -->
+              <div class="boxPilocy">
+                <div class="policy-item">
+                  <h4><i style="font-size: 14px;" class="fa-solid fa-medal"></i> Đảm bảo chất lượng</h4>
+                </div>
+                <div class="policy-item">
+                  <h4><i style="font-size: 14px;" class="fa-solid fa-shield-alt"></i> Bảo hành chính hãng</h4>
+                </div>
+                <div class="policy-item">
+                  <h4><i style="font-size: 14px;" class="fa-solid fa-truck"></i> Vận chuyển siêu tốc</h4>
+                </div>
+              </div>
+              <!-- Banner chính -->
+              <div class="banner">
+                <img src="<?php echo base_url('logo/anh/slide_1_img.png'); ?>" alt="Banner" />
+              </div>
             </div>
           </div>
-      
+
         </div>
       </div>
     </div>

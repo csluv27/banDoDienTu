@@ -32,7 +32,7 @@
     }
     ul {
         list-style-type: disc;
-        margin-left: 20px;
+      
         font-size: 16px;
     }
     .highlight {

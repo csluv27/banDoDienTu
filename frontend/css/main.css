@@ -11,6 +11,7 @@ body {
   background: url('productPic/background.jpg');
   position: relative;
   font-weight:400px;
+  background-color: #F2F3F5;
 }
 
 ul li {
@@ -76,7 +77,7 @@ a#scrollUp i{
 }
 
 .contactinfo ul li a{
-  font-size: 12px;
+  font-size: 14px;
   font-family: "Quicksand", sans-serif;
   color: white;
 }
@@ -93,7 +94,9 @@ a#scrollUp i{
   color: white;
   padding:0px;
 }
-
+.fa-phone .fa-envelope .fa-location-arrow{
+  font-size: 12px;
+}
 
 .social-icons ul li{
 	display:inline-block;
@@ -130,7 +133,7 @@ a#scrollUp i{
 	background:#CE3C2D;
 }
 
-.fa-google-plus:hover  {
+.fa-google:hover  {
 	background:#CE3C2D;
 }
 
@@ -157,7 +160,7 @@ a#scrollUp i{
 
 .btn-group.open .dropdown-toggle {
   background: rgba(0, 0, 0, 0);
-  box-shadow: none;
+  box-shadow: none;.companyinfo h2
 }
 
 .dropdown-menu  li  a:hover, .dropdown-menu  li  a:focus {
@@ -190,6 +193,116 @@ a#scrollUp i{
   margin-top: 10px;
 }
 
+.mainmenu {
+  display: flex;
+  align-items: flex-start; /* Canh theo đỉnh trên cùng */
+  justify-content: flex-start;
+  gap: 20px; /* Khoảng cách giữa các phần tử */
+  position: relative; /* Giữ vững vị trí của banner */
+}
+
+.categoriesSection {
+  width: 100%; /* Định rõ chiều rộng cho phần danh mục */
+  background-color: white;
+}
+.categories{
+  width: 250px;
+}
+.categories h4 {
+  font-size: 18px;
+  font-weight: bold;
+
+  padding: 10px 0px;
+}/* Khung chứa danh mục sản phẩm */
+.categories {
+  background: white;
+  padding: 0px 15px 15px 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+}
+
+/* Tiêu đề danh mục */
+.categoriesSection h4 {
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+  margin-top: 0;
+  margin-bottom: 2px;
+}
+.boxPilocy {
+  display: flex;
+  flex-direction: row;
+  margin-left: 25px;
+
+  padding: 0px 15px 15px 15px;
+
+  height: 100%;
+  flex-grow: 1;
+  gap: 30px; /* Khoảng cách giữa các mục */
+}
+
+.boxPilocy h4 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  margin-top: 10px;
+}
+.banner {
+  position: absolute;
+  left: 280px; /* Đẩy banner về cạnh phải */
+  top: 50px; /* Canh chỉnh để nó nằm dưới boxPolicy */
+  max-width: 700px; /* Điều chỉnh kích thước banner */
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Danh sách danh mục */
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-list li {
+  
+}
+
+.category-list li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  display: block;
+}
+
+.category-list li a:hover {
+  color: #007bff;
+}
+
+/* Menu phụ đẩy sang bên phải */
+
+
+
+.category-list {
+  list-style: none;
+  padding: 0;
+}
+
+.category-list li {
+  margin-bottom: 5px;
+}
+
+.extra-menu {
+  margin-left: auto; /* Đẩy menu phụ sang phải */
+  display: flex;
+  gap: 20px; /* Tạo khoảng cách giữa các mục */
+}
+
 
 .shop-menu ul li a i{
 	margin-right:3px;
@@ -203,16 +316,29 @@ a#scrollUp i{
 
 .header-bottom {
   padding-bottom: 30px;
-  padding-top: 30px;
+  position: relative;
+  height: 700px;
 }
+
+
+.header-bottom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 39.2px; /* Độ dày của line */
+  background-color: white; /* Màu trắng */
+  z-index: 0; /* Đảm bảo hiển thị trên cùng */
+}
+
 
 .navbar-collapse.collapse{
   padding-left: 0;
 }
 
 .mainmenu ul li{
-  padding-right: 15px;
-  padding-left: 15px;
+
 }
 
 .mainmenu ul li:first-child{
@@ -220,16 +346,19 @@ a#scrollUp i{
 }
 
 .mainmenu ul li a {
-	color: #696763;
+	color: black;
 	font-family: "Quicksand", sans-serif;
 	font-size: 17px;
 	font-weight: 400;
 	padding: 0;
-	padding-bottom: 10px;
+	padding: 5px;
 }
 
+
 .mainmenu ul li a:hover, .mainmenu ul li a.active,  .shop-menu ul li a.active{
-	background:none;
+  background: #f2f2f2; /* Màu xám nhạt */
+  border-radius: 5px;
+ 
 	color:#CE3C2D;
 }
 
@@ -302,7 +431,7 @@ ul.sub-menu {
 }
 
 .dropdown ul.sub-menu li .active{
-  color: #FDB45E;
+  color: #CE3C2D;
   padding-left: 0;
 }
 
@@ -320,7 +449,7 @@ ul.sub-menu {
 }
 
 .navbar-nav li ul.sub-menu li a:hover{
-    color: #FDB45E;
+    color: #CE3C2D;
 }
 
 .fa-angle-down{
@@ -360,7 +489,7 @@ ul.sub-menu {
 }
 
 .companyinfo h2 {
-  color: #B4B1AB;
+  color: black;
   font-family: abel;
   font-size: 27px;
   text-transform: uppercase;
@@ -371,10 +500,10 @@ ul.sub-menu {
 }
 
 .companyinfo p {
-  color: #B3B3AD;
+  color: black;
   font-family: "Quicksand", sans-serif;
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .footer-top .col-sm-3{
@@ -440,7 +569,7 @@ ul.sub-menu {
   color: #8c8c88;
   font-family: "Quicksand", sans-serif;
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 400;
   text-transform:uppercase;
   margin-top:0px;
 }
@@ -459,7 +588,7 @@ ul.sub-menu {
   color: #666663;
   font-family: "Quicksand", sans-serif;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   left: 25px;
   position: absolute;
   top: 50px;
@@ -491,7 +620,7 @@ ul.sub-menu {
 	color: #8C8C88;
 	font-family: "Quicksand", sans-serif;
 	font-size: 14px;
-	font-weight: 300;
+	font-weight: 400;
 	padding: 5px 0;
 }
 
@@ -540,7 +669,7 @@ ul.sub-menu {
   color: #8C8C88;
   font-family: "Quicksand", sans-serif;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   margin-top: 25px;
 }
 
@@ -552,7 +681,7 @@ ul.sub-menu {
 .footer-bottom p {
   color: #363432;
   font-family: "Quicksand", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   margin-left: 15px;
 }
 
@@ -629,7 +758,7 @@ ul.sub-menu {
   color: #FFFFFF;
   font-family: "Quicksand", sans-serif;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   margin-top: 23px;
 }
 
@@ -1402,7 +1531,7 @@ h2.title {
   color: #363432;
   font-family: "Quicksand", sans-serif;
   font-size: 41px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .content-404 img {
@@ -1424,7 +1553,7 @@ h2.title {
   color: #FFFFFF;
   font-family: "Quicksand", sans-serif;
   font-size: 44px;
-  font-weight: 300;
+  font-weight: 400;
   padding: 8px 40px;
 }
 
@@ -1452,7 +1581,7 @@ h2.title {
   color: #696763;
   font-family: "Quicksand", sans-serif;
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 30px;
 }
 
@@ -1464,7 +1593,7 @@ h2.title {
   display: block;
   font-family: "Quicksand", sans-serif;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   height: 40px;
   margin-bottom: 10px;
   outline: medium none;
@@ -1695,7 +1824,7 @@ h2.title {
 .heading p {
   color: #434343;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 
@@ -1830,7 +1959,7 @@ h2.title {
 
 .checkout-options p {
   color: #434343;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 25px;
 }
 
@@ -1871,7 +2000,7 @@ h2.title {
 
 .register-req  {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   padding: 15px 20px;
   margin-top: 35px;
 
@@ -1888,7 +2017,7 @@ h2.title {
 .order-message p {
   color: #696763;
   font-size: 20px;
-  font-weight: 300
+  font-weight: 400
 }
 
 
@@ -1916,7 +2045,7 @@ h2.title {
   margin-bottom:10px;
   padding: 10px;
   width: 100%;
-  font-weight: 300
+  font-weight: 400
 }
 
 .form-two > form > select {
@@ -1947,7 +2076,7 @@ h2.title {
 .review-payment h2 {
   color: #696763;
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 400;
   margin-top: 45px;
   margin-bottom: 20px
 }
@@ -1960,7 +2089,7 @@ h2.title {
 .payment-options span label {
   color: #696763;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   margin-right: 30px;
 }
 
@@ -2474,7 +2603,7 @@ h2.title {
 #contact-page .form-control:focus, 
 #contact-page .form-control:hover {
   box-shadow: inherit;
-  border-color: #FDB45E;
+  border-color: #CE3C2D;
 }
 
 #contact-page .contact-info {

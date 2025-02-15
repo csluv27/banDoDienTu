@@ -65,7 +65,7 @@ class indexController extends CI_Controller
         $this->data['top_selling_products'] = $data['top_selling_products'];
 
         $this->load->view('pages/template/header', $this->data);
-        $this->load->view('pages/template/slider', $this->data);
+        // $this->load->view('pages/template/slider', $this->data);
         // Hiển thị view home với $this->data
         $this->load->view('pages/home', $this->data);
         $this->load->view('pages/template/footer');

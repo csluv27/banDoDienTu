@@ -32,12 +32,12 @@
     }
     ul {
         list-style-type: disc;
-        margin-left: 20px;
+      
         font-size: 16px;
     }
     .highlight {
         font-weight: bold;
-        color: #FE980F;
+        color: #CE3C2D;
     }
     .img-container {
         text-align: center;

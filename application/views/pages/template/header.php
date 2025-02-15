@@ -42,20 +42,21 @@ $baseURL = base_url(); // URL gốc
           <div class="col-sm-6">
             <div class="contactinfo">
               <ul class="nav nav-pills">
-                <li><a href="#"><i class="fa fa-phone"></i> 0888888888</a></li>
-                <li><a href="#"><i class="fa fa-envelope"></i> npcshop123@gmail.com</a></li>
+                <li><a style="font-weight:600;"><i class="fa fa-phone"></i> 0888888888</a></li>
+                <li><a style="font-weight:600;"><i class="fa fa-envelope"></i> npcshop123@gmail.com</a></li>
+                <li><a style="font-weight:600;"><i class="fa fa-location-arrow"></i> 241 Điện Biên, Lộc Hoà,
+                    Nam Định, Việt Nam</a></li>
               </ul>
             </div>
           </div>
           <div class="col-sm-6">
             <div class="social-icons pull-right">
               <ul class="nav navbar-nav">
-                <li><a href="https://www.facebook.com/profile.php?id=100016773610729"><i class="fa fa-facebook"></i></a>
+                <li><a href="/"><i class="fa fa-facebook"></i></a>
                 </li>
-                <li><a href="https://www.facebook.com/huy5615612"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://www.facebook.com/quang.vu.454889"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="https://www.facebook.com/nguyen.tien.luc.581896"><i class="fa fa-dribbble"></i></a></li>
-                <li><a href="https://steamcommunity.com/id/cornspringluv/"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="/"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="/"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="/"><i class="fa fa-google-plus"></i></a></li>
               </ul>
             </div>
           </div>
@@ -65,15 +66,27 @@ $baseURL = base_url(); // URL gốc
     <div class="header-middle">
       <div class="container">
         <div class="row">
-          <div class="col-sm-4">
+          <div class="col-sm-3">
             <div class="logo pull-left">
-              <a href="<?php echo base_url('/') ?>"><img src="<?php echo base_url('frontend/images/home/logo1.png'); ?>"
+              <a href="<?php echo base_url('/') ?>"><img src="<?php echo base_url('frontend/images/home/logo2.png'); ?>"
                   alt="Logo" /></a>
             </div>
             <div class="btn-group pull-right">
             </div>
           </div>
-          <div class="col-sm-8">
+          <div class="col-sm-6">
+    <div class="search_box pull-right">
+        <form autocomplete="off" action="<?php echo base_url('tim-kiem') ?>" method="GET">
+            <input name="keyword" type="text" placeholder="Tìm kiếm sản phẩm..." />
+            <button type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</div>
+
+
+          <div class="col-sm-3">
             <div class="shop-menu pull-right">
               <ul class="nav navbar-nav">
                 <?php if ($this->session->userdata('LoggedInCustomer')) { ?>
@@ -133,20 +146,7 @@ $baseURL = base_url(); // URL gốc
               </ul>
             </div>
           </div>
-          <div class="col-sm-5">
-            <div class="search_box pull-right">
-              <form autocomplete="off" action="<?php echo base_url('tim-kiem') ?>" method="GET">
-                <div style="position: relative;">
-                  <input name="keyword" type="text" placeholder="Nhập từ khóa cần tìm sản phẩm"
-                    style="padding-right: 30px;" />
-                  <button type="submit"
-                    style="position: absolute; right: 0; top: 0; height: 100%; border: none; background: none; padding: 0 12px;">
-                    <i class="fa fa-search"></i>
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
+      
         </div>
       </div>
     </div>

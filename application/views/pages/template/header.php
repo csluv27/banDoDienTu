@@ -19,6 +19,9 @@ $baseURL = base_url(); // URL gốc
   <link href="<?php echo base_url('frontend/css/animate.css') ?>" rel="stylesheet">
   <link href="<?php echo base_url('frontend/css/main.css') ?>" rel="stylesheet">
   <link href="<?php echo base_url('frontend/css/responsive.css') ?>" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -68,13 +71,13 @@ $baseURL = base_url(); // URL gốc
         <div class="row">
           <div class="col-sm-3">
             <div class="logo pull-left">
-              <a href="<?php echo base_url('/') ?>"><img src="<?php echo base_url('frontend/images/home/logo2.png'); ?>"
+              <a href="<?php echo base_url('/') ?>"><img src="<?php echo base_url('logo/logo22.png'); ?>"
                   alt="Logo" /></a>
             </div>
             <div class="btn-group pull-right">
             </div>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-5">
     <div class="search_box pull-right">
         <form autocomplete="off" action="<?php echo base_url('tim-kiem') ?>" method="GET">
             <input name="keyword" type="text" placeholder="Tìm kiếm sản phẩm..." />
@@ -86,7 +89,7 @@ $baseURL = base_url(); // URL gốc
 </div>
 
 
-          <div class="col-sm-3">
+          <div class="col-sm-4">
             <div class="shop-menu pull-right">
               <ul class="nav navbar-nav">
                 <?php if ($this->session->userdata('LoggedInCustomer')) { ?>

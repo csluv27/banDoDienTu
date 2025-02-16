@@ -199,6 +199,7 @@ a#scrollUp i{
   justify-content: flex-start;
   gap: 20px; /* Khoảng cách giữa các phần tử */
   position: relative; /* Giữ vững vị trí của banner */
+  height: auto;
 }
 
 .categoriesSection {
@@ -216,18 +217,47 @@ a#scrollUp i{
 }/* Khung chứa danh mục sản phẩm */
 .categories {
   background: white;
-  padding: 0px 15px 15px 15px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 0px 15px 0px 15px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   width: 250px;
 }
+/* Khi ở trang chủ, danh mục luôn hiển thị */
+.categories[data-home="true"] .category-list {
+  display: block !important;
+
+}
+
+/* Khi KHÔNG ở trang chủ, danh mục bị ẩn đi */
+.categories[data-home="false"] .category-list {
+  display: none;
+  position: absolute;
+  top: 39px;
+  left: 0;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  width: 250px;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+/* Nút danh mục sản phẩm bị vô hiệu hóa ở trang chủ */
+.categories[data-home="true"] .categoriesSection {
+  pointer-events: none;
+  opacity: 0.6;
+  color: black;
+}
+
 
 /* Tiêu đề danh mục */
 .categoriesSection h4 {
   font-size: 16px;
   font-weight: bold;
   padding-bottom: 10px;
-  border-bottom: 2px solid #eee;
+ 
   margin-top: 0;
   margin-bottom: 2px;
 }
@@ -251,27 +281,111 @@ a#scrollUp i{
 }
 .banner {
   position: absolute;
-  left: 280px; /* Đẩy banner về cạnh phải */
-  top: 50px; /* Canh chỉnh để nó nằm dưới boxPolicy */
-  max-width: 700px; /* Điều chỉnh kích thước banner */
+  max-width: 1170px;
+  left: 266px; /* Điều chỉnh giá trị này để canh chuẩn */
+  top: 50px;
+  display: flex; /* Chuyển từ grid sang flex để dễ kiểm soát */
+  justify-content: space-between; /* Dàn đều bigBanner và rightBanner */
+  width: 100%; /* Đảm bảo full chiều ngang */
+  gap: 10px;
+}
+.bigBanner {
+  flex: 9;
 }
 
-.banner img {
+.bigBanner img {
   width: 100%;
+  height: 420px;
+  border-radius: 10px;
+}
+
+.rightBanner {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Khoảng cách giữa ảnh */
+  align-items: flex-end; /* Đưa các ảnh về sát mép phải */
+}
+
+.rightBanner img {
+  width: 100%; /* Để ảnh chiếm toàn bộ chiều rộng container */
+  height: 140px;
+  border-radius: 10px;
+}
+
+
+.underBanner{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 500px;
+ 
+  justify-content: space-between;
+}
+.underBanner img{
+  width: 24%;
   height: auto;
   border-radius: 10px;
 }
 
 /* Danh sách danh mục */
 .category-list {
-  list-style: none;
+
   padding: 0;
   margin: 0;
 }
 
-.category-list li {
-  
+/* Ẩn menu dropdown ban đầu */
+.category-list {
+  position: absolute;
+  top: 39px;
+  left: 0;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  width: 250px;
+  padding: 10px 0;
+  z-index: 1000;
+  display: none; /* Ban đầu ẩn */
 }
+
+.category-list li {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.category-list li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Hiển thị menu khi được kích hoạt */
+.category-list.show {
+  display: block;
+}
+
+/* Overlay làm mờ background */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+/* Khi mở menu, overlay xuất hiện */
+#overlay.show {
+  display: block;
+}
+
+/* Ẩn mặc định */
+.hidden {
+  display: none;
+}
+
 
 .category-list li a {
   text-decoration: none;
@@ -296,13 +410,6 @@ a#scrollUp i{
 .category-list li {
   margin-bottom: 5px;
 }
-
-.extra-menu {
-  margin-left: auto; /* Đẩy menu phụ sang phải */
-  display: flex;
-  gap: 20px; /* Tạo khoảng cách giữa các mục */
-}
-
 
 .shop-menu ul li a i{
 	margin-right:3px;
@@ -337,12 +444,9 @@ a#scrollUp i{
   padding-left: 0;
 }
 
-.mainmenu ul li{
-
-}
 
 .mainmenu ul li:first-child{
-  padding-left: 0px;
+  padding-left: 15px;
 }
 
 .mainmenu ul li a {
@@ -351,7 +455,7 @@ a#scrollUp i{
 	font-size: 17px;
 	font-weight: 400;
 	padding: 0;
-	padding: 5px;
+
 }
 
 
@@ -406,51 +510,8 @@ a#scrollUp i{
 }
 
 
-.nav.navbar-nav > li:hover > ul.sub-menu{
-  display: block;
-  -webkit-animation: fadeInUp 400ms;
-  -moz-animation: fadeInUp 400ms;
-  -ms-animation: fadeInUp 400ms;
-  -o-animation: fadeInUp 400ms;
-  animation: fadeInUp 400ms;
-}
-
-ul.sub-menu {
-	position: absolute;
-	top: 30px;
-	left: 0;
-	background: rgba(0, 0, 0, 0.6);
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	width: 220px;
-	-webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
-	display: none;
-	z-index: 999;
-}
-
-.dropdown ul.sub-menu li .active{
-  color: #CE3C2D;
-  padding-left: 0;
-}
 
 
-.navbar-nav li ul.sub-menu li{
-  padding: 10px 20px 0 ;
-}
-
-.navbar-nav li ul.sub-menu li:last-child{
-  padding-bottom: 20px;
-}
-
-.navbar-nav li ul.sub-menu li a{
-  color: #fff;
-}
-
-.navbar-nav li ul.sub-menu li a:hover{
-    color: #CE3C2D;
-}
 
 .fa-angle-down{
   padding-left: 5px; 

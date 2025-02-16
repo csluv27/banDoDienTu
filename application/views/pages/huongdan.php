@@ -55,6 +55,9 @@
   border-radius: 8px;
 
 }
+.banner, .underBanner {
+  display: none;
+}
 
 .title {
   font-size: 30px; /* Tăng thêm 2px */

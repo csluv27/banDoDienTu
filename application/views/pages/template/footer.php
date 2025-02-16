@@ -205,6 +205,26 @@ document.querySelectorAll('.xulydonhang').forEach(selectElement => {
     .catch(error => console.error('Error:', error));
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const categoryList = document.querySelector(".category-list");
+    const toggleButton = document.getElementById("categoryBtn");
+    const overlay = document.getElementById("overlay");
+    const isHomePage = window.location.pathname === "/trang-chu" || window.location.pathname === "/";
+
+    // Nếu không phải trang chủ, thêm sự kiện click vào nút
+    if (!isHomePage) {
+        toggleButton.addEventListener("click", function () {
+            const isShowing = categoryList.style.display === "block";
+            categoryList.style.display = isShowing ? "none" : "block";
+            overlay.classList.toggle("show", !isShowing);
+        });
+    }
+});
+
+
+
+
+
 </script>
 
 </body>

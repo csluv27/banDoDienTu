@@ -116,6 +116,7 @@ $baseURL = base_url(); // URL gốc
         </div>
       </div>
     </div>
+
     <div class=" header-bottom">
       <div class="container">
         <div class="row">
@@ -130,20 +131,31 @@ $baseURL = base_url(); // URL gốc
             </div>
             <div class="mainmenu d-flex">
               <!-- Phần danh mục sản phẩm luôn hiển thị -->
-              <div class="categories">
-                <div class="categoriesSection">
-                  <h4><i class="fa-solid fa-bars" style="font-size: 15px; margin-right:4px"></i> Danh mục sản phẩm</h4>
+              <?php
+              $isHomePage = ($_SERVER['REQUEST_URI'] == '/trang-chu' || $_SERVER['REQUEST_URI'] == '/');
+              ?>
+              <div class="categories" data-home="<?php echo $isHomePage ? 'true' : 'false'; ?>">
+                <div class="categoriesSection" id="categoryBtn" <?php echo $isHomePage ? 'style="pointer-events: none; opacity: 0.6;"' : ''; ?>>
+                  <h4>
+                    <i class="fa-solid fa-bars" style="font-size: 15px; margin-right:4px"></i>
+                    Danh mục sản phẩm
+                  </h4>
                 </div>
-                <ul class="category-list">
+                <ul class="category-list" style="<?php echo $isHomePage ? 'display: block;' : 'display: none;'; ?>">
                   <?php if (!empty($category)) {
                     foreach ($category as $cate) { ?>
-                      <li><a
-                          href="<?php echo base_url('danh-muc/' . $cate->id) ?>"><?php echo htmlspecialchars($cate->title, ENT_QUOTES, 'UTF-8') ?></a>
+                      <li>
+                        <a href="<?php echo base_url('danh-muc/' . $cate->id) ?>">
+                          <?php echo htmlspecialchars($cate->title, ENT_QUOTES, 'UTF-8') ?>
+                        </a>
                       </li>
                     <?php }
                   } ?>
                 </ul>
               </div>
+
+              <!-- Overlay chỉ hiện khi không phải trang chủ -->
+              <div id="overlay" class="hidden" onclick="toggleCategoryMenu()" <?php echo $isHomePage ? 'style="display: none;"' : ''; ?>></div>
 
 
               <!-- Phần menu phụ (Về NPC Shop, Liên hệ, Hướng dẫn) -->
@@ -158,16 +170,32 @@ $baseURL = base_url(); // URL gốc
                   <h4><i style="font-size: 14px;" class="fa-solid fa-truck"></i> Vận chuyển siêu tốc</h4>
                 </div>
               </div>
-              <!-- Banner chính -->
-              <div class="banner">
-                <img src="<?php echo base_url('logo/anh/slide_1_img.png'); ?>" alt="Banner" />
+              <?php if ($_SERVER['REQUEST_URI'] == '/trang-chu' || $_SERVER['REQUEST_URI'] == '/') { ?>
+                <!-- Banner chính -->
+                <div class="banner">
+                  <div class="bigBanner">
+                    <img src="<?php echo base_url('logo/anh/slide_1_img.png'); ?>" alt="Banner" />
+                  </div>
+                  <div class="rightBanner">
+                    <img src="<?php echo base_url('logo/anh/banner_top_1_img_large.png'); ?>" alt="Banner" />
+                    <img src="<?php echo base_url('logo/anh/banner_top_2_img_large.png'); ?>" alt="Banner" />
+                    <img src="<?php echo base_url('logo/anh/categorybanner_2_img.png'); ?>" alt="Banner" />
+
+                  </div>
+                </div>
+              </div>
+              <div class="underBanner">
+                <img src="<?php echo base_url('logo/anh/categorybanner_1_img.jpg'); ?>" alt="Banner" />
+                <img src="<?php echo base_url('logo/anh/categorybanner_3_img.png'); ?>" alt="Banner" />
+                <img src="<?php echo base_url('logo/anh/categorybanner_4_img.png'); ?>" alt="Banner" />
+                <img src="<?php echo base_url('logo/anh/categorybanner_4_img.png'); ?>" alt="Banner" />
               </div>
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
-    </div>
+    <?php } ?>
   </header>
   <style>
     .logo img {

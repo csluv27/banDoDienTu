@@ -177,18 +177,35 @@ $baseURL = base_url(); // URL gốc
                     <img src="<?php echo base_url('logo/anh/slide_1_img.png'); ?>" alt="Banner" />
                   </div>
                   <div class="rightBanner">
-                    <img src="<?php echo base_url('logo/anh/banner_top_1_img_large.png'); ?>" alt="Banner" />
-                    <img src="<?php echo base_url('logo/anh/banner_top_2_img_large.png'); ?>" alt="Banner" />
-                    <img src="<?php echo base_url('logo/anh/categorybanner_2_img.png'); ?>" alt="Banner" />
+                  <div class="img-container">
+                  <img src="<?php echo base_url('logo/anh/banner_top_1_img_large.png'); ?>" alt="Banner" />
+                </div>
+                  <div class="img-container">
+                  <img src="<?php echo base_url('logo/anh/banner_top_2_img_large.png'); ?>" alt="Banner" />
+                </div>
+                  <div class="img-container">
+                  <img src="<?php echo base_url('logo/anh/categorybanner_2_img.png'); ?>" alt="Banner" />
+                </div>
+                   
+                  
+             
 
                   </div>
                 </div>
               </div>
               <div class="underBanner">
-                <img src="<?php echo base_url('logo/anh/categorybanner_1_img.jpg'); ?>" alt="Banner" />
-                <img src="<?php echo base_url('logo/anh/categorybanner_3_img.png'); ?>" alt="Banner" />
-                <img src="<?php echo base_url('logo/anh/categorybanner_4_img.png'); ?>" alt="Banner" />
-                <img src="<?php echo base_url('logo/anh/categorybanner_4_img.png'); ?>" alt="Banner" />
+                <div class="img-container">
+                  <img src="<?php echo base_url('logo/anh/categorybanner_1_img.jpg'); ?>" alt="Banner" />
+                </div>
+                <div class="img-container">
+                  <img src="<?php echo base_url('logo/anh/categorybanner_3_img.png'); ?>" alt="Banner" />
+                </div>
+                <div class="img-container">
+                  <img src="<?php echo base_url('logo/anh/categorybanner_4_img.png'); ?>" alt="Banner" />
+                </div>
+                <div class="img-container">
+                  <img src="<?php echo base_url('logo/anh/categorybanner_4_img.png'); ?>" alt="Banner" />
+                </div>
               </div>
             </div>
 

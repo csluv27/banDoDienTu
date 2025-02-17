@@ -1,7 +1,8 @@
 <div class="col-sm-3">
   <div class="left-sidebar">
-    <h2>Danh mục</h2>
+
     <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+      <h2>Danh mục sản phẩm</h2>
       <?php
       foreach ($category as $key => $cate) {
         ?>
@@ -16,6 +17,8 @@
       ?>
     </div>
 
+ 
+
     <div class="brands_products"><!--brands_products-->
       <h2>Thương hiệu</h2>
       <div class="brands-name">
@@ -23,7 +26,7 @@
           <?php
           foreach ($brand as $key => $b) {
             ?>
-            <li><a href="<?php echo base_url('thuong-hieu/' . $b->id) ?>"><?php echo $b->title ?></a></li>
+            <li><a href="<?php echo base_url('/' . $b->id) ?>"><?php echo $b->title ?></a></li>
             <?php
           }
           ?>

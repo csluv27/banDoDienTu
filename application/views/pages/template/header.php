@@ -41,7 +41,7 @@ $baseURL = base_url(); // URL gốc
     href="<?php echo base_url('frontend/images/ico/apple-touch-icon-57-precomposed.png') ?>">
 </head>
 
-<body>
+<body class="<?php echo ($this->uri->segment(1) == '') ? 'homepage' : ''; ?>">
   <header id="header">
     <div class="header_top">
       <div class="container">
@@ -153,6 +153,7 @@ $baseURL = base_url(); // URL gốc
                   } ?>
                 </ul>
               </div>
+              
 
               <!-- Overlay chỉ hiện khi không phải trang chủ -->
               <div id="overlay" class="hidden" onclick="toggleCategoryMenu()" <?php echo $isHomePage ? 'style="display: none;"' : ''; ?>></div>

@@ -445,9 +445,11 @@ a#scrollUp i{
 .header-bottom {
   padding-bottom: 30px;
   position: relative;
-  height: 700px;
+  height: auto;
 }
-
+.homepage .header-bottom {
+  height: 700px; /* Giữ nguyên banner ở trang chủ */
+}
 
 .header-bottom::before {
   content: "";
@@ -1093,6 +1095,7 @@ h2.title {
 	font-family: "Quicksand", sans-serif;
 	font-size: 24px;
 	font-weight: 700;
+ 
 }
 .product-overlay h2{
 	color: #fff;

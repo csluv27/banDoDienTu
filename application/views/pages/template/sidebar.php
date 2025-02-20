@@ -17,7 +17,7 @@
       ?>
     </div>
 
- 
+
 
     <div class="brands_products"><!--brands_products-->
       <h2>Thương hiệu</h2>
@@ -26,7 +26,7 @@
           <?php
           foreach ($brand as $key => $b) {
             ?>
-            <li><a href="<?php echo base_url('/' . $b->id) ?>"><?php echo $b->title ?></a></li>
+            <li><a href="<?php echo base_url('thuong-hieu/' . $b->id) ?>"><?php echo $b->title ?></a></li>
             <?php
           }
           ?>
@@ -40,17 +40,18 @@
     </div><!--/shipping-->
     <style>
       .shipping img {
-    width: 100%;
-    height: auto;
-    display: block;
-    
-}
-.shipping{
-  padding: 0;
-  margin-bottom: 100px;
-}
+        width: 100%;
+        height: auto;
+        display: block;
+
+      }
+
+      .shipping {
+        padding: 0;
+        margin-bottom: 100px;
+      }
     </style>
-    
+
 
   </div>
 </div>

@@ -6,8 +6,8 @@ $route['default_controller'] = 'indexController';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 //home
-$route['danh-muc/(:any)']['GET'] = 'indexController/category/$1';
 $route['thuong-hieu/(:any)']['GET'] = 'indexController/brand/$1';
+$route['danh-muc/(:any)']['GET'] = 'indexController/category/$1';
 $route['san-pham/(:any)']['GET'] = 'indexController/product/$1';
 $route['gio-hang']['GET'] = 'indexController/cart';
 $route['add-to-cart']['POST'] = 'indexController/add_to_cart';

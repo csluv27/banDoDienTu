@@ -55,6 +55,13 @@
           width: 100%;
           box-sizing: border-box;
           overflow: hidden;
+          background: rgba(255, 255, 255, 0.8);
+          /* Nền mờ trắng */
+          border-radius: 10px;
+          /* Bo góc nhẹ */
+          padding: 15px;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          /* Đổ bóng để tạo hiệu ứng hộp */
         }
 
         .single-products {

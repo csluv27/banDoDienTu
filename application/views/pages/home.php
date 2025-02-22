@@ -18,17 +18,25 @@
                       <a href="<?php echo base_url('san-pham/' . $pro->id) ?>"><img
                           src="<?php echo base_url('uploads/product/' . $pro->image) ?>"
                           alt="<?php echo $pro->title ?>" /></a>
-                      <h2><?php echo number_format($pro->price, 0, ',', '.') ?>vnd</h2>
-                      <p><?php echo $pro->title ?></p>
-                      <?php if ($pro->quantity == 0): ?>
-                        <p class="out-of-stock-message">Hết hàng</p>
-                      <?php endif; ?>
-                      <a href="<?php echo base_url('san-pham/' . $pro->id) ?>" class="btn btn-default add-to-cart"><i
-                          class="fa fa-eye"></i>Thông tin</a>
-                      <button type="submit" class="btn btn-fefault cart" <?php echo ($pro->quantity == 0) ? 'disabled' : ''; ?>>
-                        <i class="fa fa-shopping-cart"></i>
-                        Thêm vào giỏ hàng
-                      </button>
+                      <div style="display:flex; flex-direction: column; gap:8px">
+
+                        <div style="display:flex; flex-direction: column; gap:8px">
+
+                          <span><?php echo $pro->title ?></span>
+                          <h2><?php echo number_format($pro->price, 0, ',', '.') ?>₫</h2>
+
+                        </div>
+                        <div style="flex-grow: 1;"></div>
+                        <div style="display:flex; flex-direction: column;">
+
+                          <a href="<?php echo base_url('san-pham/' . $pro->id) ?>" class="btn btn-default add-to-cart"><i
+                              class="fa fa-eye"></i>Thông tin</a>
+                          <button type="submit" class="btn btn-fefault cart" <?php echo ($pro->quantity == 0) ? 'disabled' : ''; ?>>
+                            <i class="fa fa-shopping-cart"></i>
+                            Thêm vào giỏ hàng
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </form>
@@ -55,17 +63,23 @@
                           <img src="<?php echo base_url('uploads/product/' . $product->image) ?>"
                             alt="<?php echo $product->title ?>" />
                         </a>
-                        <h2><?php echo number_format($product->price, 0, ',', '.') ?> VND</h2>
-                        <p><?php echo $product->title ?></p>
-                        <?php if ($product->quantity == 0): ?>
-                          <p class="out-of-stock-message">Hết hàng</p>
-                        <?php endif; ?>
-                        <a href="<?php echo base_url('san-pham/' . $product->id) ?>" class="btn btn-default add-to-cart"><i
-                            class="fa fa-eye"></i>Thông tin</a>
-                        <button type="submit" class="btn btn-fefault cart" <?php echo ($product->quantity == 0) ? 'disabled' : ''; ?>>
-                          <i class="fa fa-shopping-cart"></i>
-                          Thêm vào giỏ hàng
-                        </button>
+                        <div style="display:flex; flex-direction: column; gap:8px">
+
+                          <div style="display:flex; flex-direction: column; gap:8px">
+                            <span><?php echo $product->title ?></span>
+                            <h2><?php echo number_format($product->price, 0, ',', '.') ?> ₫</h2>
+                          </div>
+                          <div style="flex-grow: 1;"></div>
+                          <div style="display:flex; flex-direction: column;">
+
+                            <a href="<?php echo base_url('san-pham/' . $product->id) ?>"
+                              class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>Thông tin</a>
+                            <button type="submit" class="btn btn-fefault cart" <?php echo ($product->quantity == 0) ? 'disabled' : ''; ?>>
+                              <i class="fa fa-shopping-cart"></i>
+                              Thêm vào giỏ hàng
+                            </button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </form>
@@ -122,7 +136,7 @@
           text-align: center;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          gap: 26px;
           height: 100%;
 
         }

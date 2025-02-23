@@ -1,9 +1,19 @@
 <section>
     <div class="container">
-        <div class="row">
-            <?php $this->load->view('pages/template/sidebar'); ?>
+    <div class="breadcrumbs">
+      <ol class="breadcrumb">
+        <li><a href="<?php echo base_url('/') ?>">Home</a></li>
+  
+        <li class="active">Liên hệ NPC Shop</li>
+        <li style="font-weight:200;color: #ccc;">/</li>
+        <li class="active">
+    <?php echo isset($product_details[0]->title) ? $product_details[0]->title : ''; ?>
+</li>
 
-            <div class="col-sm-9 padding-right">
+      </ol>
+    </div>
+        <div class="row">
+            <div class="col-sm-12 padding-right">
                 <?php foreach ($product_details as $key => $pro) { ?>
                     <div class="product-details">
                         <div class="col-sm-5">
@@ -176,6 +186,10 @@
                         max-width: 800px;
 
                     }
+                    .breadcrumbs .breadcrumb{
+                        margin-bottom: 30px;
+                    }
+                
                 </style>
             </div>
         </div>

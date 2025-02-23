@@ -10,9 +10,9 @@
               echo '<div class="alert alert-success">' . $message . '</div>';
             } elseif ($error = $this->session->flashdata('error')) {
               echo '<div class="alert alert-danger">' . $error . '</div>';
-            } 
+            }
             ?>
-            
+
             <input type="email" name="email" placeholder="Nhập email" />
             <?php echo form_error('email'); ?>
             <input type="password" name="password" placeholder="Nhập mật khẩu" />
@@ -41,3 +41,35 @@
     </div>
   </div>
 </section><!--/form-->
+<style>
+  .login-form {
+
+    background: rgba(255, 255, 255, 0.8);
+    /* Nền mờ trắng */
+    border-radius: 10px;
+    /* Bo góc nhẹ */
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Đổ bóng để tạo hiệu ứng hộp */
+  }
+  .login-form h2{
+    font-size: 27px;
+    font-weight: 700;
+    color: black;
+  }
+  .signup-form h2{
+    font-size: 27px;
+    font-weight: 700;
+    color: black;
+  }
+
+  .signup-form {
+    background: rgba(255, 255, 255, 0.8);
+    /* Nền mờ trắng */
+    border-radius: 10px;
+    /* Bo góc nhẹ */
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Đổ bóng để tạo hiệu ứng hộp */
+  }
+</style>

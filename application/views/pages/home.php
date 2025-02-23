@@ -127,7 +127,7 @@
 
         .productinfo img {
           max-width: 100%;
-          max-height: 260px;
+          max-height: 246px;
           /* Increased maximum height for images */
           object-fit: contain;
         }

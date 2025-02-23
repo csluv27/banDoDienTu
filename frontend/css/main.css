@@ -1723,15 +1723,15 @@ h2.title {
 
 .login-form form input,
 .signup-form form input {
-  background: #F0F0E9;
+  background: #EDEDED;
   border: medium none;
-  color: #696763;
+  color: #5e5d5b;
   display: block;
   font-family: "Quicksand", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   height: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   outline: medium none;
   padding-left: 10px;
   width: 100%;
@@ -1751,6 +1751,9 @@ h2.title {
 .login-form form button {
   margin-top: 23px;
 }
+.signup-form form button {
+  margin-top: 23px;
+}
 
 .login-form form button,
 .signup-form form button {
@@ -1760,7 +1763,9 @@ h2.title {
   color: #FFFFFF;
   display: block;
   font-family: "Quicksand", sans-serif;
-  padding: 6px 25px;
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .login-form label {}
@@ -1777,17 +1782,22 @@ h2.title {
 
 
 .or {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #CE3C2D;
   border-radius: 40px;
   color: #FFFFFF;
   font-family: "Quicksand", sans-serif;
   font-size: 16px;
   height: 50px;
-  line-height: 50px;
-  margin-top: 75px;
-  text-align: center;
   width: 50px;
+  margin-top: 75px;
+  place-self: center;
+  text-align: center;
+  font-weight: 700;
 }
+
 
 
 /*************************

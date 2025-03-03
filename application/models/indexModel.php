@@ -97,7 +97,7 @@ class indexModel extends CI_Model
         ->join('brands', 'brands.id = products.brand_id')
         ->where('products.category_id', $category_id)
         ->where_not_in('products.id', $id)
-        ->limit(6) // Giới hạn hiển thị 6 sản phẩm
+        ->limit(8) // Giới hạn hiển thị 6 sản phẩm
         ->get();
     return $query->result();
 }

@@ -1305,16 +1305,18 @@ h2.title {
 }
 
 .recommended_items {
-  overflow: hidden;
+display: flex;
+flex-direction: column;
 }
 
 #recommended-item-carousel .carousel-inner .item {
-  padding-left: 0;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .recommended-item-control {
   position: absolute;
-  top: 41%;
+  top: 50%;
 }
 
 .recommended-item-control i {
@@ -1417,6 +1419,7 @@ h2.title {
 
 .product-details {
   overflow: hidden;
+  background-color: white;
 }
 
 

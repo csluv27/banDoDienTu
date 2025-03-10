@@ -8,8 +8,8 @@
         <thead class="thead-dark">
           <tr>
             <th scope="col" style="width: 50px;">STT</th>
-            <th scope="col" style="width: 150px;">Tên sản phẩm</th>
-            <th scope="col" style="width: 300px;">Mô tả</th> <!-- Thiết lập width cho phần mô tả -->
+            <th scope="col" style="width: 250px;">Tên sản phẩm</th>
+            <th scope="col" style="width: 200px;">Mô tả</th> <!-- Thiết lập width cho phần mô tả -->
             <th scope="col" style="width: 100px;">Slug</th>
             <th scope="col" style="width: 100px;">Giá</th>
             <th scope="col" style="width: 100px;">Số lượng</th>
@@ -27,8 +27,13 @@
             ?>
             <tr>
               <th scope="row" style="width: 50px;"><?php echo $start_index + $key + 1; ?></th>
-              <td style="width: 150px;"><?php echo $prod->title ?></td>
-              <td style="width: 300px; word-wrap: break-word;"><?php echo $prod->description ?></td> <!-- Thiết lập word-wrap cho phần mô tả -->
+              <td style="width: 150px;">
+                <span class="product-title" onclick="toggleTitle(this)">
+                  <?php echo htmlspecialchars($prod->title); ?>
+                </span>
+              </td>
+              <td style="width: 200px; word-wrap: break-word;"><?php echo $prod->description ?></td>
+              <!-- Thiết lập word-wrap cho phần mô tả -->
               <td style="width: 100px;"><?php echo $prod->slug ?></td>
               <td style="width: 100px;"><?php echo number_format($prod->price, 0, ',', '.') ?>vnd</td>
               <td style="width: 100px;"><?php echo $prod->quantity ?></td>
@@ -43,8 +48,8 @@
               </td>
               <td style="width: 150px;"> <!-- Tăng max-width của phần quản lý -->
                 <div class="btn-group">
-                  <a onclick="return confirm('Xác nhận xóa');" href="<?php echo base_url('product/delete/' . $prod->id) ?>"
-                    class="btn btn-danger">Xóa</a>
+                  <a onclick="return confirm('Xác nhận xóa');"
+                    href="<?php echo base_url('product/delete/' . $prod->id) ?>" class="btn btn-danger">Xóa</a>
                   <a href="<?php echo base_url('product/edit/' . $prod->id) ?>" class="btn btn-info">Sửa</a>
                 </div>
               </td>
@@ -60,62 +65,84 @@
 
 
 <style>
- .btn-group {
-  display: flex;
-  gap: 5px; /* Khoảng cách giữa các nút */
-}
+  .btn-group {
+    display: flex;
+    gap: 5px;
+    /* Khoảng cách giữa các nút */
+  }
 
-.status-column {
-  text-align: center;
-}
+  .status-column {
+    text-align: center;
+  }
 
-.card-header {
-  font-size: 30px; /* Tăng cỡ chữ */
-  font-weight: bold; /* Làm đậm chữ */
-  text-align: center;
-}
+  .card-header {
+    font-size: 30px;
+    /* Tăng cỡ chữ */
+    font-weight: bold;
+    /* Làm đậm chữ */
+    text-align: center;
+  }
 
-.container {
-  max-width: 1650px;
-  width: 100%;
-}
+  .container {
+    max-width: 1650px;
+    width: 100%;
+  }
 
-.table th, .table td {
-  vertical-align: top;
-  word-wrap: break-word;
-  white-space: normal; /* Cho phép chữ xuống dòng nếu quá dài */
-}
+  .table th,
+  .table td {
+    vertical-align: top;
+    word-wrap: break-word;
+    white-space: normal;
+    /* Cho phép chữ xuống dòng nếu quá dài */
+  }
 
-.pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
 
-.pagination li {
-  list-style: none;
-  margin: 0 5px;
-}
+  .pagination li {
+    list-style: none;
+    margin: 0 5px;
+  }
 
-.pagination li a {
-  padding: 8px 16px;
-  text-decoration: none;
-  color: #007bff;
-  border: 1px solid #dee2e6;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
+  .pagination li a {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #007bff;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
 
-.pagination li a:hover {
-  background-color: #f1f1f1;
-}
+  .pagination li a:hover {
+    background-color: #f1f1f1;
+  }
 
-.pagination li.active a {
-  background-color: #007bff;
-  color: white;
-  border: 1px solid #007bff;
-}
+  .pagination li.active a {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+  }
 
+  .product-title {
+    max-width: 150px;
+    /* Giữ nguyên width */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .product-title.expanded {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    display: block;
+  }
 </style>
 </div>
 </div>

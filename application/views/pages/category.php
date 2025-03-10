@@ -32,7 +32,7 @@
                       <input type="hidden" value="1" name="quantity">
                       <a href="<?php echo base_url('san-pham/'.$cate->id) ?>"><img src="<?php echo base_url('uploads/product/' . $cate->image) ?>"
                       alt="<?php echo $cate->title ?>" /></a>
-                      <h2><?php echo number_format($cate->price, 0, ',', '.') ?>vnd</h2>
+                      <h2><?php echo number_format($cate->price, 0, ',', '.') ?>₫</h2>
                       <p><?php echo $cate->title ?></p>
                       <a href="<?php echo base_url('san-pham/' . $cate->id) ?>" class="btn btn-default add-to-cart"><i
                           class="fa fa-eye"></i>Thông tin</a>

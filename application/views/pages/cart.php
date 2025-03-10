@@ -47,7 +47,7 @@
 								</td>
 								<td class="cart_price">
 									<p class="cart_total_price" style="font-size: 18px; margin:0;">
-										<?php echo number_format($items['price'], 0, ',', '.') ?> vnd
+										<?php echo number_format($items['price'], 0, ',', '.') ?> ₫
 									</p>
 								</td>
 								<td class="cart_quantity">
@@ -81,7 +81,7 @@
 
 								<td class="cart_total">
 									<p class="cart_total_price" style="font-size: 18px; margin:0;"><?php echo number_format($subtotal, 0, ',', '.') ?>
-										vnd
+										₫
 									</p>
 								</td>
 								<td class="cart_delete">
@@ -96,7 +96,7 @@
 							<td colspan="5" style="text-align:right;">
 								<p class="cart_total_price">Tổng tiền hàng trong giỏ:</p>
 								<p class="cart_total_price" style="font-size: 20px; font-weight: bold;">
-									<?php echo number_format($total, 0, ',', '.') ?> vnd
+									<?php echo number_format($total, 0, ',', '.') ?> ₫
 								</p>
 							</td>
 							<td colspan="2" style="text-align:right;">

@@ -183,6 +183,17 @@
           font-weight: bold;
           text-align: center;
         }
+        .productinfo span {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            /* Giới hạn số dòng tối đa */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            word-break: break-word;
+            max-width: 100%;
+          }
       </style>
     </div>
   </div>

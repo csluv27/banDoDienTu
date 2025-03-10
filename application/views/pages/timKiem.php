@@ -17,7 +17,7 @@
                       <input type="hidden" value="<?php echo $pro->id ?>" name="product_id">
                       <input type="hidden" value="1" name="quantity">
                       <a href="<?php echo base_url('san-pham/'.$pro->id) ?>"><img src="<?php echo base_url('uploads/product/' . $pro->image) ?>" alt="<?php echo $pro->title ?>" /></a>
-                      <h2><?php echo number_format($pro->price, 0, ',', '.') ?>vnd</h2>
+                      <h2><?php echo number_format($pro->price, 0, ',', '.') ?>₫</h2>
                       <p><?php echo $pro->title ?></p>
                       <a href="<?php echo base_url('san-pham/' . $pro->id) ?>" class="btn btn-default add-to-cart"><i
                           class="fa fa-eye"></i>Thông tin</a>

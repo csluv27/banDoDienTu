@@ -1420,6 +1420,7 @@ flex-direction: column;
 .product-details {
   overflow: hidden;
   background-color: white;
+  padding: 16px 0px;
 }
 
 
@@ -1490,11 +1491,12 @@ flex-direction: column;
 }
 
 .product-information {
-  border: 1px solid #F7F7F0;
+
   overflow: hidden;
-  padding-bottom: 60px;
-  padding-left: 60px;
-  padding-top: 60px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-right: 60px;
   position: relative;
 }
 
@@ -1509,6 +1511,7 @@ flex-direction: column;
   font-family: "Quicksand", sans-serif;
   font-size: 20px;
   margin-top: 0;
+  max-width: 800px;
 }
 
 .product-information p {
@@ -1519,18 +1522,20 @@ flex-direction: column;
 
 .product-information span {
   display: inline-block;
-  margin-bottom: 8px;
+
   margin-top: 18px;
+  
 }
 
 .product-information span span {
-  color: #CE3C2D;
-  float: left;
+  color: red;
+
   font-family: "Quicksand", sans-serif;
   font-size: 30px;
   font-weight: 700;
   margin-right: 20px;
   margin-top: 0px;
+
 }
 
 .product-information span input {
@@ -1564,8 +1569,9 @@ flex-direction: column;
   color: #FFFFFF;
   font-family: "Quicksand", sans-serif;
   font-size: 15px;
-  margin-bottom: 10px;
+
   margin-left: 20px;
+
 }
 
 

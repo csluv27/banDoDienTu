@@ -221,10 +221,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".quantity-selector").forEach(function (selector) {
+          let minusBtn = selector.querySelector(".minus");
+          let plusBtn = selector.querySelector(".plus");
+          let qtyInput = selector.querySelector(".qty-input");
 
+          minusBtn.addEventListener("click", function () {
+              let value = parseInt(qtyInput.value);
+              if (value > 1) {
+                  qtyInput.value = value - 1;
+              }
+          });
 
-
-
+          plusBtn.addEventListener("click", function () {
+              let value = parseInt(qtyInput.value);
+              qtyInput.value = value + 1;
+          });
+      });
+  });
 </script>
 
 </body>

@@ -135,7 +135,7 @@ $baseURL = base_url(); // URL gốc
               $isHomePage = ($_SERVER['REQUEST_URI'] == '/trang-chu' || $_SERVER['REQUEST_URI'] == '/');
               ?>
               <div class="categories" data-home="<?php echo $isHomePage ? 'true' : 'false'; ?>">
-                <div class="categoriesSection" id="categoryBtn" <?php echo $isHomePage ? 'style="pointer-events: none; opacity: 0.6;"' : ''; ?>>
+                <div class="categoriesSection" id="categoryBtn" <?php echo $isHomePage ? 'style="pointer-events: none; opacity: 0.8;"' : ''; ?>>
                   <h4>
                     <i class="fa-solid fa-bars" style="font-size: 15px; margin-right:4px"></i>
                     Danh mục sản phẩm

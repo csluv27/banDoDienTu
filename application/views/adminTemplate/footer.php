@@ -22,6 +22,12 @@
     }
   });
 </script>
+<script>
+function toggleTitle(element) {
+  element.classList.toggle('expanded');
+}
+</script>
+
 </body>
 
 </html>

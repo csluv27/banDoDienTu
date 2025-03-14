@@ -108,7 +108,7 @@ a#scrollUp i {
 }
 
 .social-icons ul li a i {
-  padding: 11px 15px;
+  padding: 13px 15px;
   transition: all 0.9s ease 0s;
   -moz-transition: all 0.9s ease 0s;
   -webkit-transition: all 0.9s ease 0s;
@@ -229,8 +229,7 @@ a#scrollUp i {
 .categories {
   background: white;
   padding: 0px 15px 0px 15px;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
+
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   width: 250px;
 }
@@ -781,7 +780,7 @@ a#scrollUp i {
 
 .footer-bottom {
   background: #D6D6D0;
-  padding-top: 10px;
+
 }
 
 .footer-bottom p {
@@ -1088,6 +1087,7 @@ h2.title:before {
 
 .features_items {
   overflow: hidden;
+
 }
 
 
@@ -1096,7 +1096,7 @@ h2.title {
   font-family: "Quicksand", sans-serif;
   font-size: 30px;
   font-weight: 700;
-  margin: 0 15px;
+  margin: 0;
   text-transform: uppercase;
   margin-bottom: 30px;
   position: relative;
@@ -1310,14 +1310,13 @@ flex-direction: column;
 }
 
 #recommended-item-carousel .carousel-inner .item {
-  padding-left: 20px;
-  padding-right: 20px;
+
 }
 
-.recommended-item-control {
+/* .recommended-item-control {
   position: absolute;
   top: 50%;
-}
+} */
 
 .recommended-item-control i {
   background: none repeat scroll 0 0 #CE3C2D;
@@ -1579,7 +1578,7 @@ flex-direction: column;
   border: 1px solid #F7F7F0;
   margin-bottom: 75px;
   margin-left: 15px;
-  margin-right: 15px;
+
   padding-bottom: 10px;
 }
 

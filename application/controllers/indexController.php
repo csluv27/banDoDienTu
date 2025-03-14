@@ -20,7 +20,7 @@ class indexController extends CI_Controller
 
     // Phương thức hiển thị sản phẩm top bán chạy nhất
     public function showTopSellingProducts() {
-        $data['top_selling_products'] = $this->productModel->get_top_products(3);
+        $data['top_selling_products'] = $this->productModel->get_top_products(4);
 
         // Đã loại bỏ phần debug
         return $data;
@@ -34,7 +34,7 @@ class indexController extends CI_Controller
         $config = array();
         $config["base_url"] = base_url() . '/phan-trang/index';
         $config['total_rows'] = $this->IndexModel->countAllProduct();
-        $config["per_page"] = 6;
+        $config["per_page"] = 16;
         $config["uri_segment"] = 3;
         $config['use_page_numbers'] = TRUE;
         $config['full_tag_open'] = '<ul class="pagination">';
@@ -79,7 +79,7 @@ class indexController extends CI_Controller
 		$config = array();
 		$config["base_url"] = base_url() . '/danh-muc' . '/' . $id . '/';
 		$config['total_rows'] = $this->IndexModel->countAllProductByCategory($id); //đếm tất cả sản phẩm //8 //hàm ceil làm tròn phân trang 
-		$config["per_page"] = 6; //từng trang 3 sản phẩn
+		$config["per_page"] = 9; //từng trang 3 sản phẩn
 		$config["uri_segment"] = 3; //lấy số trang hiện tại
 		$config['use_page_numbers'] = TRUE; //trang có số
 		$config['full_tag_open'] = '<ul class="pagination">';
@@ -122,7 +122,7 @@ class indexController extends CI_Controller
 		$config = array();
 		$config["base_url"] = base_url() . '/thuong-hieu' . '/' . $id . '/';
 		$config['total_rows'] = $this->IndexModel->countAllProductByBrand($id); //đếm tất cả sản phẩm //8 //hàm ceil làm tròn phân trang 
-		$config["per_page"] = 6; //từng trang 3 sản phẩn
+		$config["per_page"] = 9; //từng trang 3 sản phẩn
 		$config["uri_segment"] = 3; //lấy số trang hiện tại
 		$config['use_page_numbers'] = TRUE; //trang có số
 		$config['full_tag_open'] = '<ul class="pagination">';

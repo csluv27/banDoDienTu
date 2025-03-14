@@ -104,17 +104,26 @@
                 <input type="email" class="email_reviewer" required placeholder="Email" />
               </span>
               <textarea name="" class="review_reviewer" required placeholder="Nội dung đánh giá"></textarea>
-              <button type="button" class="btn btn-default pull-right write-comment">Đánh giá</button>
+              <button type="button" class="btn btn-default pull-right write-comment" style="margin-right:8px;">Đánh giá</button>
             </form>
           </div>
         </div>
       </div>
 
       <div class="recommended_items">
-        <h2 class="title text-center">Sản phẩm liên quan</h2>
+      <div class="title-container">
+          <h2 class="title">Sản phẩm liên quan</h2>
+            <div class="controls">
+              <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+              </a>
+              <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </div>
+        </div>
         <div class="related-products-container">
           <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
-
             <div class="carousel-inner">
               <?php $chunks = array_chunk($product_related, 4); ?>
               <?php foreach ($chunks as $key => $chunk) { ?>
@@ -158,12 +167,7 @@
                 </div>
               <?php } ?>
             </div>
-            <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
-              <i class="fa fa-angle-left"></i>
-            </a>
-            <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
-              <i class="fa fa-angle-right"></i>
-            </a>
+          
           </div>
         </div>
       </div>
@@ -396,6 +400,37 @@
           font-size:20px;
           margin-right: 16px;
         }
+        .category-tab{
+          background-color: white;
+        }
+        .title-container {
+           overflow: hidden; 
+
+          }
+        .title {
+              float: left;
+              font-size: 24px;
+              font-weight: bold;
+          }
+
+          .controls {
+              float: right;
+              display: flex;
+              gap: 10px;
+              margin-top: 10px;
+        
+          }
+
+          .controls a {
+              background-color: #CE3C2D;
+              color: white;
+              padding: 5px 10px;
+              border-radius: 5px;
+              text-decoration: none;
+          }
+          .item {
+            padding: 0;
+          }
       </style>
     </div>
   </div>

@@ -4,7 +4,7 @@
 			<div class="row">
 				<div class="col-sm-2">
 					<div class="companyinfo">
-						<h2><span style="font-size:26px;">NPC</span>SHOP</h2>
+						<h2><span style="font-size:26px;">LUV</span>SHOP</h2>
 						<p>Just five decent fellows sharing our passion for gaming with you!</p>
 					</div>
 				</div>

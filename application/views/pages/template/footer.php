@@ -69,13 +69,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3">
+		 <div class="col-sm-3">
 					<div class="address">
-						<!-- <img src="/frontend/images/home/map.png" alt="" />
-						<p>241 Điện Biên, Lộc Hoà, Nam Định, Việt Nam</p> -->
+
+			
 						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3738.8551185156552!2d106.16051547666265!3d20.430042481073645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135e756dae56d0d%3A0x97cbf14af357037e!2zMjQxIMSQaeG7h24gQmnDqm4sIEzhu5ljIEhvw6AsIE5hbSDEkOG7i25oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1737435356607!5m2!1svi!2s" width="450" height="180" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 					</div>
-				</div>
+				</div> 
 			</div>
 		</div>
 	</div>
@@ -133,6 +133,20 @@
 						<ul class="nav nav-pills nav-stacked">
 							<li><a href="<?php echo base_url('information') ?>">Thông tin về NPC</a></li>
 							<li><a href="<?php echo base_url('contact') ?>">Địa điểm cửa hàng</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="single-widget">
+						<h2>CÁC THƯƠNG HIỆU</h2>
+						<ul class="nav nav-pills nav-stacked">
+						<?php
+          foreach ($brand as $key => $b) {
+            ?>
+            <li><a href="<?php echo base_url('thuong-hieu/' . $b->id) ?>"><?php echo $b->title ?></a></li>
+            <?php
+          }
+          ?>
 						</ul>
 					</div>
 				</div>

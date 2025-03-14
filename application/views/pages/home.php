@@ -17,7 +17,7 @@
         </div>
         <div id="featured-item-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
         <div class="carousel-inner">
-            <?php $chunks = array_chunk($allproduct_pagination, 8); ?>
+            <?php $chunks = array_chunk($allproduct_pagination, 10); ?>
             <?php foreach ($chunks as $key => $chunk) { ?>
                 <div class="item <?php echo $key == 0 ? 'active' : '' ?>">
                     <?php foreach ($chunk as $pro) { ?>
@@ -65,7 +65,7 @@
 
     <?php if (isset($top_selling_products) && !empty($top_selling_products)): ?>
       <?php foreach ($top_selling_products as $key => $product): ?>
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <div class="product-image-wrapper">
             <form action="<?php echo base_url('add-to-cart') ?>" method="POST">
               <div class="single-products <?php echo ($product->quantity == 0) ? 'out-of-stock' : ''; ?>">
@@ -74,15 +74,15 @@
                   <input type="hidden" value="1" name="quantity">
                   <a href="<?php echo base_url('san-pham/' . $product->id) ?>">
                     <img src="<?php echo base_url('uploads/product/' . $product->image) ?>"
-                      alt="<?php echo $product->title ?>" />
+                      alt="<?php echo $product->title ?>"/>
                   </a>
                   <div style="display:flex; flex-direction: column; gap:8px">
 
-                    <div style="display:flex; flex-direction: column; gap:8px">
+                    <div style="display:flex; flex-direction: column;gap:8px">
                       <span><?php echo $product->title ?></span>
                       <h2><?php echo number_format($product->price, 0, ',', '.') ?> ₫</h2>
                     </div>
-                    <div style="flex-grow: 1;"></div>
+         
                     <div style="display:flex; flex-direction: column;">
 
                       <a href="<?php echo base_url('san-pham/' . $product->id) ?>"
@@ -117,6 +117,7 @@
         }
 
         .product-image-wrapper {
+          max-width: 250px;
           width: 100%;
           box-sizing: border-box;
           overflow: hidden;
@@ -131,8 +132,8 @@
 
         .single-products {
           width: 100%;
-          height: 480px;
-          max-height: 480px;
+          height: 400px;
+          max-height: 400px;
           /* Ensure all products have the same height */
           display: flex;
           flex-direction: column;
@@ -142,7 +143,7 @@
 
         .productinfo img {
           max-width: 100%;
-          max-height: 246px;
+          max-height: 180px;
           /* Increased maximum height for images */
           object-fit: contain;
         }
@@ -151,7 +152,7 @@
           text-align: center;
           display: flex;
           flex-direction: column;
-          gap: 26px;
+          gap: 8px;
           height: 100%;
 
         }

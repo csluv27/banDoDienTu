@@ -700,7 +700,7 @@ a#scrollUp i {
 }
 
 .footer-widget {
-  margin-bottom: 68px;
+  margin-bottom: 10px;
 }
 
 .footer-widget .container {
@@ -787,7 +787,7 @@ a#scrollUp i {
   color: #363432;
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
-  margin-left: 15px;
+  
 }
 
 .footer-bottom p span a {
@@ -1126,7 +1126,8 @@ h2.title {
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
   font-weight: 700;
-
+  margin-bottom: 22px;
+    margin-top: 10px;
 }
 
 .product-overlay h2 {

@@ -125,11 +125,11 @@
         <div class="related-products-container">
           <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-              <?php $chunks = array_chunk($product_related, 4); ?>
+              <?php $chunks = array_chunk($product_related, 5); ?>
               <?php foreach ($chunks as $key => $chunk) { ?>
                 <div class="item <?php echo $key == 0 ? 'active' : '' ?>">
                   <?php foreach ($chunk as $pro) { ?>
-                    <div class="col-sm-6">
+                    <div class="col-sm-3 col-sm-6">
                       <div class="product-image-wrapper">
                         <form action="<?php echo base_url('add-to-cart') ?>" method="POST">
                           <div class="single-products <?php echo ($pro->quantity == 0) ? 'out-of-stock' : ''; ?>">
@@ -145,9 +145,9 @@
 
                                   <span><?php echo $pro->title ?></span>
                                   <h2><?php echo number_format($pro->price, 0, ',', '.') ?>₫</h2>
-
                                 </div>
-                                <div style="flex-grow: 1;"></div>
+
+                             
                                 <div style="display:flex; flex-direction: column;">
 
                                   <a href="<?php echo base_url('san-pham/' . $pro->id) ?>"
@@ -181,13 +181,6 @@
         }
 
 
-        .product-image-wrapper img {
-          width: auto;
-          height: 120px;
-          object-fit: contain;
-          padding-bottom: 20px;
-
-        }
 
 
         .productinfo .add-to-cart {
@@ -229,10 +222,10 @@
         }
 
         .item .col-sm-6 {
-          width: 25%;
+          width: 20%;
           /* Đảm bảo đúng 3 sản phẩm trên 1 hàng */
-          max-width: 25%;
-          flex: 0 0 25%;
+          max-width: 20%;
+          flex: 0 0 0 0 20%;
         }
 
         .product-image-wrapper {
@@ -240,13 +233,22 @@
           box-sizing: border-box;
         }
 
-
-        .productinfo {
-          height: 350px;
-          background: rgba(255, 255, 255, 0.8);
-          border-radius: 10px;
-          padding: 15px;
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        .productinfo{
+          text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+        }
+        .product-image-wrapper {
+     max-width: 250px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .productinfo .add-to-cart,
@@ -267,7 +269,16 @@
           word-break: break-word;
           max-width: 100%;
         }
-
+        .single-products {
+          width: 100%;
+          height: 400px;
+          max-height: 400px;
+          /* Ensure all products have the same height */
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          position: relative;
+        }
 
         .productinfo .btn {
           height: 30px;
@@ -303,7 +314,11 @@
         .out-of-stock .productinfo img {
           opacity: 0.5;
         }
-
+        .productinfo img{
+          max-width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+        }
         .out-of-stock .out-of-stock-message {
           color: red;
           font-weight: bold;

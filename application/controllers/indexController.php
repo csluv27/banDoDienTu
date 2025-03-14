@@ -20,7 +20,7 @@ class indexController extends CI_Controller
 
     // Phương thức hiển thị sản phẩm top bán chạy nhất
     public function showTopSellingProducts() {
-        $data['top_selling_products'] = $this->productModel->get_top_products(4);
+        $data['top_selling_products'] = $this->productModel->get_top_products(5);
 
         // Đã loại bỏ phần debug
         return $data;
@@ -34,7 +34,7 @@ class indexController extends CI_Controller
         $config = array();
         $config["base_url"] = base_url() . '/phan-trang/index';
         $config['total_rows'] = $this->IndexModel->countAllProduct();
-        $config["per_page"] = 16;
+        $config["per_page"] = 20;
         $config["uri_segment"] = 3;
         $config['use_page_numbers'] = TRUE;
         $config['full_tag_open'] = '<ul class="pagination">';

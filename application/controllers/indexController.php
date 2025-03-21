@@ -79,7 +79,7 @@ class indexController extends CI_Controller
 		$config = array();
 		$config["base_url"] = base_url() . '/danh-muc' . '/' . $id . '/';
 		$config['total_rows'] = $this->IndexModel->countAllProductByCategory($id); //đếm tất cả sản phẩm //8 //hàm ceil làm tròn phân trang 
-		$config["per_page"] = 9; //từng trang 3 sản phẩn
+		$config["per_page"] = 12; //từng trang 3 sản phẩn
 		$config["uri_segment"] = 3; //lấy số trang hiện tại
 		$config['use_page_numbers'] = TRUE; //trang có số
 		$config['full_tag_open'] = '<ul class="pagination">';
@@ -122,7 +122,7 @@ class indexController extends CI_Controller
 		$config = array();
 		$config["base_url"] = base_url() . '/thuong-hieu' . '/' . $id . '/';
 		$config['total_rows'] = $this->IndexModel->countAllProductByBrand($id); //đếm tất cả sản phẩm //8 //hàm ceil làm tròn phân trang 
-		$config["per_page"] = 9; //từng trang 3 sản phẩn
+		$config["per_page"] = 12; //từng trang 3 sản phẩn
 		$config["uri_segment"] = 3; //lấy số trang hiện tại
 		$config['use_page_numbers'] = TRUE; //trang có số
 		$config['full_tag_open'] = '<ul class="pagination">';

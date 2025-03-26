@@ -579,7 +579,7 @@ a#scrollUp i {
 **************************/
 
 #footer {
-  background: #F0F0E9;
+  background: rgb(242,243,245);
 }
 
 
@@ -588,9 +588,7 @@ a#scrollUp i {
   padding-bottom: 20px;
 }
 
-.companyinfo {
-  margin-top: 57px;
-}
+
 
 .companyinfo h2 {
   color: black;
@@ -705,7 +703,7 @@ a#scrollUp i {
 
 .footer-widget .container {
   border-top: 1px solid #FFFFFF;
-  padding-top: 15px;
+  padding-top: 30px;
 }
 
 .single-widget h2 {
@@ -779,7 +777,8 @@ a#scrollUp i {
 }
 
 .footer-bottom {
-  background: #D6D6D0;
+  
+  background: rgb(242,243,245);
 
 }
 
@@ -787,13 +786,14 @@ a#scrollUp i {
   color: #363432;
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
-  
+  margin:10px;
 }
 
 .footer-bottom p span a {
   color: #CE3C2D;
   font-style: italic;
   text-decoration: underline;
+  font-size: 14px;
 }
 
 
@@ -1823,7 +1823,7 @@ flex-direction: column;
 
 .breadcrumbs .breadcrumb {
   background: transparent;
-  margin-bottom: 75px;
+  margin-bottom: 30px;
   padding-left: 0;
 }
 
@@ -1851,7 +1851,7 @@ flex-direction: column;
 }
 
 #cart_items .cart_info {
-  border: 1px solid #E6E4DF;
+
   margin-bottom: 50px
 }
 
@@ -1878,8 +1878,7 @@ flex-direction: column;
 }
 
 .cart_info table tr td {
-  border-top: 0 none;
-  vertical-align: inherit;
+ 
 }
 
 
@@ -1913,12 +1912,12 @@ flex-direction: column;
 
 #cart_items .cart_info .cart_total_price {
   color: #CE3C2D;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .cart_product {
   display: block;
-  margin: 15px -70px 10px 25px;
+
 }
 
 .cart_quantity_button a {
@@ -1937,10 +1936,10 @@ flex-direction: column;
 .cart_quantity_input {
   color: #696763;
   float: left;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
-
+  border: none;
 }
 
 

@@ -54,7 +54,7 @@
     </div>
 </div>
 
-    <div style="flex:1;flex-grow:1;background-color:white;padding:20px;width:100%;margin-top:25px;margin-bottom:15px;border-radius:10px"></div>
+    <div style="flex:1;flex-grow:1;background-color:white;padding:20px;width:100%;margin-top:25px;border-radius:10px"></div>
         
 <div class="top-selling-products">
   <div>
@@ -203,7 +203,7 @@
         }
         .productinfo span {
             display: -webkit-box;
-            -webkit-line-clamp: 1;
+            -webkit-line-clamp: 2;
             /* Giới hạn số dòng tối đa */
             -webkit-box-orient: vertical;
             overflow: hidden;

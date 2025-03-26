@@ -1,115 +1,112 @@
 <footer id="footer"><!--Footer-->
-	<div class="footer-top">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-2">
-					<div class="companyinfo">
-						<h2><span style="font-size:26px;">LUV</span>SHOP</h2>
-						<p>Just five decent fellows sharing our passion for gaming with you!</p>
-					</div>
-				</div>
-				<div class="col-sm-7">
-					<div class="col-sm-3">
-						<div class="video-gallery text-center">
-							<a href="#">
-								<div class="iframe-img">
-									<img src="/frontend/Footer/1.png" alt="" />
-								</div>
-								<div class="overlay-icon">
-									<i class="fa fa-play-circle-o"></i>
-								</div>
-							</a>
-						
-							
-						</div>
-					</div>
-
-					<div class="col-sm-3">
-						<div class="video-gallery text-center">
-							<a href="#">
-								<div class="iframe-img">
-									<img src="/frontend/Footer/2.png" alt="" />
-								</div>
-								<div class="overlay-icon">
-									<i class="fa fa-play-circle-o"></i>
-								</div>
-							</a>
-						
-							
-						</div>
-					</div>
-
-					<div class="col-sm-3">
-						<div class="video-gallery text-center">
-							<a href="#">
-								<div class="iframe-img">
-									<img src="/frontend/Footer/3.png" alt="" />
-								</div>
-								<div class="overlay-icon">
-									<i class="fa fa-play-circle-o"></i>
-								</div>
-							</a>
-						
-							
-						</div>
-					</div>
-
-					<div class="col-sm-3">
-						<div class="video-gallery text-center">
-							<a href="#">
-								<div class="iframe-img">
-									<img src="/frontend/Footer/4.png" alt="" />
-								</div>
-								<div class="overlay-icon">
-									<i class="fa fa-play-circle-o"></i>
-								</div>
-							</a>
-					
-							
-						</div>
-					</div>
-				</div>
-		 <div class="col-sm-3">
-					<div class="address">
-
-			
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3738.8551185156552!2d106.16051547666265!3d20.430042481073645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135e756dae56d0d%3A0x97cbf14af357037e!2zMjQxIMSQaeG7h24gQmnDqm4sIEzhu5ljIEhvw6AsIE5hbSDEkOG7i25oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1737435356607!5m2!1svi!2s" width="450" height="180" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-					</div>
-				</div> 
-			</div>
-		</div>
-	</div>
+<div class="footer-top">
+	<div class="leftS">
+			<p style="font-size:28px;margin:0;font-weight:600"> Tại sao nên mua <br> hàng tại LUVSHOP</p>
+        <div class="benefit-item">
+            <div class="icon"><i class="fa-solid fa-computer"></i></div>
+            <p>Đa dạng<br> cấu hình</p>
+        </div>
+        <div class="benefit-item">
+            <div class="icon"><i class="fa-solid fa-truck-fast"></i></div>
+            <p>Giao hàng<br> nhanh chóng</p>
+        </div>
+        <div class="benefit-item">
+            <div class="icon"><i class="fa-brands fa-facebook-messenger"></i></div>
+            <p>Hỗ trợ <br>24/7</p>
+        </div>
+        <div class="benefit-item">
+            <div class="icon"><i class="fa-solid fa-certificate"></i></div>
+            <p>Đổi trả<br> 7 ngày</p>
+        </div>
+    </div>
+</div>
 	<style>
 		.video-gallery .iframe-img {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+		}
+
+		.video-gallery .iframe-img img {
+			width: 100%;
+			height: auto;
+			max-height: 85px;
+			display: block;
+			object-fit: cover;
+			/* Đảm bảo ảnh không bị biến dạng */
+		}
+
+		.leftS {
+    background-color: rgb(0, 157, 222);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 120px;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
 }
 
-.video-gallery .iframe-img img {
-    width: 100%;
-    height: auto;
-		max-height: 85px;
-    display: block;
-    object-fit: cover; /* Đảm bảo ảnh không bị biến dạng */
+.benefit-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 200px;
+		gap: 10px;
+		justify-content: center;
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+		background-color: rgb(43, 138, 179);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.icon i {
+    font-size: 28px;
+    color: white;
 }
 	</style>
-	
+
 
 
 	<div class="footer-widget">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-3">
-					<div class="single-widget">
-						<h2>Dịch vụ</h2>
-						<ul class="nav nav-pills nav-stacked">
-							<li><a href="<?php echo base_url('contact') ?>">Liên hệ</a></li>
-							<li><a href="https://www.facebook.com/profile.php?id=100016773610729">Fanpage</a></li>
+
+					<div class="companyinfo">
+						<h2><span style="font-size:26px;">LUV</span>SHOP</h2>
+						<p>Just five decent fellows sharing our passion for gaming with you!</p>
+					</div>
+					<img src="<?php echo base_url('frontend/images/1.png'); ?>" alt="" style="margin-bottom:15px">
+					<div class="social-icons">
+						<ul class="nav navbar-nav">
+							<li><a href="/"><i class="fa-brands fa-facebook"
+										style="color: black;margin-right:6px; font-size: 18px; ;border:1px solid rgb(210, 210, 210)"></i></i></a>
+							</li>
+							<li><a href="/"><i class="fa-brands fa-google"
+										style="color: black;margin-right:6px; font-size: 18px; ;border:1px solid rgb(210, 210, 210)"></i></a>
+							</li>
+							<li><a href="/"><i class="fa-brands fa-twitter"
+										style="color: black;margin-right:6px; font-size: 18px; ;border:1px solid rgb(210, 210, 210)"></i></a>
+							</li>
+							<li><a href="/"><i class="fa-brands fa-instagram"
+										style="color: black;margin-right:6px; font-size: 18px; ;border:1px solid rgb(210, 210, 210)"></i></a>
+							</li>
 						</ul>
 					</div>
 				</div>
-			
+
 				<div class="col-sm-3">
 					<div class="single-widget">
 						<h2>Hướng dẫn đặt hàng</h2>
@@ -140,22 +137,22 @@
 					<div class="single-widget">
 						<h2>CÁC THƯƠNG HIỆU</h2>
 						<ul class="nav nav-pills nav-stacked">
-						<?php
-          foreach ($brand as $key => $b) {
-            ?>
-            <li><a href="<?php echo base_url('thuong-hieu/' . $b->id) ?>"><?php echo $b->title ?></a></li>
-            <?php
-          }
-          ?>
+							<?php
+							foreach ($brand as $key => $b) {
+								?>
+								<li><a href="<?php echo base_url('thuong-hieu/' . $b->id) ?>"><?php echo $b->title ?></a></li>
+								<?php
+							}
+							?>
 						</ul>
 					</div>
 				</div>
-				
+
 
 			</div>
 		</div>
 	</div>
-
+	<div class="underline" style="border-bottom: 1px solid #e0e0e0;"></div>
 	<div class="footer-bottom">
 		<div class="container">
 			<div class="row">
@@ -188,7 +185,7 @@
 			$.ajax({
 				method: 'POST',
 				url: '/review/send',
-				data: { name_reviewer: name_reviewer, email_reviewer: email_reviewer, review_reviewer: review_reviewer,pro_id:pro_id },
+				data: { name_reviewer: name_reviewer, email_reviewer: email_reviewer, review_reviewer: review_reviewer, pro_id: pro_id },
 				success: function () {
 					alert('Thêm đánh giá thành công! Chúng tôi rất vui khi có bạn góp ý.');
 				}
@@ -199,63 +196,63 @@
 
 </script>
 <script>
-document.querySelectorAll('.xulydonhang').forEach(selectElement => {
-  selectElement.addEventListener('change', function() {
-    const orderStatus = document.getElementById('orderStatus');
-    const orderCode = this.id;
-    const value = this.value;
+	document.querySelectorAll('.xulydonhang').forEach(selectElement => {
+		selectElement.addEventListener('change', function () {
+			const orderStatus = document.getElementById('orderStatus');
+			const orderCode = this.id;
+			const value = this.value;
 
-    fetch('path_to_your_controller/process', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: `order_code=${orderCode}&value=${value}`,
-    })
-    .then(response => response.text())
-    .then(data => {
-      orderStatus.innerHTML = data;
-    })
-    .catch(error => console.error('Error:', error));
-  });
-});
-document.addEventListener("DOMContentLoaded", function () {
-    const categoryList = document.querySelector(".category-list");
-    const toggleButton = document.getElementById("categoryBtn");
-    const overlay = document.getElementById("overlay");
-    const isHomePage = window.location.pathname === "/trang-chu" || window.location.pathname === "/";
+			fetch('path_to_your_controller/process', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/x-www-form-urlencoded',
+				},
+				body: `order_code=${orderCode}&value=${value}`,
+			})
+				.then(response => response.text())
+				.then(data => {
+					orderStatus.innerHTML = data;
+				})
+				.catch(error => console.error('Error:', error));
+		});
+	});
+	document.addEventListener("DOMContentLoaded", function () {
+		const categoryList = document.querySelector(".category-list");
+		const toggleButton = document.getElementById("categoryBtn");
+		const overlay = document.getElementById("overlay");
+		const isHomePage = window.location.pathname === "/trang-chu" || window.location.pathname === "/";
 
-    // Nếu không phải trang chủ, thêm sự kiện click vào nút
-    if (!isHomePage) {
-        toggleButton.addEventListener("click", function () {
-            const isShowing = categoryList.style.display === "block";
-            categoryList.style.display = isShowing ? "none" : "block";
-            overlay.classList.toggle("show", !isShowing);
-        });
-    }
-});
+		// Nếu không phải trang chủ, thêm sự kiện click vào nút
+		if (!isHomePage) {
+			toggleButton.addEventListener("click", function () {
+				const isShowing = categoryList.style.display === "block";
+				categoryList.style.display = isShowing ? "none" : "block";
+				overlay.classList.toggle("show", !isShowing);
+			});
+		}
+	});
 
 </script>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-      document.querySelectorAll(".quantity-selector").forEach(function (selector) {
-          let minusBtn = selector.querySelector(".minus");
-          let plusBtn = selector.querySelector(".plus");
-          let qtyInput = selector.querySelector(".qty-input");
+	document.addEventListener("DOMContentLoaded", function () {
+		document.querySelectorAll(".quantity-selector").forEach(function (selector) {
+			let minusBtn = selector.querySelector(".minus");
+			let plusBtn = selector.querySelector(".plus");
+			let qtyInput = selector.querySelector(".qty-input");
 
-          minusBtn.addEventListener("click", function () {
-              let value = parseInt(qtyInput.value);
-              if (value > 1) {
-                  qtyInput.value = value - 1;
-              }
-          });
+			minusBtn.addEventListener("click", function () {
+				let value = parseInt(qtyInput.value);
+				if (value > 1) {
+					qtyInput.value = value - 1;
+				}
+			});
 
-          plusBtn.addEventListener("click", function () {
-              let value = parseInt(qtyInput.value);
-              qtyInput.value = value + 1;
-          });
-      });
-  });
+			plusBtn.addEventListener("click", function () {
+				let value = parseInt(qtyInput.value);
+				qtyInput.value = value + 1;
+			});
+		});
+	});
 </script>
 
 </body>

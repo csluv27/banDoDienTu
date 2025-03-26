@@ -42,6 +42,10 @@
   </div>
 </section><!--/form-->
 <style>
+  .btn-default:hover{
+    background-color: #E05239;
+
+  }
   .login-form {
 
     background: rgba(255, 255, 255, 0.8);

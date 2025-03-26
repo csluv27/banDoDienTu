@@ -364,7 +364,7 @@ class indexController extends CI_Controller
 		$config["base_url"] = base_url() . '/tim-kiem';
 		$config["reuse_query_string"] = TRUE;
 		$config['total_rows'] = $this->IndexModel->countAllProductByKeyword($keyword); //đếm tất cả sản phẩm //8 //hàm ceil làm tròn phân trang 
-		$config["per_page"] = 6; //từng trang 3 sản phẩn
+		$config["per_page"] = 12; //từng trang 3 sản phẩn
 		$config["uri_segment"] = 2; //lấy số trang hiện tại
 		$config['use_page_numbers'] = TRUE; //trang có số
 		$config['full_tag_open'] = '<ul class="pagination">';

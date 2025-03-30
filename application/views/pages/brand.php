@@ -1,5 +1,14 @@
 <section>
   <div class="container">
+  <div class="breadcrumbs">
+     <ol class="breadcrumb">
+       <li><a href="<?php echo base_url('/') ?>">Home</a></li>
+       <li class="active">
+          <?php echo isset($brand[0]->title) ? $brand[0]->title : ''; ?>
+        </li>
+     </ol>
+   </div>
+
     <div class="row">
     <?php $this->load->view('pages/template/sidebar');?>
       <div class="col-sm-9 padding-right">
@@ -79,7 +88,7 @@
 
           .productinfo img {
             max-width: 100%;
-            max-height: 153px;
+            max-height: 148px;
             object-fit: contain;
           }
 

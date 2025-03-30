@@ -32,10 +32,10 @@
                                     $subtotal = $items['qty'] * $items['price'];
                                     $total += $subtotal;
                                     ?>
+                                  
                                     <tr>
                                         <td class="cart_product">
-                                            <img width="130px" height="110px"
-                                                src="<?php echo base_url('uploads/product/' . ($items['options']['image'] ?? 'default.jpg')) ?>"
+                                            <img src="<?php echo base_url('uploads/product/' . ($items['options']['image'] ?? 'default.jpg')) ?>"
                                                 alt="<?php echo $items['name'] ?>"></a>
                                         </td>
                                         <td class="cart_description">
@@ -282,6 +282,17 @@
 
     .cart_product {
         padding: 0px;
+    }
+    .cart_product img {
+    width: 100%; /* Độ rộng cố định */
+    height: auto; /* Độ cao cố định */
+    object-fit: contain; 
+    aspect-ratio: 5/4; 
+
+}
+    .cart_quantity_delete{
+        align-items: center;
+        float: ;   
     }
 </style>
 <script>

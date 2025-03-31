@@ -22,7 +22,7 @@ class productController extends CI_Controller
     $this->checkLogin();
     $this->load->view('adminTemplate/header');
     $this->load->view('adminTemplate/navbar');
-
+		
     // Configuring pagination
     $config = array();
     $config["base_url"] = base_url() . 'danh-sach-san-pham/';

@@ -4,7 +4,7 @@
      <ol class="breadcrumb">
        <li><a href="<?php echo base_url('/') ?>">Home</a></li>
        <li class="active">
-          <?php echo isset($brand[0]->title) ? $brand[0]->title : ''; ?>
+          <?php echo $title; ?>
         </li>
      </ol>
    </div>

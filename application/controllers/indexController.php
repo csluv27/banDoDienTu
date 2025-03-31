@@ -58,8 +58,12 @@ class indexController extends CI_Controller
         $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 1;
         $offset = ($page - 1) * $config["per_page"];
         $this->data["links"] = $this->pagination->create_links();
-
+				$category_id = 20;
+				$category_id2 = 21;
         $this->data['allproduct_pagination'] = $this->IndexModel->getIndexPagination($config["per_page"], $offset);
+        $this->data['allproductpcMINI_pagination'] = $this->IndexModel->getIndexPCMINIPagination($config["per_page"], $offset, $category_id);
+        $this->data['allproductConsole_pagination'] = $this->IndexModel->getIndexConsolePagination($config["per_page"], $offset, $category_id2);
+		
 
         // Thêm dữ liệu top bán chạy nhất vào $this->data
         $this->data['top_selling_products'] = $data['top_selling_products'];

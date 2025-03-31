@@ -15,7 +15,8 @@
         <?php
       }
       ?>
-      <form action="<?php echo base_url('product/update/'.$product->id) ?> " method="POST" enctype="multipart/form-data">
+     <form action="<?php echo base_url('product/update/'.urlencode($product->id)) ?>" method="POST" enctype="multipart/form-data">
+
         <div class="form-group">
           <label for="title">Tên sản phẩm</label>
           <input type="text" name="title" value="<?php echo $product->title ?>" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Nhập tên sản phẩm">

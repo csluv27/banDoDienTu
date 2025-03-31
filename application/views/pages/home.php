@@ -54,12 +54,100 @@
     </div>
 </div>
 
-    <div style="flex:1;flex-grow:1;background-color:white;padding:20px;width:100%;margin-top:25px;border-radius:10px"></div>
-        
+    <div style="flex:1;flex-grow:1;background-color:white;padding:20px;width:100%;margin-top:25px;margin-bottom:30px;border-radius:10px"></div>
+    
+ 
+    <div class="features_items">
+       <div class="title-container">
+          <h2 class="title">PC MINI</h2>
+         
+        </div>
+        <div id="featured-item-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+        <div class="carousel-inner">
+            <?php $chunks = array_chunk($allproductpcMINI_pagination, 10); ?>
+            <?php foreach ($chunks as $key => $chunk) { ?>
+                <div class="item <?php echo $key == 0 ? 'active' : '' ?>">
+                    <?php foreach ($chunk as $pro) { ?>
+                        <div class="col-sm-3 col-sm-6">
+                            <div class="product-image-wrapper">
+                                <form action="<?php echo base_url('add-to-cart') ?>" method="POST">
+                                    <div class="single-products <?php echo ($pro->quantity == 0) ? 'out-of-stock' : ''; ?>">
+                                        <div class="productinfo text-center">
+                                            <input type="hidden" value="<?php echo $pro->id ?>" name="product_id">
+                                            <input type="hidden" value="1" name="quantity">
+                                            <a href="<?php echo base_url('san-pham/' . $pro->id) ?>">
+                                                <img src="<?php echo base_url('uploads/product/' . $pro->image) ?>" alt="<?php echo $pro->title ?>" />
+                                            </a>
+                                            <div style="display:flex; flex-direction: column; gap:8px">
+                                                <span><?php echo $pro->title ?></span>
+                                                <h2><?php echo number_format($pro->price, 0, ',', '.') ?>₫</h2>
+                                            </div>
+                                            <div style="display:flex; flex-direction: column;">
+                                                <a href="<?php echo base_url('san-pham/' . $pro->id) ?>" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>Thông tin</a>
+                                                <button type="submit" class="btn btn-fefault cart" <?php echo ($pro->quantity == 0) ? 'disabled' : ''; ?>>
+                                                    <i class="fa fa-shopping-cart"></i>
+                                                    Thêm vào giỏ hàng
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</div>  
+<div class="features_items">
+       <div class="title-container">
+          <h2 class="title">MÁY CONSOLE PS5</h2>
+         
+        </div>
+        <div id="featured-item-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+        <div class="carousel-inner">
+            <?php $chunks = array_chunk($allproductConsole_pagination, 10); ?>
+            <?php foreach ($chunks as $key => $chunk) { ?>
+                <div class="item <?php echo $key == 0 ? 'active' : '' ?>">
+                    <?php foreach ($chunk as $pro) { ?>
+                        <div class="col-sm-3 col-sm-6">
+                            <div class="product-image-wrapper">
+                                <form action="<?php echo base_url('add-to-cart') ?>" method="POST">
+                                    <div class="single-products <?php echo ($pro->quantity == 0) ? 'out-of-stock' : ''; ?>">
+                                        <div class="productinfo text-center">
+                                            <input type="hidden" value="<?php echo $pro->id ?>" name="product_id">
+                                            <input type="hidden" value="1" name="quantity">
+                                            <a href="<?php echo base_url('san-pham/' . $pro->id) ?>">
+                                                <img src="<?php echo base_url('uploads/product/' . $pro->image) ?>" alt="<?php echo $pro->title ?>" />
+                                            </a>
+                                            <div style="display:flex; flex-direction: column; gap:8px">
+                                                <span><?php echo $pro->title ?></span>
+                                                <h2><?php echo number_format($pro->price, 0, ',', '.') ?>₫</h2>
+                                            </div>
+                                            <div style="display:flex; flex-direction: column;">
+                                                <a href="<?php echo base_url('san-pham/' . $pro->id) ?>" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>Thông tin</a>
+                                                <button type="submit" class="btn btn-fefault cart" <?php echo ($pro->quantity == 0) ? 'disabled' : ''; ?>>
+                                                    <i class="fa fa-shopping-cart"></i>
+                                                    Thêm vào giỏ hàng
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</div> 
+<div style="flex:1;flex-grow:1;background-color:white;padding:20px;width:100%;margin-top:25px;border-radius:10px"></div>
 <div class="top-selling-products">
   <div>
 
-    <h2 class="title text-center">Top sản phẩm bán chạy nhất</h2>
+    <h2 class="title text-center" style="margin-top:0;">Top sản phẩm bán chạy nhất</h2>
   </div>
   <div>
 
@@ -143,7 +231,7 @@
 
         .productinfo img {
           max-width: 100%;
-          max-height: 180px;
+          max-height: 147px;
           /* Increased maximum height for images */
           object-fit: contain;
         }
@@ -249,7 +337,7 @@
             flex: 1 1 25%;
             max-width: 25%;
           }
-
+          
     </style>
     </div>
   </div>

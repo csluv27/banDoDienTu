@@ -69,6 +69,21 @@ class indexModel extends CI_Model
     $query = $this->db->get_where('products', ['status' => 1]);
     return $query->result();
   }
+  public function getIndexPCMINIPagination($limit, $start, $category_id)
+  {
+      $this->db->limit($limit, $start);
+      $this->db->where(['status' => 1, 'category_id' => $category_id]);
+      $query = $this->db->get('products');
+      return $query->result();
+  }
+  public function getIndexConsolePagination($limit, $start, $category_id2)
+  {
+      $this->db->limit($limit, $start);
+      $this->db->where(['status' => 1, 'category_id' => $category_id2]);
+      $query = $this->db->get('products');
+      return $query->result();
+  }
+  
 
 
   public function getAllProduct()

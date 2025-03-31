@@ -36,7 +36,7 @@
 
 
     <div class="shipping text-center"><!--shipping-->
-      <img src="/frontend/images/home/13.png" alt="" />
+      <img src="/frontend/images/5.png" alt="" />
     </div><!--/shipping-->
     <style>
       .shipping img {
@@ -49,6 +49,10 @@
       .shipping {
         padding: 0;
         margin-bottom: 100px;
+      }
+      .col-sm-3{
+        padding: 0 15px;
+    
       }
     </style>
 

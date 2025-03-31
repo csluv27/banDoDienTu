@@ -1040,9 +1040,7 @@ h2.title:before {
 
 .shipping {
   background-color: #F2F2F2;
-  margin-top: 40px;
-  overflow: hidden;
-  padding-top: 20px;
+
   position: relative;
 }
 
@@ -1417,11 +1415,6 @@ flex-direction: column;
 *******Product Details CSS******
 **************************/
 
-.product-details {
-  overflow: hidden;
-  background-color: white;
-  padding: 16px 0px;
-}
 
 
 #similar-product {
@@ -1434,11 +1427,6 @@ flex-direction: column;
   padding-right: 25px;
 }
 
-.product-details {
-  margin-bottom: 40px;
-  overflow: hidden;
-  margin-top: 10px;
-}
 
 
 
@@ -1578,7 +1566,7 @@ flex-direction: column;
 .shop-details-tab {
   border: 1px solid #F7F7F0;
   margin-bottom: 75px;
-  margin-left: 15px;
+
 
   padding-bottom: 10px;
 }

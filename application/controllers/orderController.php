@@ -119,12 +119,16 @@ public function userOrderList() {
   $this->load->model('orderModel');
   $data['order_list'] = $this->orderModel->getUserOrders($user_email);
 
-  // Tải view
-  $this->load->view('pages/template/header');
+  // Lấy danh sách thương hiệu
+  $this->load->model('brandModel');  // Đảm bảo model thương hiệu được nạp
+  $data['brand'] = $this->brandModel->getAllBrands(); // Lấy danh sách thương hiệu
 
+  // Tải view
+  $this->load->view('pages/template/header', $data);
   $this->load->view('pages/orderUserList', $data);
-  $this->load->view('pages/template/footer');
+  $this->load->view('pages/template/footer', $data);
 }
+
 
 	
 

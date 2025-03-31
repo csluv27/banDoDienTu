@@ -58,11 +58,13 @@ class indexController extends CI_Controller
         $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 1;
         $offset = ($page - 1) * $config["per_page"];
         $this->data["links"] = $this->pagination->create_links();
+				$category_id2 = 17;
 				$category_id = 20;
-				$category_id2 = 21;
+				$category_id3 = 19;
         $this->data['allproduct_pagination'] = $this->IndexModel->getIndexPagination($config["per_page"], $offset);
+        $this->data['allproductPCWork_pagination'] = $this->IndexModel->getIndexPCWorkPagination($config["per_page"], $offset, $category_id2);
         $this->data['allproductpcMINI_pagination'] = $this->IndexModel->getIndexPCMINIPagination($config["per_page"], $offset, $category_id);
-        $this->data['allproductConsole_pagination'] = $this->IndexModel->getIndexConsolePagination($config["per_page"], $offset, $category_id2);
+        $this->data['allproductManHinh_pagination'] = $this->IndexModel->getIndexManHinhPagination($config["per_page"], $offset, $category_id3);
 		
 
         // Thêm dữ liệu top bán chạy nhất vào $this->data
@@ -244,7 +246,8 @@ class indexController extends CI_Controller
 	
 					if (!$found) {
 							// Nếu sản phẩm chưa có trong giỏ hàng, thêm mới
-							$clean_product_name = str_replace(array('(', ')', '"', "'"), '', $pro->title);
+							$clean_product_name = str_replace(array('(', ')', '"', "'", '/',','), '', $pro->title);
+
 							$cart = array(
 									'id' => $pro->id,
 									'qty' => min($quantity, $pro->quantity),

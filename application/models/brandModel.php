@@ -22,5 +22,10 @@
       return $this->db->delete('brands',['id'=>$id]);
        
     }
+    public function getAllBrands() {
+      $query = $this->db->get('brands'); // Giả sử bảng lưu thương hiệu tên là 'brands'
+      return $query->result();
+  }
+  
   }
 ?>

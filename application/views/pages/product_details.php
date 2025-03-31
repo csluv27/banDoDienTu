@@ -13,7 +13,7 @@
       </ol>
     </div>
     <div class="row">
-      <div class="col-sm-12 padding-right">
+      <div class="col-sm-12 padding-right proDetails">
         <?php foreach ($product_details as $key => $pro) { ?>
           <div class="product-details">
             <div class="col-sm-4">
@@ -437,6 +437,12 @@
 
         .item {
           padding: 0;
+        }
+        .proDetails{
+          background-color: white;
+          padding:20px 0;
+          border-radius: 10px;
+          margin-bottom: 20px;
         }
       </style>
     </div>

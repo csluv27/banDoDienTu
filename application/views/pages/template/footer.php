@@ -1,25 +1,25 @@
 <footer id="footer"><!--Footer-->
-<div class="footer-top">
-	<div class="leftS">
+	<div class="footer-top">
+		<div class="leftS">
 			<p style="font-size:28px;margin:0;font-weight:600"> Tại sao nên mua <br> hàng tại LUVSHOP</p>
-        <div class="benefit-item">
-            <div class="icon"><i class="fa-solid fa-computer"></i></div>
-            <p>Đa dạng<br> cấu hình</p>
-        </div>
-        <div class="benefit-item">
-            <div class="icon"><i class="fa-solid fa-truck-fast"></i></div>
-            <p>Giao hàng<br> nhanh chóng</p>
-        </div>
-        <div class="benefit-item">
-            <div class="icon"><i class="fa-brands fa-facebook-messenger"></i></div>
-            <p>Hỗ trợ <br>24/7</p>
-        </div>
-        <div class="benefit-item">
-            <div class="icon"><i class="fa-solid fa-certificate"></i></div>
-            <p>Đổi trả<br> 7 ngày</p>
-        </div>
-    </div>
-</div>
+			<div class="benefit-item">
+				<div class="icon"><i class="fa-solid fa-computer"></i></div>
+				<p>Đa dạng<br> cấu hình</p>
+			</div>
+			<div class="benefit-item">
+				<div class="icon"><i class="fa-solid fa-truck-fast"></i></div>
+				<p>Giao hàng<br> nhanh chóng</p>
+			</div>
+			<div class="benefit-item">
+				<div class="icon"><i class="fa-brands fa-facebook-messenger"></i></div>
+				<p>Hỗ trợ <br>24/7</p>
+			</div>
+			<div class="benefit-item">
+				<div class="icon"><i class="fa-solid fa-certificate"></i></div>
+				<p>Đổi trả<br> 7 ngày</p>
+			</div>
+		</div>
+	</div>
 	<style>
 		.video-gallery .iframe-img {
 			width: 100%;
@@ -37,44 +37,44 @@
 		}
 
 		.leftS {
-    background-color: rgb(0, 157, 222);
-    color: white;
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    gap: 120px;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: 500;
-    text-align: center;
-}
+			background-color: rgb(0, 157, 222);
+			color: white;
+			display: flex;
+			flex-direction: row;
+			padding: 20px;
+			gap: 120px;
+			justify-content: center;
+			font-size: 18px;
+			font-weight: 500;
+			text-align: center;
+		}
 
-.benefit-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    max-width: 200px;
-		gap: 10px;
-		justify-content: center;
-}
+		.benefit-item {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			max-width: 200px;
+			gap: 10px;
+			justify-content: center;
+		}
 
-.icon {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-		background-color: rgb(43, 138, 179);
+		.icon {
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			background-color: rgb(43, 138, 179);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
 
-}
+		}
 
-.icon i {
-    font-size: 28px;
-    color: white;
-}
+		.icon i {
+			font-size: 28px;
+			color: white;
+		}
 	</style>
 
 
@@ -137,13 +137,16 @@
 					<div class="single-widget">
 						<h2>CÁC THƯƠNG HIỆU</h2>
 						<ul class="nav nav-pills nav-stacked">
-							<?php
-							foreach ($brand as $key => $b) {
-								?>
-								<li><a href="<?php echo base_url('thuong-hieu/' . $b->id) ?>"><?php echo $b->title ?></a></li>
-								<?php
-							}
-							?>
+							<?php if (isset($brand) && is_array($brand)) { ?>
+								<ul class="nav nav-pills nav-stacked">
+									<?php foreach ($brand as $key => $b) { ?>
+										<li><a href="<?php echo base_url('thuong-hieu/' . $b->id) ?>"><?php echo $b->title ?></a></li>
+									<?php } ?>
+								</ul>
+							<?php } else { ?>
+								<p class="text-muted">Không có thương hiệu nào</p>
+							<?php } ?>
+
 						</ul>
 					</div>
 				</div>

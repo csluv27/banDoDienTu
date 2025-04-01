@@ -128,37 +128,36 @@
               <?php foreach ($chunks as $key => $chunk) { ?>
                 <div class="item <?php echo $key == 0 ? 'active' : '' ?>">
                   <?php foreach ($chunk as $pro) { ?>
-                    <div class="col-sm-3 col-sm-6">
+                    <div class="col-sm-3 col-md-3 col-lg-3 product-item">
                       <div class="product-image-wrapper">
                         <form action="<?php echo base_url('add-to-cart') ?>" method="POST">
                           <div class="single-products <?php echo ($pro->quantity == 0) ? 'out-of-stock' : ''; ?>">
                             <div class="productinfo text-center">
                               <input type="hidden" value="<?php echo $pro->id ?>" name="product_id">
                               <input type="hidden" value="1" name="quantity">
-                              <a href="<?php echo base_url('san-pham/' . $pro->id) ?>"><img
-                                  src="<?php echo base_url('uploads/product/' . $pro->image) ?>"
-                                  alt="<?php echo $pro->title ?>" /></a>
-                              <div style="display:flex; flex-direction: column; gap:8px">
-
-                                <div style="display:flex; flex-direction: column; gap:8px">
-
-                                  <span><?php echo $pro->title ?></span>
-                                  <h2><?php echo number_format($pro->price, 0, ',', '.') ?>₫</h2>
-                                </div>
-                                <div style="display:flex; flex-direction: column;">
-                                  <a href="<?php echo base_url('san-pham/' . $pro->id) ?>"
-                                    class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>Thông tin</a>
-                                  <button type="submit" class="btn btn-fefault cart" <?php echo ($pro->quantity == 0) ? 'disabled' : ''; ?>>
-                                    <i class="fa fa-shopping-cart"></i>
-                                    Thêm vào giỏ hàng
-                                  </button>
-                                </div>
+                              <a href="<?php echo base_url('san-pham/' . $pro->id) ?>">
+                                <img src="<?php echo base_url('uploads/product/' . $pro->image) ?>"
+                                  alt="<?php echo $pro->title ?>" />
+                              </a>
+                              <div class="product-details">
+                                <span><?php echo $pro->title ?></span>
+                                <h2><?php echo number_format($pro->price, 0, ',', '.') ?>₫</h2>
+                              </div>
+                              <div class="product-buttons">
+                                <a href="<?php echo base_url('san-pham/' . $pro->id) ?>"
+                                  class="btn btn-default add-to-cart">
+                                  <i class="fa fa-eye"></i> Thông tin
+                                </a>
+                                <button type="submit" class="btn btn-fefault cart" <?php echo ($pro->quantity == 0) ? 'disabled' : ''; ?>>
+                                  <i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
+                                </button>
                               </div>
                             </div>
                           </div>
                         </form>
                       </div>
                     </div>
+
                   <?php } ?>
                 </div>
               <?php } ?>
@@ -173,11 +172,14 @@
           max-height: auto;
           object-fit: cover;
         }
+
         .productinfo .add-to-cart {
           margin-bottom: 10px;
           margin-top: 10px;
         }
-
+        .productinfo h2{
+          margin-bottom: 15px;
+        }
         .recommended_items {
           width: 100vw;
           /* Chiếm toàn bộ chiều rộng của màn hình */
@@ -189,7 +191,7 @@
         .related-products-container {
           width: 100%;
           overflow: hidden;
-          padding: 15px;
+  
         }
 
         .carousel-inner {
@@ -205,7 +207,7 @@
           width: 100%;
         }
 
-        .item .col-sm-6 {
+        .item .col-sm-3 {
           width: 20%;
           /* Đảm bảo đúng 3 sản phẩm trên 1 hàng */
           max-width: 20%;
@@ -257,8 +259,8 @@
 
         .single-products {
           width: 100%;
-          height: 400px;
-          max-height: 400px;
+          height: 360px;
+          max-height:360px;
           /* Ensure all products have the same height */
           display: flex;
           flex-direction: column;
@@ -269,9 +271,14 @@
         .productinfo .btn {
           height: 30px;
           line-height: 18px;
-          margin-top: 18px;
+          margin: 10px auto;
         }
+        .productinfo img {
+          max-width: 100%;
+          max-height: 147px;
 
+          object-fit: contain;
+        }
 
 
         .breadcrumbs .breadcrumb {
@@ -301,11 +308,7 @@
           opacity: 0.5;
         }
 
-        .productinfo img {
-          max-width: 100%;
-          max-height: 180px;
-          object-fit: contain;
-        }
+    
 
         .out-of-stock .out-of-stock-message {
           color: red;
@@ -438,9 +441,10 @@
         .item {
           padding: 0;
         }
-        .proDetails{
+
+        .proDetails {
           background-color: white;
-          padding:20px 0;
+          padding: 20px 0;
           border-radius: 10px;
           margin-bottom: 20px;
         }

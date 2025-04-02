@@ -5,7 +5,7 @@
 				  <li><a href="#">Home</a></li>
 				  <li class="active">Check out</li>
 				</ol>
-			</div><!--/breadcrums-->
+			</div>
 			<div class="shopper-informations">
 				<div class="row">
 		
@@ -30,4 +30,4 @@
 				</div>
 			</div>
 		</div>
-	</section> <!--/#cart_items-->
+	</section> 

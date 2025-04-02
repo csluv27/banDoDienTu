@@ -90,19 +90,15 @@
           box-sizing: border-box;
           overflow: hidden;
           background: rgba(255, 255, 255, 0.8);
-          /* Nền mờ trắng */
           border-radius: 10px;
-          /* Bo góc nhẹ */
           padding: 15px;
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-          /* Đổ bóng để tạo hiệu ứng hộp */
         }
 
         .single-products {
           width: 100%;
           height: 360px;
           max-height:360px;
-          /* Ensure all products have the same height */
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -167,7 +163,6 @@
         .productinfo span {
           display: -webkit-box;
           -webkit-line-clamp: 2;
-          /* Giới hạn số dòng tối đa */
           -webkit-box-orient: vertical;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -178,8 +173,6 @@
 
         .title-container {
           overflow: hidden;
-          /* Giúp float hoạt động đúng */
-
         }
         .item {
           padding: 0;

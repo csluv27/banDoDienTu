@@ -12,16 +12,14 @@
                 <div class="underline" style="border-bottom: 1px solid #e0e0e0;margin: 5px 0 20px;"></div>
                 <div class="table-responsive cart_info">
                     <?php
-                    $total = 0; // Đảm bảo biến này luôn tồn tại
+                    $total = 0;
                     if ($this->cart->contents()) { ?>
                         <table class="table table-condensed">
                             <thead>
                                 <tr class="cart_menu">
                                     <td class="image" width="150"></td>
                                     <td class="title">Tên sản phẩm</td>
-
                                     <td class="quantity" width="120">Số lượng</td>
-
                                     <td class="total" width="200">Tổng tiền</td>
                                     <td class="util"></td>
                                 </tr>
@@ -32,7 +30,6 @@
                                     $subtotal = $items['qty'] * $items['price'];
                                     $total += $subtotal;
                                     ?>
-                                  
                                     <tr>
                                         <td class="cart_product">
                                             <img src="<?php echo base_url('uploads/product/' . ($items['options']['image'] ?? 'default.jpg')) ?>"
@@ -54,7 +51,6 @@
                                                             min="1" autocomplete="off">
                                                         <button type="button" class="qty-btn plus">+</button>
                                                     </div>
-
                                                 </form>
                                             </div>
                                         </td>
@@ -86,7 +82,9 @@
                     <div class="tongTien"
                         style="display: flex; flex-direction: row; justify-content: space-between;; margin-top:10px;font-size:20px;font-weight:600;align-items:center;">
                         <div class="te">Tổng tiền:</div>
-                        <div class="te" style="color:red ;font-size:28px"> <?php echo number_format($total, 0, ',', '.') ?> ₫</div>
+                        <div class="te" style="color:red ;font-size:28px">
+                            <?php echo number_format($total, 0, ',', '.') ?> ₫
+                        </div>
                     </div>
                     <div class="underline" style="border-bottom: 1px solid #e0e0e0;margin: 5px 0 20px;"></div>
                     <div class="thongBao">
@@ -101,45 +99,50 @@
                             fanpage.</p>
                     </div>
                     <div class="buttol">
-                        <a href="<?php echo base_url('delete-all-cart') ?>" class="btn btn-danger" style="font-size: 16px; font-weight:500">Xóa tất cả</a>
-          
+                        <a href="<?php echo base_url('delete-all-cart') ?>" class="btn btn-danger"
+                            style="font-size: 16px; font-weight:500">Xóa tất cả</a>
+
                     </div>
                 </div>
-           
+
             </div>
         </div>
         <div class="checkout" style="margin-top:20px">
-                    <form class="check" action="<?php echo base_url('confirm-checkout') ?>" method="POST"
-                        onsubmit="return confirm('Xác nhận đặt hàng?')">
-                        <input type="text" name="email" placeholder="Email">
-                        <input type="text" name="name" placeholder="Họ tên">
-                        <input type="text" name="location" placeholder="Địa chỉ">
-                        <input type="text" name="phone" placeholder="Số điện thoại">
-                        <span style="font-size:18px;font-weight:600;">Hình thức thanh toán</span>
-                        <select name="shipping_method">
-                            <option value="cod">COD</option>
-                            <option value="vnpay" disabled>VNPAY (Đang bảo trì..)</option>
-                        </select>
+            <form class="check" action="<?php echo base_url('confirm-checkout') ?>" method="POST"
+                onsubmit="return confirm('Xác nhận đặt hàng?')">
+                <input type="text" name="email" placeholder="Email">
+                <input type="text" name="name" placeholder="Họ tên">
+                <input type="text" name="location" placeholder="Địa chỉ">
+                <input type="text" name="phone" placeholder="Số điện thoại">
+                <span style="font-size:18px;font-weight:600;">Hình thức thanh toán</span>
+                <select name="shipping_method">
+                    <option value="cod">COD</option>
+                    <option value="vnpay" disabled>VNPAY (Đang bảo trì..)</option>
+                </select>
 
-                        <button class="btn btn-success" type="submit" style="font-size: 16px; font-weight:500">Xác nhận thanh toán</button>
-                    </form>
-                </div>
+                <button class="btn btn-success" type="submit" style="font-size: 16px; font-weight:500">Xác nhận thanh
+                    toán</button>
+            </form>
+        </div>
     </div>
 </section>
 <style>
-    .check{
+    .check {
         display: flex;
         flex-direction: column;
         gap: 15px;
         font-size: 16px;
     }
-    .check input{
+
+    .check input {
         border: 1px solid rgb(194, 193, 193);
         padding: 5px;
     }
-    .checkout{
+
+    .checkout {
         width: 70.5%;
     }
+
     .buttol {
         display: flex;
         flex-direction: column;
@@ -168,7 +171,6 @@
         font-weight: 500;
         padding: 10px;
     }
-
 
     .custom-container {
         background-color: transparent;
@@ -234,7 +236,6 @@
         width: fit-content;
         border-radius: 5px;
         overflow: hidden;
-
     }
 
     .qty-btn {
@@ -270,7 +271,6 @@
     .cart_description span {
         display: -webkit-box;
         -webkit-line-clamp: 2;
-        /* Giới hạn số dòng tối đa */
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -283,16 +283,18 @@
     .cart_product {
         padding: 0px;
     }
-    .cart_product img {
-    width: 100%; /* Độ rộng cố định */
-    height: auto; /* Độ cao cố định */
-    object-fit: contain; 
-    aspect-ratio: 5/4; 
 
-}
-    .cart_quantity_delete{
+    .cart_product img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        aspect-ratio: 5/4;
+
+    }
+
+    .cart_quantity_delete {
         align-items: center;
-        float: ;   
+        float: ;
     }
 </style>
 <script>
@@ -306,7 +308,7 @@
             let currentValue = parseInt(quantityInput.value);
             if (currentValue > 1) {
                 quantityInput.value = currentValue - 1;
-                form.submit(); // Tự động gửi form để cập nhật giỏ hàng
+                form.submit();
             }
         });
 

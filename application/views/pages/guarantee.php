@@ -1,28 +1,23 @@
 <style>
     .custom-container{
-    background-color: white;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    padding-top: 20px;
-    padding-bottom: 14px;
-  }
+        background-color: white;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        padding-top: 20px;
+        padding-bottom: 14px;
+    }
     h1 {
         font-size: 30px;
         color: #444;
         border-bottom: 2px solid #e0e0e0;
         padding-bottom: 10px;
         margin-bottom: 20px;
-      color:  #CE3C2D;
-      font-weight: 700;
+        color:  #CE3C2D;
+        font-weight: 700;
     }
     h2 {
         font-size: 24px;
         color: #444;
-    }
-   
-    ul {
-       
-    
     }
     .highlight {
         font-weight: bold;

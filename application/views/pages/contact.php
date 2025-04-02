@@ -118,7 +118,6 @@
 
   .rightSection span {
     display: block;
-
   }
 
   .inputField {
@@ -130,8 +129,8 @@
     font-size: 16px;
   }
   .breadcrumbs .breadcrumb {
-          margin-bottom: 30px;
-        }
+     margin-bottom: 30px;
+   }
 
   .submitButton {
     padding: 12px 24px;

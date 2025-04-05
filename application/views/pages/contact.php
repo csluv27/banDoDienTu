@@ -50,7 +50,7 @@
            </div>
            <div class="info">
              <i class="fa fa-envelope" style="margin-right:15px;" aria-hidden="true"></i>
-             <span>npcshop123@gmail.com</span>
+             <span>LUVshop123@gmail.com</span>
            </div>
            <div class="info">
              <i class="fa fa-phone" style="margin-right:15px;" aria-hidden="true"></i>

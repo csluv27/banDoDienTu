@@ -118,7 +118,6 @@
           flex-direction: column;
           gap: 8px;
           height: 100%;
-
         }
 
         .productinfo .add-to-cart,

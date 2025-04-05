@@ -52,7 +52,7 @@ $baseURL = base_url(); // URL gốc
                 <li><a style="font-weight:600; "><i style="font-size: 12px;" class="fa fa-phone"></i> 0888888888</a>
                 </li>
                 <li><a style="font-weight:600; "><i style="font-size: 12px;" class="fa fa-envelope"></i>
-                    npcshop123@gmail.com</a></li>
+                    LUVshop123@gmail.com</a></li>
                 <li><a style="font-weight:600; "><i style="font-size: 12px;" class="fa fa-location-arrow"></i> 241 Điện
                     Biên, Lộc Hoà,
                     Nam Định, Việt Nam</a></li>
@@ -159,7 +159,7 @@ $baseURL = base_url(); // URL gốc
               <div id="overlay" class="hidden" onclick="toggleCategoryMenu()" <?php echo $isHomePage ? 'style="display: none;"' : ''; ?>></div>
 
 
-              <!-- Phần menu phụ (Về NPC Shop, Liên hệ, Hướng dẫn) -->
+              <!-- Phần menu phụ (Về LUV Shop, Liên hệ, Hướng dẫn) -->
               <div class="boxPilocy">
                 <div class="policy-item">
                   <h4><i style="font-size: 14px;" class="fa-solid fa-medal"></i> Đảm bảo chất lượng</h4>

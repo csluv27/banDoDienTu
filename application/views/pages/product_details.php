@@ -56,7 +56,7 @@
                       <p style="color:black"><b style="margin-right:3px;color:black;">Thương hiệu:</b>
                         <?php echo $pro->tenthuonghieu ?></p>
                       <p style="color:black"><b style="margin-right:3px;color:black;">Danh mục
-                          loại:</b><?php echo $pro->tendanhmuc ?></p>
+                          sản phẩm:</b><?php echo $pro->tendanhmuc ?></p>
                     </div>
                     <div class="policy-info-container">
                       <div class="chinhSachInfo">

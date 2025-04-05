@@ -126,9 +126,9 @@
 				</div>
 				<div class="col-sm-3">
 					<div class="single-widget">
-						<h2>Về NPC SHOP</h2>
+						<h2>Về LUV SHOP</h2>
 						<ul class="nav nav-pills nav-stacked">
-							<li><a href="<?php echo base_url('information') ?>">Thông tin về NPC</a></li>
+							<li><a href="<?php echo base_url('information') ?>">Thông tin về LUV</a></li>
 							<li><a href="<?php echo base_url('contact') ?>">Địa điểm cửa hàng</a></li>
 						</ul>
 					</div>
@@ -159,7 +159,7 @@
 	<div class="footer-bottom">
 		<div class="container">
 			<div class="row">
-				<p class="pull-left">Copyright © 2025 NPC Inc.</p>
+				<p class="pull-left">Copyright © 2025 LUV Inc.</p>
 				<p class="pull-right">Designed by <span><a target="_blank"
 							href="https://steamcommunity.com/id/cornspringluv/">cornspringluv</a></span></p>
 			</div>

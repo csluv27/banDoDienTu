@@ -202,101 +202,100 @@ class indexController extends CI_Controller
 
 	}
 	public function add_to_cart()
-	{
-			$product_id = $this->input->post('product_id');
-			$quantity = $this->input->post('quantity');
-			$this->data['product_details'] = $this->IndexModel->getProductDetails($product_id);
-	
-			if (!$this->data['product_details']) {
-					$this->session->set_flashdata('error_message', 'Sản phẩm không tồn tại.');
-					redirect($_SERVER['HTTP_REFERER']);
-			}
-	
-			foreach ($this->data['product_details'] as $pro) {
-					if ($pro->quantity <= 0) {
-							$this->session->set_flashdata('error_message', 'Sản phẩm đã hết hàng.');
-							redirect($_SERVER['HTTP_REFERER']);
-					}
-	
-					// Kiểm tra sản phẩm đã có trong giỏ hàng chưa
-					$cart_contents = $this->cart->contents();
-					$found = false;
-					$new_qty = $quantity;
-	
-					foreach ($cart_contents as $items) {
-							if ($items['id'] == $product_id) {
-									$found = true;
-									$new_qty = $items['qty'] + $quantity; // Cộng dồn số lượng
-	
-									// Kiểm tra số lượng tồn kho
-									if ($new_qty > $pro->quantity) {
-											$new_qty = $pro->quantity;
-											$this->session->set_flashdata('error_message', 'Số lượng sản phẩm trong kho không đủ.');
-									}
-	
-									// Cập nhật số lượng trong giỏ hàng
-									$cart_data = array(
-											'rowid' => $items['rowid'],
-											'qty' => $new_qty
-									);
-									$this->cart->update($cart_data);
-									break;
-							}
-					}
-	
-					if (!$found) {
-							// Nếu sản phẩm chưa có trong giỏ hàng, thêm mới
-							$clean_product_name = str_replace(array('(', ')', '"', "'", '/',','), '', $pro->title);
+{
+    $product_id = $this->input->post('product_id');
+    $quantity = $this->input->post('quantity');
+    $this->data['product_details'] = $this->IndexModel->getProductDetails($product_id);
 
-							$cart = array(
-									'id' => $pro->id,
-									'qty' => min($quantity, $pro->quantity),
-									'price' => $pro->price,
-									'name' => $clean_product_name,
-									'options' => array('image' => $pro->image, 'in_stock' => $pro->quantity)
-							);
-							$this->cart->insert($cart);
-					}
-	
-					// Trừ số lượng trong kho
-					$new_quantity = $pro->quantity - $new_qty;
-					$this->IndexModel->updateProductQuantity($product_id, max(0, $new_quantity));
-			}
-	
-			redirect(base_url() . 'gio-hang');
-	}
-	
+    if (!$this->data['product_details']) {
+        $this->session->set_flashdata('error_message', 'Sản phẩm không tồn tại.');
+        redirect($_SERVER['HTTP_REFERER']);
+    }
 
+    foreach ($this->data['product_details'] as $pro) {
+        if ($pro->quantity <= 0) {
+            $this->session->set_flashdata('error_message', 'Sản phẩm đã hết hàng.');
+            redirect($_SERVER['HTTP_REFERER']);
+        }
+
+        $cart_contents = $this->cart->contents();
+        $found = false;
+        $new_qty = $quantity;
+
+        foreach ($cart_contents as $items) {
+            if ($items['id'] == $product_id) {
+                $found = true;
+                $new_qty = $items['qty'] + $quantity;
+
+                if ($new_qty > $pro->quantity) {
+                    $new_qty = $pro->quantity;
+                    $this->session->set_flashdata('error_message', 'Số lượng sản phẩm trong kho không đủ.');
+                }
+
+                $cart_data = array(
+                    'rowid' => $items['rowid'],
+                    'qty' => $new_qty
+                );
+                $this->cart->update($cart_data);
+                break;
+            }
+        }
+
+        if (!$found) {
+            $clean_product_name = str_replace(array('(', ')', '"', "'", '/', ','), '', $pro->title);
+
+            $cart = array(
+                'id' => $pro->id,
+                'qty' => min($quantity, $pro->quantity),
+                'price' => $pro->price,
+                'name' => $clean_product_name,
+                'options' => array('image' => $pro->image, 'in_stock' => $pro->quantity)
+            );
+            $this->cart->insert($cart);
+        }
+
+    
+    }
+
+    redirect(base_url() . 'gio-hang');
+}
+
+
+public function update_cart_item()
+{
+    $rowid = $this->input->post('rowid');
+    $new_quantity = $this->input->post('quantity');
+
+    foreach ($this->cart->contents() as $items) {
+        if ($rowid == $items['rowid']) {
+            $product_id = $items['id'];
+            $current_stock = $items['options']['in_stock'];
+
+            if ($new_quantity <= $current_stock) {
+                $update_data = array('rowid' => $rowid, 'qty' => $new_quantity);
+                $this->cart->update($update_data);
+            } else {
+                $this->session->set_flashdata('error_message', 'Số lượng cập nhật vượt quá số lượng có sẵn.');
+            }
+        }
+    }
+    redirect(base_url() . 'gio-hang');
+}
+
+
+public function delete_item($rowid)
+{
+    $this->cart->remove($rowid);
+    redirect(base_url() . 'gio-hang', 'refresh');
+}
 
 
 	public function delete_all_cart()
 	{
-		$this->cart->destroy();
-		redirect(base_url() . 'gio-hang', 'refresh');
+			$this->cart->destroy();
+			redirect(base_url() . 'gio-hang', 'refresh');
 	}
-	public function delete_item($rowid)
-{
-    foreach ($this->cart->contents() as $items) {
-        if ($items['rowid'] == $rowid) {
-            $quantity_to_return = $items['qty']; // Số lượng sản phẩm trong giỏ
-            $product_id = $items['id'];         // ID sản phẩm
-            $this->cart->remove($rowid);        // Xóa sản phẩm khỏi giỏ hàng
 
-            // Cập nhật số lượng sản phẩm trong kho
-            $product_details = $this->IndexModel->getProductDetails($product_id);
-            foreach ($product_details as $pro) {
-                $new_quantity = $pro->quantity + $quantity_to_return; // Cộng lại số lượng đã xóa vào kho
-                $this->IndexModel->updateProductQuantity($product_id, $new_quantity);
-            }
-            break; // Thoát vòng lặp sau khi tìm thấy sản phẩm cần xóa
-        }
-    }
-    redirect(base_url() . 'gio-hang', 'refresh'); // Chuyển hướng về trang giỏ hàng
-}
-
-	
-
-	
 	private function calculate_total_cart_quantity($product_id)
 	{
 			$total_quantity = 0;
@@ -306,37 +305,6 @@ class indexController extends CI_Controller
 					}
 			}
 			return $total_quantity;
-	}
-	
-
-	
-	public function update_cart_item()
-	{
-			$rowid = $this->input->post('rowid');
-			$new_quantity = $this->input->post('quantity');
-	
-			foreach ($this->cart->contents() as $items) {
-					if ($rowid == $items['rowid']) {
-							$old_quantity = $items['qty']; // Số lượng cũ trong giỏ
-							$product_id = $items['id'];   // ID sản phẩm
-							$current_stock = $items['options']['in_stock']; // Số lượng còn lại trong kho
-	
-							// Kiểm tra số lượng cập nhật có hợp lệ không
-							if ($new_quantity <= $current_stock + $old_quantity) {
-									// Cập nhật số lượng trong giỏ hàng
-									$update_data = array('rowid' => $rowid, 'qty' => $new_quantity);
-									$this->cart->update($update_data);
-	
-									// Tính toán lại số lượng trong kho
-									$quantity_difference = $new_quantity - $old_quantity; // Chênh lệch số lượng
-									$new_stock = $current_stock - $quantity_difference;  // Cập nhật kho
-									$this->IndexModel->updateProductQuantity($product_id, $new_stock);
-							} else {
-									$this->session->set_flashdata('error_message', 'Số lượng cập nhật vượt quá số lượng có sẵn.');
-							}
-					}
-			}
-			redirect(base_url() . 'gio-hang');
 	}
 	
 
@@ -552,59 +520,78 @@ class indexController extends CI_Controller
 
 
 	public function confirm_checkout()
-	{
-		$this->form_validation->set_rules('name', 'Họ tên', 'trim|required', ['required' => 'Vui lòng nhập %s.']);
-		$this->form_validation->set_rules('email', 'Email', 'trim|required', ['required' => 'Vui lòng nhập %s.']);
-		$this->form_validation->set_rules('location', 'Địa chỉ', 'trim|required', ['required' => 'Vui lòng nhập %s.']);
-		$this->form_validation->set_rules('phone', 'Số điện thoại', 'trim|required', ['required' => 'Vui lòng nhập %s.']);
+{
+    $this->form_validation->set_rules('name', 'Họ tên', 'trim|required', ['required' => 'Vui lòng nhập %s.']);
+    $this->form_validation->set_rules('email', 'Email', 'trim|required', ['required' => 'Vui lòng nhập %s.']);
+    $this->form_validation->set_rules('location', 'Địa chỉ', 'trim|required', ['required' => 'Vui lòng nhập %s.']);
+    $this->form_validation->set_rules('phone', 'Số điện thoại', 'trim|required', ['required' => 'Vui lòng nhập %s.']);
 
-		if ($this->form_validation->run()) {
-			$email = $this->input->post('email');
-			$name = $this->input->post('name');
-			$phone = $this->input->post('phone');
-			$location = $this->input->post('location');
-			$shipping_method = $this->input->post('shipping_method');
-			$data = array(
-				'name' => $name,
-				'email' => $email,
-				'method' => $shipping_method,
-				'location' => $location,
-				'phone' => $phone
-			);
-			$this->load->model('loginModel');
-			$result = $this->loginModel->newShipping($data);
-			if ($result) {
-				$order_code = random_int(00, 9999);
-				$data_order = array(
-					'order_code' => $order_code,
-					'ship_id' => $result,
-					'status' => 1
-				);
-				$insert_order = $this->loginModel->insert_order($data_order);
-				//order_details
-				foreach ($this->cart->contents() as $items) {
-					$data_order_details = array(
-						'order_code' => $order_code,
-						'product_id' => $items['id'],
-						'quantity' => $items['qty']
-					);
-					$insert_order_details = $this->loginModel->insert_order_details($data_order_details);
-				}
+    if ($this->form_validation->run()) {
+        $email = $this->input->post('email');
+        $name = $this->input->post('name');
+        $phone = $this->input->post('phone');
+        $location = $this->input->post('location');
+        $shipping_method = $this->input->post('shipping_method');
+        
+        $data = array(
+            'name' => $name,
+            'email' => $email,
+            'method' => $shipping_method,
+            'location' => $location,
+            'phone' => $phone
+        );
 
-				$this->cart->destroy();
-				//send mail after checkout
-				$message_data = array('name' => $name, 'order_code' => $order_code);
-				$this->send_mail_comfirm_checkout($email, 'NPC Shop đã nhận được đơn hàng của bạn', $message_data);
-				redirect(base_url('/thanks'));
-			} else {
-				$this->session->flashdata('error', 'Đăng nhập không thành công');
-				redirect(base_url('/checkout'));
-			}
-		} else {
-			$this->checkout();
-		}
+        $this->load->model('loginModel');
+        $result = $this->loginModel->newShipping($data);
+        
+        if ($result) {
+            $order_code = random_int(1000, 9999); // nên dùng từ 1000 để tránh số ngắn
 
-	}
+            $data_order = array(
+                'order_code' => $order_code,
+                'ship_id' => $result,
+                'status' => 1
+            );
+            $insert_order = $this->loginModel->insert_order($data_order);
+
+            foreach ($this->cart->contents() as $items) {
+                $product_id = $items['id'];
+                $quantity_ordered = $items['qty'];
+
+                // Lưu chi tiết đơn hàng
+                $data_order_details = array(
+                    'order_code' => $order_code,
+                    'product_id' => $product_id,
+                    'quantity' => $quantity_ordered
+                );
+                $this->loginModel->insert_order_details($data_order_details);
+
+                // Cập nhật tồn kho
+                $product_details = $this->IndexModel->getProductDetails($product_id);
+                if ($product_details) {
+                    $current_stock = $product_details[0]->quantity;
+                    $new_quantity = max(0, $current_stock - $quantity_ordered);
+                    $this->IndexModel->updateProductQuantity($product_id, $new_quantity);
+                }
+            }
+
+            // Xóa giỏ hàng sau khi đã lưu và cập nhật xong
+            $this->cart->destroy();
+
+            // Gửi mail xác nhận
+            $message_data = array('name' => $name, 'order_code' => $order_code);
+            $this->send_mail_comfirm_checkout($email, 'NPC Shop đã nhận được đơn hàng của bạn', $message_data);
+
+            redirect(base_url('/thanks'));
+        } else {
+            $this->session->set_flashdata('error', 'Đăng nhập không thành công');
+            redirect(base_url('/checkout'));
+        }
+    } else {
+        $this->checkout();
+    }
+}
+
 	public function send_mail($to_email, $title, $message_data)
 	{
 		$config = array();

@@ -1,7 +1,7 @@
 <footer id="footer"><!--Footer-->
 	<div class="footer-top">
 		<div class="leftS">
-			<p style="font-size:28px;margin:0;font-weight:600"> Tại sao nên mua <br> hàng tại LUVSHOP</p>
+			<p style="font-size:28px;margin:0;font-weight:600"> Tại sao nên mua <br> hàng tại NPCSHOP</p>
 			<div class="benefit-item">
 				<div class="icon"><i class="fa-solid fa-computer"></i></div>
 				<p>Đa dạng<br> cấu hình</p>
@@ -85,7 +85,7 @@
 				<div class="col-sm-3">
 
 					<div class="companyinfo">
-						<h2><span style="font-size:26px;">LUV</span>SHOP</h2>
+						<h2><span style="font-size:26px;">NPC</span>SHOP</h2>
 						<p>Just five decent fellows sharing our passion for gaming with you!</p>
 					</div>
 					<img src="<?php echo base_url('frontend/images/1.png'); ?>" alt="" style="margin-bottom:15px">
@@ -126,9 +126,9 @@
 				</div>
 				<div class="col-sm-3">
 					<div class="single-widget">
-						<h2>Về LUV SHOP</h2>
+						<h2>Về NPC SHOP</h2>
 						<ul class="nav nav-pills nav-stacked">
-							<li><a href="<?php echo base_url('information') ?>">Thông tin về LUV</a></li>
+							<li><a href="<?php echo base_url('information') ?>">Thông tin về NPC Shop</a></li>
 							<li><a href="<?php echo base_url('contact') ?>">Địa điểm cửa hàng</a></li>
 						</ul>
 					</div>
@@ -159,7 +159,7 @@
 	<div class="footer-bottom">
 		<div class="container">
 			<div class="row">
-				<p class="pull-left">Copyright © 2025 LUV Inc.</p>
+				<p class="pull-left">Copyright © 2025 NPC Inc.</p>
 				<p class="pull-right">Designed by <span><a target="_blank"
 							href="https://steamcommunity.com/id/cornspringluv/">cornspringluv</a></span></p>
 			</div>

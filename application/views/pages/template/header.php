@@ -41,7 +41,7 @@ $baseURL = base_url(); // URL gốc
     href="<?php echo base_url('frontend/images/ico/apple-touch-icon-57-precomposed.png') ?>">
 </head>
 
-<body class="<?php echo ($this->uri->segment(1) == '') ? 'homepage' : ''; ?>">
+<body class="<?php echo ($this->uri->segment(1) == '') ? 'homepage' : ''; ?> is-pc-mini">
   <header id="header">
     <div class="header_top">
       <div class="container">
@@ -52,7 +52,7 @@ $baseURL = base_url(); // URL gốc
                 <li><a style="font-weight:600; "><i style="font-size: 12px;" class="fa fa-phone"></i> 0888888888</a>
                 </li>
                 <li><a style="font-weight:600; "><i style="font-size: 12px;" class="fa fa-envelope"></i>
-                    LUVshop123@gmail.com</a></li>
+                    npcshop123@gmail.com</a></li>
                 <li><a style="font-weight:600; "><i style="font-size: 12px;" class="fa fa-location-arrow"></i> 241 Điện
                     Biên, Lộc Hoà,
                     Nam Định, Việt Nam</a></li>
@@ -78,7 +78,7 @@ $baseURL = base_url(); // URL gốc
         <div class="row">
           <div class="col-sm-3">
             <div class="logo pull-left">
-              <a href="<?php echo base_url('/') ?>"><img src="<?php echo base_url('logo/logo22.png'); ?>"
+              <a class="logoWeb" href="<?php echo base_url('/') ?>"><img src="<?php echo base_url('logo/6.png'); ?>"
                   alt="Logo" /></a>
             </div>
             <div class="btn-group pull-right">
@@ -204,7 +204,7 @@ $baseURL = base_url(); // URL gốc
                 <div class="img-container">
                   <img src="<?php echo base_url('logo/anh/categorybanner_4_img.png'); ?>" alt="Banner" />
                 </div>
-                <div class="img-container">
+                <div class="img-container img-container4 ">
                   <img src="<?php echo base_url('logo/anh/categorybanner_2_img.png'); ?>" alt="Banner" />
                 </div>
               </div>
@@ -219,8 +219,12 @@ $baseURL = base_url(); // URL gốc
     .logo img {
       max-width: 100px;
       height: auto;
-    }
+  
+    } 
+
+   
   </style>
 </body>
 
 </html>
+

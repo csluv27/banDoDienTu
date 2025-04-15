@@ -308,7 +308,7 @@ a#scrollUp i {
 
 .bigBanner img {
   width: 100%;
-  height: 420px;
+  height: auto;
   border-radius: 10px;
 }
 

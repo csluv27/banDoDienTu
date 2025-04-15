@@ -4,14 +4,16 @@
    <div class="breadcrumbs">
      <ol class="breadcrumb">
        <li><a href="<?php echo base_url('/') ?>">Home</a></li>
-       <li class="active"> Liên hệ LUV Shop</li>
+       <li class="active"> Liên hệ NPC Shop</li>
      </ol>
    </div>
 
 
    <div class=" container custom-container">
      <span class="title" style="font-size: 30px;font-weight:700;color:#CE3C2D;">Liên hệ</span>
-     <div class="underline" style=""></div>
+     <div class="underline" style="" style=" border-bottom: 2px solid #e0e0e0;
+    margin-top: 5px;
+    margin-bottom: 20px;"></div>
      <iframe
        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3738.8551185156552!2d106.16051547666265!3d20.430042481073645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135e756dae56d0d%3A0x97cbf14af357037e!2zMjQxIMSQaeG7h24gQmnDqm4sIEzhu5ljIEhvw6AsIE5hbSDEkOG7i25oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1737096165929!5m2!1svi!2s"
        allowfullscreen="" style="  width: 100%;
@@ -24,7 +26,9 @@
        <form action="<?php echo base_url('send-contact') ?>" method="POST" class="leftSection">
          <div>
            <span style="font-size: 24px; margin-bottom:10px">Viết nhận xét:</span>
-           <div class="underline"></div>
+           <div class="underline" style=" border-bottom: 2px solid #e0e0e0;
+    margin-top: 5px;
+    margin-bottom: 20px;"></div>
            <span style="margin-bottom:15px">Nếu bạn có thắc mắc gì, có thể gửi yêu cầu cho chúng tôi, và chúng tôi sẽ
              liên lạc lại với bạn sớm nhất có thể.</span>
            <input type="text" name="name" placeholder="Họ và tên" class="inputField">
@@ -39,7 +43,9 @@
 
        <div class="rightSection">
          <span style="font-size: 24px;">Chúng tôi ở đây</span>
-         <div class="underline"></div>
+         <div class="underline" style=" border-bottom: 2px solid #e0e0e0;
+    margin-top: 5px;
+    margin-bottom: 20px;"></div>
          <div style="display:flex;flex-direction:column;gap:15px">
 
            <span style="font-size: 20px;">New Gaming Product & Power Computing Center</span>
@@ -50,7 +56,7 @@
            </div>
            <div class="info">
              <i class="fa fa-envelope" style="margin-right:15px;" aria-hidden="true"></i>
-             <span>LUVshop123@gmail.com</span>
+             <span>npcshop123@gmail.com</span>
            </div>
            <div class="info">
              <i class="fa fa-phone" style="margin-right:15px;" aria-hidden="true"></i>
@@ -94,11 +100,6 @@
     font-size: 16px;
   }
 
-  .underline {
-    border-bottom: 2px solid #e0e0e0;
-    margin-top: 5px;
-    margin-bottom: 20px;
-  }
 
   .leftSection,
   .rightSection {

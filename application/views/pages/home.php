@@ -20,7 +20,7 @@
               <?php foreach ($chunks as $key => $chunk) { ?>
                 <div class="item <?php echo $key == 0 ? 'active' : '' ?>">
                   <?php foreach ($chunk as $pro) { ?>
-                    <div class="col-sm-3 col-sm-6">
+                    <div class="col-sm-3 col-sm-6 ">
                       <div class="product-image-wrapper">
                         <form action="<?php echo base_url('add-to-cart') ?>" method="POST">
                           <div class="single-products <?php echo ($pro->quantity == 0) ? 'out-of-stock' : ''; ?>">
@@ -232,10 +232,9 @@
           </div>
         </div>
 
-      
 
-        <div
-          style="flex:1;flex-grow:1;background-color:white;padding:20px;width:100%;border-radius:10px">
+
+        <div style="flex:1;flex-grow:1;background-color:white;padding:20px;width:100%;border-radius:10px">
         </div>
         <div class="top-selling-products">
           <div>
@@ -324,7 +323,7 @@
         .single-products {
           width: 100%;
           height: 360px;
-          max-height:360px;
+          max-height: 360px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -447,12 +446,16 @@
           min-height: auto;
           display: block;
         }
-        .productinfo h2{
+
+        .productinfo h2 {
           margin-bottom: 15px;
         }
-        .divTo{
+
+        .divTo {
           margin-bottom: 30px;
         }
+
+      
       </style>
     </div>
   </div>

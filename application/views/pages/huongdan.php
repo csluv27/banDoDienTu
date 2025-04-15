@@ -8,7 +8,7 @@
      </div>
     <div class="container custom-container">
       <div class="">
-        <h1 class="title">5 bước đặt hàng dễ dàng tại LUV Gaming</h1>
+        <h1 class="title">5 bước đặt hàng dễ dàng tại NPC Gaming</h1>
         <!-- Bước 1 -->
         <div class="step">
           <h2>Bước 1: Đăng ký và đăng nhập tài khoản</h2>
@@ -56,7 +56,7 @@
         <!-- Cảm ơn -->
         <div class="thank-you">
           <h2>Cảm ơn bạn đã xem hướng dẫn</h2>
-          <p style="font-size:16px;">Cảm ơn bạn vì đã tin tưởng và mua sản phẩm tại LUV Gaming!</p>
+          <p style="font-size:16px;">Cảm ơn bạn vì đã tin tưởng và mua sản phẩm tại NPC Gaming!</p>
         </div>
       </div>
     </div>

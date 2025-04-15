@@ -37,25 +37,25 @@
     <div class="breadcrumbs">
          <ol class="breadcrumb">
            <li><a href="<?php echo base_url('/') ?>">Home</a></li>
-           <li class="active"> Về LUV Shop</li>
+           <li class="active"> Về NPC Shop</li>
          </ol>
        </div>
     <div class="container custom-container">
         <div class="content">
-        <h1>Giới thiệu về LUV Shop</h1>
+        <h1>Giới thiệu về NPC Shop</h1>
         <p style="font-size: 16px;">
-            LUV Shop là thương hiệu được sinh ra từ giấc mơ của một game thủ, phát triển bởi tập thể các game thủ để phục vụ cho cộng đồng game thủ Việt.
+            NPC Shop là thương hiệu được sinh ra từ giấc mơ của một game thủ, phát triển bởi tập thể các game thủ để phục vụ cho cộng đồng game thủ Việt.
         </p>
         <p style="font-size: 16px;">
-            Đội ngũ tư vấn của LUV Shop không đơn thuần là nhân viên kinh doanh, chúng tôi còn là những người yêu game với mong muốn giúp bạn cùng sở thích có được dàn máy và gear phù hợp.
+            Đội ngũ tư vấn của NPC Shop không đơn thuần là nhân viên kinh doanh, chúng tôi còn là những người yêu game với mong muốn giúp bạn cùng sở thích có được dàn máy và gear phù hợp.
         </p>
         <p style="font-size: 16px;">
-            Sự hài lòng của khách hàng chính là động lực giúp LUV Shop không ngừng hoàn thiện, mang lại ngày càng nhiều giá trị tích cực cho cộng đồng.
+            Sự hài lòng của khách hàng chính là động lực giúp NPC Shop không ngừng hoàn thiện, mang lại ngày càng nhiều giá trị tích cực cho cộng đồng.
         </p>
         
         <section class="content-section">
             <h2>Sứ mệnh của chúng tôi</h2>
-            <p style="font-size: 16px;">LUV Shop được thành lập với niềm tin rằng công nghệ không chỉ là công cụ, mà còn là cách để mỗi người thể hiện cá tính và đam mê. Chúng tôi mang đến các sản phẩm chất lượng cao để tối ưu hóa trải nghiệm chơi game của bạn.</p>
+            <p style="font-size: 16px;">NPC Shop được thành lập với niềm tin rằng công nghệ không chỉ là công cụ, mà còn là cách để mỗi người thể hiện cá tính và đam mê. Chúng tôi mang đến các sản phẩm chất lượng cao để tối ưu hóa trải nghiệm chơi game của bạn.</p>
         </section>
         
         <section class="content-section">
@@ -74,7 +74,7 @@
         
         <section class="content-section">
             <h2>Hành trình phát triển</h2>
-            <p style="font-size: 16px;">LUV Shop được thành lập vào năm 2025 và đã nhanh chóng khẳng định vị thế trong lĩnh vực gaming với các dòng sản phẩm đa dạng như:</p>
+            <p style="font-size: 16px;">NPC Shop được thành lập vào năm 2025 và đã nhanh chóng khẳng định vị thế trong lĩnh vực gaming với các dòng sản phẩm đa dạng như:</p>
             <ul style="font-size:16px;">
                 <li><span class="highlight">PC Gaming:</span> Hiệu năng vượt trội, thiết kế cho các tựa game nặng.</li>
                 <li><span class="highlight">Laptop Gaming:</span> Linh hoạt, tối ưu hóa sức mạnh cho game thủ di động.</li>

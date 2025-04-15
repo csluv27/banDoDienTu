@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 16, 2025 lúc 02:22 PM
+-- Thời gian đã tạo: Th4 11, 2025 lúc 10:04 AM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.0.30
 
@@ -41,14 +41,10 @@ CREATE TABLE `brands` (
 --
 
 INSERT INTO `brands` (`id`, `title`, `description`, `image`, `status`, `slug`) VALUES
-(8, 'Corsair', 'Corsair là thương hiệu công nghệ hàng đầu, nổi tiếng với các sản phẩm linh kiện máy tính, gaming gear và thiết bị ngoại vi chất lượng cao. Thành lập năm 1994, Corsair không ngừng đổi mới, cung cấp các', '1735799750CORSAIR.png', 1, 'corsair'),
-(10, 'Samsung', 'Samsung là tập đoàn công nghệ hàng đầu thế giới, nổi tiếng với các sản phẩm điện tử tiêu dùng như điện thoại, TV, tủ lạnh, và chip bán dẫn. Với sự đổi mới không ngừng, chất lượng vượt trội và thiết kế', '1735800048SAMSUNG.png', 1, 'samsung'),
-(11, 'Logitech', 'Logitech là thương hiệu công nghệ hàng đầu, chuyên sản xuất các thiết bị ngoại vi như chuột, bàn phím, tai nghe và webcam, nổi bật với thiết kế sáng tạo và chất lượng cao. Thành lập năm 1981, Logitech', '1735805128LOGITECH.png', 1, 'logitech'),
-(12, 'Sony', 'Sony là tập đoàn công nghệ và giải trí hàng đầu thế giới, nổi tiếng với các sản phẩm điện tử như TV, máy ảnh, tai nghe và hệ máy chơi game PlayStation. Thành lập năm 1946, Sony kết hợp sáng tạo và chấ', '1735805169SONY.png', 1, 'sony'),
-(13, 'Zowie', 'Zowie là thương hiệu gaming chuyên nghiệp thuộc BenQ, nổi tiếng với các sản phẩm chuột, màn hình và thiết bị ngoại vi tập trung vào eSports. Với thiết kế tối giản, hiệu suất cao và độ chính xác tối ưu', '1735805191ZOWIE.png', 1, 'zowie'),
-(14, 'MSI', 'MSI (Micro-Star International) là thương hiệu công nghệ nổi tiếng, chuyên sản xuất laptop gaming, bo mạch chủ, card đồ họa và thiết bị PC. Thành lập năm 1986, MSI cam kết mang đến hiệu suất vượt trội,', '1735805216MSI.jpg', 1, 'msi'),
-(15, 'Razer', 'Razer là thương hiệu công nghệ hàng đầu dành cho game thủ, chuyên sản xuất thiết bị gaming như chuột, bàn phím, tai nghe và laptop. Thành lập năm 2005, Razer nổi bật với thiết kế hiện đại, hiệu suất c', '1735805232RAZER.jpg', 1, 'razer'),
-(16, 'ASUS', 'Asus là thương hiệu công nghệ toàn cầu nổi tiếng với các sản phẩm máy tính, laptop, linh kiện và thiết bị chơi game. Với sự kết hợp giữa chất lượng, sáng tạo và hiệu suất cao, Asus được người dùng đán', '1735806203z6189895199011_e8790bfef158a9e85964d112c11785ee.jpg', 1, 'asus');
+(19, 'ASUS', 'Asus là thương hiệu công nghệ toàn cầu nổi tiếng với các sản phẩm máy tính, laptop, linh kiện và thiết bị chơi game. Với sự kết hợp giữa chất lượng, sáng tạo và hiệu suất cao, Asus được người dùng đán', '1743332260424_asus.jpg', 1, 'ASUS'),
+(17, 'AMD', 'AMD (Advanced Micro Devices) là một công ty công nghệ nổi tiếng của Mỹ, chuyên thiết kế và sản xuất các vi xử lý, bộ vi mạch, card đồ họa và các sản phẩm bán dẫn khác', '1743321966png-transparent-amd-logo-logos-logos-and-brands-icon.png', 1, 'AMD'),
+(18, 'Intel', 'Intel (Integrated Electronics) là một tập đoàn công nghệ hàng đầu của Mỹ, được thành lập vào năm 1968. Công ty chuyên sản xuất vi xử lý, chipset, bộ nhớ và các giải pháp phần cứng khác.', '1743321994purepng_com-intel-logologobrand-logoiconslogos-251519939644r68ft.png', 1, 'INTEL'),
+(12, 'Sony', 'Sony là tập đoàn công nghệ và giải trí hàng đầu thế giới, nổi tiếng với các sản phẩm điện tử như TV, máy ảnh, tai nghe và hệ máy chơi game PlayStation. Thành lập năm 1946, Sony kết hợp sáng tạo và chấ', '1735805169SONY.png', 1, 'sony');
 
 -- --------------------------------------------------------
 
@@ -70,11 +66,15 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `title`, `description`, `status`, `image`, `slug`) VALUES
-(9, 'Console', 'Console là thiết bị chơi game chuyên dụng, dễ sử dụng và tối ưu hóa hiệu năng.', 1, '1735805386Console.png', 'console'),
-(8, 'PC Gaming', 'PC gaming là hình thức chơi game trên máy tính với hiệu năng cao và đồ họa ấn tượng.', 1, '1735805365Case.png', 'pc_gaming'),
-(10, 'Gaming gear', 'Bàn phím và chuột là thiết bị nhập liệu chính, hỗ trợ thao tác nhanh và chính xác.', 1, '1735805424hinh-anh-ban-phim-+-chuot.jpg', 'gaming-gear'),
-(11, 'Laptop', 'Laptop là máy tính xách tay nhỏ gọn, tiện lợi, tích hợp pin và màn hình di động.', 1, '1735805446Laptop.png', 'laptop'),
-(12, 'Tai nghe, ghế, loa', 'Tai nghe, ghế, loa gaming nâng cao âm thanh, thoải mái, và trải nghiệm chơi game chân thực.', 1, '1735805552Tai_nghe_gaming.png', 'tai_nghe_ghe_loa');
+(18, 'Linh kiện máy tính', 'Linh kiện máy tính', 1, '1743388171linh-kien-may-tinh-gia-re-2.jpg', 'linh-kien-may-tinh'),
+(8, 'PC Pro Gaming', 'PC gaming là hình thức chơi game trên máy tính với hiệu năng cao và đồ họa ấn tượng.', 1, '17433881941743322990PC-AMD-GAMING-PRO-RYZEN-5-7500F---RTX-5070-12GB-OC-WHITE-(All-NEW---Bảo-hành-36-', 'pc-pro-gaming'),
+(17, 'PC Workstation', 'PC Workstation', 1, '1743322111Ảnh-chụp-màn-hình-2025-03-25-130622.png', 'pc-workstation'),
+(16, 'PC Core Ultra', 'PC Core Ultra', 1, '1743322098Ảnh-chụp-màn-hình-2025-03-25-130622.png', 'pc-core-ultra'),
+(14, 'PC Gaming AMD', 'PC Gaming AMD', 1, '1743322065Ảnh-chụp-màn-hình-2025-03-25-130622.png', 'pc-gaming-amd'),
+(15, 'PC Gaming Intel', 'PC Gaming Intel', 1, '1743322082Ảnh-chụp-màn-hình-2025-03-25-130622.png', 'pc-gaming-intel'),
+(19, 'Màn hình', 'Màn hình', 1, '1743322152Ảnh-chụp-màn-hình-2025-03-25-130622.png', 'man-hinh'),
+(20, 'PC Mini', 'PC Mini', 1, '1743322166Ảnh-chụp-màn-hình-2025-03-25-130622.png', 'pc-mini'),
+(21, 'Máy Console PS5', 'Máy Console PS5', 1, '1743322180Ảnh-chụp-màn-hình-2025-03-25-130622.png', 'may-console-ps5');
 
 -- --------------------------------------------------------
 
@@ -88,17 +88,6 @@ CREATE TABLE `contact` (
   `email` varchar(100) NOT NULL,
   `note` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `contact`
---
-
-INSERT INTO `contact` (`id`, `name`, `email`, `note`) VALUES
-(7, 'Ngô Xuân Quý', 'luvngo27@gmail.com', 'Tôi hoàn toàn ấn tượng với trải nghiệm mua sắm trên website này! Họ cung cấp một loạt các sản phẩm gaming chất lượng từ các thương hiệu nổi tiếng. Giao diện trang web rất thân thiện, dễ dàng tìm kiếm và mua sắm.'),
-(8, 'Nguyễn Xuân Huy', 'huy277003@gmail.com', 'Tôi rất hài lòng với dịch vụ của website bán đồ gaming này! Sản phẩm đa dạng, cập nhật mẫu mới thường xuyên, đảm bảo mang đến những lựa chọn phong phú. Trang web được thiết kế bắt mắt và dễ điều hướng, giúp tôi nhanh chóng tìm kiếm sản phẩm cần thiết. '),
-(9, 'Nguyễn Đức Thảo', 'thao23@gmail.com', 'Website bán đồ gaming này thực sự đáng để trải nghiệm! Các sản phẩm được chọn lọc kỹ lưỡng, chất lượng cao và giá cả hợp lý. Giao diện thân thiện với người dùng, dễ dàng duyệt qua các danh mục và tìm kiếm sản phẩm nhanh chóng. Sẽ đề xuất cho người khác'),
-(10, 'Nguyễn Đức Thảo', 'thao23@gmail.com', 'web hoạt động trơn tru tôi rất thích'),
-(11, 'Ngô Xuân Quý', 'ngoq6155@gmail.com', 'web lam viec tot');
 
 -- --------------------------------------------------------
 
@@ -123,14 +112,14 @@ CREATE TABLE `customers` (
 
 INSERT INTO `customers` (`id`, `name`, `email`, `password`, `location`, `phone`, `status`, `token`) VALUES
 (1, 'Ngô Xuân Quý', 'luvngo27@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Hà Nội', '0889033006', 1, '3234'),
-(21, 'Corn Spring Luv', 'naoimanetop@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 'Hà Nội', '0948926993', 1, '7200'),
 (22, 'Ngô Văn Quý', 'ngoluv8@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Hà Nội', '0948926993', 1, '6938'),
 (23, 'Nguyễn Đức Thảo', 'cornspringluv@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Hà Nội', '099999999', 0, '1906'),
 (24, 'ngo quy', 'ngoq6155@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Hà Nội', '0889033006', 1, '8953'),
 (25, 'Nguyễn Đức Thảo', 'doanvanhau55555@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Hà Nội', '0336852003', 0, '1905'),
 (26, 'admin', 'doanvanhau55555@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Hà Nội', '0336852003', 0, '2684'),
 (27, 'Nguyễn Đức Thảo', 'doanvanhau55555@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Hà Nội', '0208392984', 0, '5331'),
-(28, 'admin', 'doanvanhau55555@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Hà Nội 1', '0938493479', 0, '9987');
+(28, 'admin', 'doanvanhau55555@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Hà Nội 1', '0938493479', 0, '9987'),
+(29, 'Nguyễn Xuân Huy', 'huy123@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Hà Nam', '0882334455', 0, '3586');
 
 -- --------------------------------------------------------
 
@@ -165,7 +154,12 @@ INSERT INTO `orders` (`id`, `order_code`, `status`, `ship_id`) VALUES
 (25, '1396', 1, 25),
 (26, '8935', 1, 26),
 (27, '4216', 1, 27),
-(28, '2342', 1, 28);
+(28, '2342', 1, 28),
+(30, '233', 1, 30),
+(31, '8255', 1, 31),
+(32, '5462', 1, 32),
+(33, '1642', 1, 33),
+(34, '4883', 1, 34);
 
 -- --------------------------------------------------------
 
@@ -185,33 +179,20 @@ CREATE TABLE `order_details` (
 --
 
 INSERT INTO `order_details` (`id`, `order_code`, `product_id`, `quantity`) VALUES
-(1, '2470', 17, 1),
-(2, '2470', 70, 1),
-(3, '2470', 75, 1),
-(4, '2470', 41, 1),
-(5, '2470', 26, 1),
-(6, '2470', 52, 1),
-(7, '2470', 35, 1),
-(8, '2470', 38, 1),
-(9, '2470', 44, 1),
-(10, '5840', 15, 10),
-(11, '5840', 16, 1),
-(12, '9406', 15, 1),
-(13, '1157', 15, 9),
-(14, '9164', 17, 1),
-(15, '254', 70, 1),
-(16, '7817', 39, 1),
-(30, '8933', 20, 5),
-(31, '9966', 21, 3),
-(32, '7457', 22, 5),
-(33, '5854', 24, 4),
-(34, '1155', 16, 1),
-(35, '1396', 62, 7),
-(36, '8935', 70, 6),
-(37, '4216', 70, 1),
-(38, '4216', 52, 1),
-(39, '4216', 15, 1),
-(40, '2342', 15, 7);
+(41, '233', 86, 1),
+(42, '8255', 113, 21),
+(43, '5462', 90, 1),
+(44, '5462', 136, 1),
+(45, '5462', 278, 1),
+(46, '5462', 178, 1),
+(47, '5462', 255, 2),
+(48, '5462', 87, 1),
+(49, '5462', 258, 1),
+(50, '5462', 256, 1),
+(51, '5462', 260, 1),
+(52, '5462', 262, 1),
+(53, '1642', 89, 1),
+(54, '4883', 86, 1);
 
 -- --------------------------------------------------------
 
@@ -237,77 +218,175 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `title`, `description`, `image`, `status`, `category_id`, `brand_id`, `slug`, `quantity`, `price`) VALUES
-(15, 'PC R9-9950X RTX 4090', 'PC hiệu năng cao', '1735805725PC-GVN-AMD-R9-9950X-VGA-RTX-4090.png', 1, 8, 10, 'pc_r9_9950', 0, 50000000),
-(16, 'PC R7-7700X RTX 4070 Ti Super', 'PC hiệu năng cao', '1735805831PC-GVN-G-STUDIO-AMD-R7-7700X-VGA-RTX-4070-Ti-Super-(Powered-by-ASUS).png', 1, 8, 10, 'pc_r7_7700', 4, 45000000),
-(17, 'PC I9-14900K RTX 4090', 'PC hiệu năng cao', '1735805880PC-GVN-G-STUDIO-Intel-i914900K-VGA-RTX-4090-.png', 1, 8, 10, 'pc_i9_14900K', 9, 48000000),
-(18, 'PC I7-14700F RTX 4060', 'PC hiệu năng cao', '1735805928PC-GVN-Intel-i7-14700F-VGA-RTX-4060.png', 1, 8, 11, 'pc_i7_14700K', 4, 40000000),
-(19, 'PC I7-14900K RTX 4070', 'PC hiệu năng cao', '1735805963PC-GVN-Intel-i9-14900K-VGA-RTX-4070-Ti-Super.png', 1, 8, 13, 'pc_i9_14900K', 5, 60000000),
-(20, 'PC I9-14900K RTX 4080 Super', 'PC hiệu năng cao', '1735806060PC-GVN-x-AORUS-XTREME-ICE-(Intel-i9-14900K-VGA-RTX-4080-Super).png', 1, 8, 10, 'pc_i9_14900K', 5, 65000000),
-(21, 'PC Core Ultra 9 295K RTX 4090', 'PC hiệu năng cao', '1735806166PC-GVN-x-ASUS-Advanced-Ai-(Intel-Core-Ultra-9-285K-VGA-RTX-4090)-(Powered-by-ASUS).png', 1, 8, 10, 'pc_core_ultra_9_285K', 10, 66000000),
-(22, 'PC Core Ultra 9 295K RTX 4080 Super', 'PC hiệu năng cao', '1735806243PC-GVN-x-MSI-Dragon-ACE-(Intel-Core-Ultra-9-285K-VGA-RTX-4080-Super).png', 1, 8, 14, 'pc_core_ultra_9_285K', 6, 63000000),
-(23, 'PC ROG Hyperion EVA-02', 'PC hiệu năng cao', '1735806301Vỏ-máy-tính-ASUS-ROG-Hyperion-EVA-02-Edition.png', 1, 8, 16, 'pc_rog_hyperion_eva_02', 8, 8300000),
-(24, 'Vỏ case Corsair iCUE 5000X', 'Vỏ case Corsair RGB QL TG White', '1735806397Vỏ-máy-tính-Corsair-iCUE-5000X-RGB-QL-TG-White.png', 1, 8, 8, 'vo_case_corsair', 6, 2000000),
-(25, 'Chuột gaming razer v2', 'Chuột gaming cao cấp từ razer', '173580646451576_chuot_razer_deathadder_v2_rgb_gaming_mouse_black_rz01_03210100_r3m1_0003_1.jpg', 1, 10, 15, 'gaming_mouse', 10, 2000000),
-(26, 'Chuột gaming Logitech G Pro X', 'Chuột gaming cao cấp từ logitech', '1735806499Chuột-Logitech-G-Pro-X-Superlight-Wireless-White.png', 1, 10, 11, 'gaming_mouse', 6, 2000000),
-(27, 'Chuột gaming Logitech G502', 'Chuột gaming cao cấp từ logitech', '1735806525Chuột-Logitech-G502-X-Plus-LightSpeed-Black.png', 1, 10, 11, 'gaming_mouse', 10, 1400000),
-(28, 'Chuột gaming Razer Basilisk V3 Pro', 'Chuột gaming cao cấp từ razer', '1735806557Chuột-Razer-Basilisk-V3-Pro-35K-Black.png', 1, 10, 15, 'gaming_mouse', 10, 2400000),
-(29, 'Chuột gaming Razer Viper V3 Pro', 'Chuột gaming cao cấp từ razer', '1735806584Chuột-Razer-Không-dây-Viper-V3-Pro-Trắng.png', 1, 10, 15, 'gaming_mouse', 10, 2200000),
-(30, 'Chuột gaming ASUS Gladius 3', 'Chuột gaming cao cấp từ asus', '1735806623chuot-gaming-asus-rog-gladius-iii-wireless-aimpoint.jpg', 1, 10, 16, 'gaming_mouse', 10, 2000000),
-(31, 'Chuột gaming ZOWIE EC3', 'Chuột gaming cao cấp từ zowie', '1735806654chuot-gaming-zowie-ec3-c.jpg', 1, 10, 13, 'gaming_mouse', 10, 3000000),
-(32, 'Chuột gaming ASUS Pugi 3', 'Chuột gaming cao cấp từ zowie', '1735806694gearvn-asus-rog-pugi-3.jpg', 0, 10, 16, 'gaming_mouse', 10, 300000),
-(33, 'Ghế Razer Iskur 2', 'Ghế gaming cao cấp', '173580676617184-razer-iskur-2.jpg', 0, 12, 15, 'gaming_chair', 10, 2000000),
-(34, 'Ghế Samsung Layer 4', 'Ghế gaming cao cấp', '173580680252280_anh_web_0003_layer_4.jpg', 1, 12, 10, 'gaming_chair', 9, 2000000),
-(35, 'Ghế Corsair T3 RUSH', 'Ghế gaming cao cấp', '1735806831Ghế-Corsair-T3-RUSH-GrayCharcoal-2023.png', 1, 12, 8, 'gaming_chair', 10, 2900000),
-(36, 'Ghế ASUS Chariot', 'Ghế gaming cao cấp', '1735806870ghe-gaming-asus-rog-chariot-core-sl300-1.jpg', 1, 12, 16, 'gaming_chair', 10, 2500000),
-(37, 'Loa Logitech G560', 'Loa gaming cao cấp', '1735806921Loa-Logitech-G560-.png', 1, 12, 11, 'gaming_speaker', 10, 2000000),
-(38, 'Loa Razer Leviathan V2', 'Loa gaming cao cấp', '1735806948Loa-Razer-Leviathan-V2-X.png', 1, 12, 15, 'gaming_speaker', 10, 2800000),
-(39, 'Loa Razer Leviathan V3', 'Loa gaming cao cấp', '1735806982Loa-Razer-Leviathan-V2.png', 1, 12, 15, 'gaming_speaker', 9, 3800000),
-(40, 'Màn hình ASUS ROG Strix 300Hz', 'Màn hình gaming cao cấp', '1735807032Màn-hình-ASUS-ROG-Strix-XG27AQMR-27-IPS-2K-300Hz-1ms-G-Sync.png', 1, 10, 16, 'gaming_moniter', 10, 5000000),
-(41, 'Màn hình cong SAMSUNG 180Hz', 'Màn hình gaming cao cấp', '1735807080Màn-hình-cong-LG-27GS60QC-B-UltraGear-27-2K-180Hz-chuyên-game.png', 1, 10, 10, 'gaming_moniter', 10, 3000000),
-(42, 'Màn hình SAMSUNG 2K 240Hz', 'Màn hình gaming cao cấp', '1735807114Màn-hình-LG-45GS95QE-B-UltraGear-45-OLED-2K-240Hz-G-Sync.png', 1, 10, 10, 'gaming_moniter', 10, 6000000),
-(43, 'Tai nghe nhét tai Razer', 'Tai nghe gaming', '173580717457da5fe88bc7e62a53c0ecc43fa6f7f3.jpg', 1, 12, 15, 'gaming_headphone', 10, 1600000),
-(44, 'Tai nghe Razer Kraken Kitty', 'Tai nghe gaming razer', '1735807211-Kraken-Kitty-Chroma-USB---Quartz-(1).png', 1, 12, 15, 'gaming_headphone', 10, 3600000),
-(45, 'Tai nghe ASUS ROG Delta Core', 'Tai nghe gaming asus', '1735807246Tai-nghe-Asus-ROG-Delta-Core.png', 1, 12, 16, 'gaming_headphone', 10, 3100000),
-(46, 'Tai nghe ASUS ROG THETA 7.1', 'Tai nghe gaming asus', '1735807272Tai-nghe-Asus-ROG-THETA-7_1.png', 1, 12, 16, 'gaming_headphone', 10, 3500000),
-(47, 'Tai nghe Razer Barracuda Pro', 'Tai nghe gaming razer', '1735807301Tai-nghe-Razer-Barracuda-Pro.png', 1, 12, 15, 'gaming_headphone', 10, 2900000),
-(48, 'Tai nghe Razer BlackShark V2', 'Tai nghe gaming razer', '1735807325Tai-nghe-Razer-BlackShark-V2-X.png', 1, 12, 15, 'gaming_headphone', 10, 2900000),
-(49, 'Tai nghe Logitech G Pro', 'Tai nghe gaming logitech', '1735807360tai-nghe-gaming-logitech-g-pro-black.png', 1, 12, 11, 'gaming_headphone', 10, 2600000),
-(50, 'Bàn phím ASUS ROG Strix Flare', 'Bàn phím gaming', '1735807467asus-rog-strix-flare.jpg', 1, 10, 16, 'gaming_keyboard', 10, 5000000),
-(51, 'Bàn phím ASUS ROG Strix Scope 2', 'Bàn phím gaming', '1735807492Bàn-phím-Asus-ROG-Strix-Scope-II-96-Wireless-ROG-NX-Snow-Switch.png', 1, 10, 16, 'gaming_keyboard', 10, 3400000),
-(52, 'Bàn phím ASUS ROG Strix Scope TKL', 'Bàn phím gaming', '1735807511Bàn-phím-Asus-ROG-Strix-Scope-TKL-Red-Switch.png', 1, 10, 16, 'gaming_keyboard', 9, 3100000),
-(53, 'Bàn phím Corsair K100 RGB', 'Bàn phím gaming', '1735807537Bàn-phím-cơ-Corsair-K100-RGB-Cherry-MX-Speed-(CH-912A014-NA).png', 1, 10, 8, 'gaming_keyboard', 10, 3500000),
-(54, 'Bàn phím Razer Huntsman V2', 'Bàn phím gaming', '1735807573Bàn-phím-cơ-Razer-Huntsman-V2-Linear-Optical-Switch-PUBG-BATTLEGROUNDS-Edition.png', 1, 10, 15, 'gaming_keyboard', 10, 4500000),
-(55, 'Bàn phím Logitech G813', 'Bàn phím gaming', '1735807598Bàn-phím-Logitech-G813-RGB-Clicky.png', 1, 10, 11, 'gaming_keyboard', 10, 4500000),
-(56, 'Bàn phím Logitech G913', 'Bàn phím gaming', '1735807617Bàn-phím-Logitech-G913-TKL-Lightspeed-Wireless-Clicky.png', 1, 10, 11, 'gaming_keyboard', 10, 6500000),
-(57, 'Bàn phím Razer BlackWidow V4', 'Bàn phím gaming', '1735807644Bàn-phím-Razer-BlackWidow-V4-Yellow-Switch.png', 1, 10, 15, 'gaming_keyboard', 10, 5500000),
-(58, 'Bàn phím ASUS TUF', 'Bàn phím gaming', '1735807674gaming-asus-tuf.jpg', 1, 10, 16, 'gaming_keyboard', 10, 3600000),
-(59, 'Laptop ASUS Zenbook 14 OLED', 'Laptop gaming asus', '1735807833Laptop-ASUS-Zenbook-14-OLED-UX3405MA-PP152W.png', 1, 11, 16, 'gaming_laptop', 10, 30000000),
-(60, 'Laptop ASUS Zenbook Dou OLED', 'Laptop gaming asus', '1735807856Laptop-ASUS-Zenbook-Duo-OLED-UX8406MA-PZ142W.png', 1, 11, 16, 'gaming_laptop', 8, 32000000),
-(61, 'Laptop ASUS ROG Strix G16', 'Laptop gaming asus', '1735807890Laptop-gaming-Asus-ROG-Strix-G16-G614JU-N4132W.png', 1, 11, 16, 'gaming_laptop', 10, 36000000),
-(62, 'Laptop ASUS TUF A15', 'Laptop gaming asus', '1735808032Laptop-gaming-ASUS-TUF-Gaming-A15-FA506NC-HN011W.png', 1, 11, 16, 'gaming_laptop', 3, 32000000),
-(63, 'Laptop ASUS TUF F15', 'Laptop gaming asus', '1735808064Laptop-gaming-ASUS-TUF-Gaming-F15-FX507VV-LP304W.png', 1, 11, 16, 'gaming_laptop', 10, 32000000),
-(64, 'Laptop ASUS Vivobook 16X', 'Laptop gaming asus', '1735808094Laptop-gaming-ASUS-Vivobook-16X-K3605ZU-RP296W.png', 1, 11, 16, 'gaming_laptop', 10, 37000000),
-(65, 'Laptop MSI Cyborg 14', 'Laptop gaming MSI', '1735808128Laptop-gaming-MSI-Cyborg-14-A13VE-090VN.png', 1, 11, 14, 'gaming_laptop', 10, 37000000),
-(66, 'Laptop MSI Katana A15', 'Laptop gaming MSI', '1735808155Laptop-gaming-MSI-Katana-A15-AI-B8VG-465VN-(20th-Edition).png', 1, 11, 14, 'gaming_laptop', 10, 36000000),
-(67, 'Laptop MSI Stealth 16 AI', 'Laptop gaming MSI', '1735808185Laptop-gaming-MSI-Stealth-16-AI-Studio-A1VHG-241VN.png', 1, 11, 14, 'gaming_laptop', 10, 46000000),
-(68, 'Laptop MSI Titan 18 HX', 'Laptop gaming MSI', '1735808211Laptop-gaming-MSI-Titan-18-HX-A14VIG-410VN-(20th-Edition).png', 1, 11, 14, 'gaming_laptop', 10, 56000000),
-(69, 'Laptop MSI Vector GP78HX', 'Laptop gaming MSI', '1735808237Laptop-gaming-MSI-Vector-GP78HX-13VI-476VN.png', 1, 11, 14, 'gaming_laptop', 10, 41000000),
-(70, 'Máy chơi game console PS5 Standard', 'Máy chơi game đồ họa cao giá cả phải chăng', '1735808348Sony-Playstation-5-Standard-Edition.png', 1, 9, 12, 'gaming_console', 2, 15000000),
-(71, 'Tay cầm PS5 DualSense', 'Tay cầm ps5', '1735808402Tay-cầm-Sony-PS5-DualSense-White.png', 1, 9, 12, 'ps5_controller', 10, 2000000),
-(72, 'Tay cầm gaming MSI Pro', 'Tay cầm gaming msi', '1735808458Tay-cầm-chơi-game-Asus-ROG-Kunai-3-Gamepad-Black.png', 1, 9, 14, 'gaming_controller', 10, 1300000),
-(73, 'Tay cầm Dualsense Chroma Pearl', 'Tay cầm Dualsense Chroma', '1735808498Tay-cầm-Dualsense-Chroma-Pearl.png', 1, 9, 12, 'gaming_controller', 10, 1900000),
-(74, 'Tay cầm Razer Raiju Ultimate', 'Tay cầm gaming razer', '1735808536Tay-cầm-Razer-Raiju-Ultimate.png', 1, 9, 15, 'gaming_controller', 10, 2000000),
-(75, 'Đĩa game Black Myth Wukong', 'Đĩa game ps5', '1735808597Đĩa-Game-Black-Myth-Wukong-Deluxe-Edition-PS5.jpg', 1, 9, 12, 'ps5_game_disk', 10, 1300000),
-(76, 'Đĩa game The Last Of Us 1', 'Đĩa game ps5', '1735808619dia_game_ps5_the_last_of_us_part_1.jpg', 1, 9, 12, 'ps5_game_disk', 10, 1300000),
-(77, 'Đĩa game Spider man Miles Morales', 'Đĩa game ps5', '1735808644dia-game-ps5-spider-man-miles-morales-1.jpg', 1, 9, 12, 'ps5_game_disk', 10, 1300000),
-(78, 'Đĩa game Elden Ring', 'Đĩa game ps5', '1735808663Eldenring.png', 1, 9, 12, 'ps5_game_disk', 10, 1300000),
-(79, 'Đĩa game FC 25', 'Đĩa game ps5', '1735808686Game-PS5-EA-Sports-FC-25-Standard-Edition.png', 1, 9, 12, 'ps5_game_disk', 10, 1300000),
-(80, 'Đĩa game Ghost of Tsushima', 'Đĩa game ps5', '1735808705Ghost-of-Tsushima-Directors-Cut---PS5.png', 1, 9, 12, 'ps5_game_disk', 10, 1300000),
-(81, 'Đĩa game GOW Ragnarok', 'Đĩa game ps5', '1735808725God-of-war-Ragnarok-PS5.jpg', 1, 9, 12, 'ps5_game_disk', 10, 1300000),
-(82, 'Đĩa game Spider man 2', 'Đĩa game ps5', '1735808741Spider-man-2.png', 1, 9, 12, 'ps5_game_disk', 10, 1300000),
-(83, 'Đĩa game COD Modern Warfare 3', 'Đĩa game ps5', '1735808801vn-11134207-7r98o-lyp1m8x8i0y5d8.jpg', 1, 9, 12, 'ps5_game_disk', 16, 1300000),
-(84, 'Đĩa game Yakuza Like a Dragon', 'Đĩa game ps5', '1735808825Yakuza-Like-A-Dragon.jpg', 0, 9, 12, 'ps5_game_disk', 10, 500000),
-(85, 'Tay cầm PS5 DualSense Edge', 'Tay cầm ps5 for pro gamer', '1735808868dual-sensel-edge.png', 1, 9, 12, 'ps5_controller', 10, 5000000);
+(86, 'PC AMD 4K GAMING RYZEN 7 9800X3D - RTX 5090 32GB (ALL NEW - Bảo hành 36 tháng)', 'pc', '1743322358PC-AMD-4K-GAMING-RYZEN-7-9800X3D---RTX-5090-32GB-(ALL-NEW---Bảo-hành-36-tháng).jpg', 1, 14, 17, 'pc', 4, 139999000),
+(87, 'PC AMD GAMING PRO RYZEN 5 7500F - RTX 5070 12GB OC WHITE (All NEW - Bảo hành 36 tháng)', 'pc', '1743322558PC-AMD-GAMING-PRO-RYZEN-5-7500F---RTX-5070-12GB-OC-WHITE-(All-NEW---Bảo-hành-36-tháng).jpg', 1, 14, 17, 'pc', 9, 32999000),
+(88, 'PC AMD GAMING PRO Ryzen 5 7500F - RX 9070 XT 16GB OC (ALL NEW - Bảo hành 36 tháng)', 'pc', '1743322642PC-AMD-GAMING-PRO-Ryzen-5-7500F---RX-9070-XT-16GB-OC-(ALL-NEW---Bảo-hành-36-tháng).jpg', 1, 14, 17, 'pc', 10, 33999000),
+(89, 'PC AMD GAMING PRO Ryzen 7 5700X3D - RX 9070 XT 16GB OC (ALL NEW - Bảo hành 36 tháng)', 'pc', '1743322728PC-AMD-GAMING-PRO-Ryzen-7-5700X3D---RX-9070-XT-16GB-OC-(ALL-NEW---Bảo-hành-36-tháng).jpg', 1, 14, 17, 'pc', 11, 34999000),
+(90, 'PC AMD GAMING PRO RYZEN 7 7700 - RTX 5070 12GB OC WHITE (All NEW - Bảo hành 36 tháng)', 'pc', '1743322788PC-AMD-GAMING-PRO-RYZEN-7-7700---RTX-5070-12GB-OC-WHITE-(All-NEW---Bảo-hành-36-tháng).jpg', 1, 14, 17, 'pc', 19, 33999000),
+(91, 'PC AMD GAMING PRO Ryzen 7 7700 - RX 9070 XT 16GB OC (ALL NEW - Bảo hành 36 tháng)', 'pc', '1743322850PC-AMD-GAMING-PRO-Ryzen-7-7700---RX-9070-XT-16GB-OC-(ALL-NEW---Bảo-hành-36-tháng)-(1).jpg', 1, 14, 17, 'pc', 19, 34999000),
+(92, 'PC AMD GAMING PRO Ryzen 7 7700 - RX 9070 XT 16GB OC (ALL NEW - Bảo hành 36 tháng)', 'pc', '1743322898PC-AMD-GAMING-PRO-Ryzen-7-7700---RX-9070-XT-16GB-OC-(ALL-NEW---Bảo-hành-36-tháng).jpg', 1, 14, 17, 'pc', 19, 34999000),
+(93, 'PC AMD GAMING PRO RYZEN 7 7800X3D - RTX 5070 12GB OC WHITE (All NEW - Bảo hành 36 tháng)', 'pc', '1743322990PC-AMD-GAMING-PRO-RYZEN-5-7500F---RTX-5070-12GB-OC-WHITE-(All-NEW---Bảo-hành-36-tháng).jpg', 1, 14, 17, 'pc', 19, 41999000),
+(94, 'PC AMD GAMING PRO Ryzen 7 7800X3D - RX 9070 XT 16GB OC (ALL NEW - Bảo hành 36 tháng)', 'pc', '1743323061PC-AMD-GAMING-PRO-Ryzen-7-7800X3D---RX-9070-XT-16GB-OC-(ALL-NEW---Bảo-hành-36-tháng).jpg', 1, 14, 17, 'pc', 18, 41999000),
+(95, 'PC AMD GAMING PRO RYZEN 9 9900X - RTX 5070 TWIN X2 12GB (All NEW - Bảo hành 36 tháng)', 'pc', '1743323141PC-AMD-GAMING-PRO-RYZEN-9-9900X---RTX-5070-TWIN-X2-12GB-(All-NEW---Bảo-hành-36-tháng).jpg', 1, 14, 17, 'pc', 18, 41999000),
+(96, 'PC AMD GAMING PRO RYZEN 9 9900X - RTX 5080 16GB X3 (All NEW - Bảo hành 36 tháng)', 'pc', '1743323208PC-AMD-GAMING-PRO-RYZEN-9-9900X---RTX-5080-16GB-X3-(All-NEW---Bảo-hành-36-tháng).jpg', 1, 14, 17, 'pc', 20, 60999000),
+(97, 'PC AMD GAMING PRO RYZEN 9 9900X - RTX 5090 32GB OC (All NEW - Bảo hành 36 tháng)', 'pc', '1743323235PC-AMD-GAMING-PRO-RYZEN-9-9900X---RTX-5090-32GB-OC-(All-NEW---Bảo-hành-36-tháng).jpg', 1, 14, 17, 'pc', 20, 156999000),
+(99, 'PC AMD GAMING PRO RYZEN 9 9950X3D - RTX 4060 Ti 8GB OC (All NEW - Bảo hành 36 tháng)', 'pc', '1743323354PC-AMD-GAMING-PRO-RYZEN-9-9950X---RTX-4060-Ti-8GB-OC-(1).jpg', 1, 14, 17, 'pc', 20, 48999000),
+(100, 'PC AMD GAMING PRO RYZEN 9 9950X - RTX 4060 Ti 8GB OC(All NEW - Bảo hành 36 tháng)', 'pc', '1743323418PC-AMD-GAMING-PRO-RYZEN-9-9950X---RTX-4060-Ti-8GB-OC.jpg', 1, 14, 17, 'pc', 19, 43999000),
+(101, 'PC AMD GAMING PRO RYZEN 9 9950X - RTX 4060 Ti 16GB (All NEW - Bảo hành 36 tháng)', 'pc', '1743323489PC-AMD-GAMING-PRO-RYZEN-9-9950X---RTX-4060-Ti-16GB-(All-NEW---Bảo-hành-36-tháng).jpg', 1, 14, 17, 'pc', 19, 44999000),
+(102, 'PC AMD GAMING PRO RYZEN 9 9950X - RTX 5070 Ti 16GB (All NEW - Bảo hành 36 tháng)', 'pc', '1743323531PC-AMD-GAMING-PRO-RYZEN-9-9950X---RTX-5070-Ti-16GB-(All-NEW---Bảo-hành-36-tháng).jpg', 1, 14, 17, 'pc', 20, 65999000),
+(103, 'PC AMD GAMING PRO RYZEN 9 9950X - RTX 5070 TWIN X2 12GB (All NEW - Bảo hành 36 tháng)', 'pc', '1743323571PC-AMD-GAMING-PRO-RYZEN-9-9950X---RTX-5070-TWIN-X2-12GB-(All-NEW---Bảo-hành-36-tháng).jpg', 1, 8, 17, 'pc', 20, 57999000),
+(104, 'PC AMD HIGH PERFORMANCE GAMING RYZEN 7 7800X3D - RTX 3070 8GB (All NEW - Bảo hành 36 tháng)', 'pc', '1743323611PC-AMD-HIGH-PERFORMANCE-GAMING-RYZEN-7-7800X3D---RTX-3070-8GB.jpg', 1, 14, 17, 'pc', 19, 33999000),
+(105, 'PC AMD SUPER GAMING Ryzen 7 5700X3D - RTX 3070 8GB ( ALL NEW - Bảo hành 36 Tháng)', 'pc', '1743323641PC-AMD-SUPER-GAMING-Ryzen-7-5700X3D---RTX-3070-8GB-(-ALL-NEW---Bảo-hành-36-Tháng).jpg', 1, 14, 17, 'pc', 20, 34999000),
+(106, 'PC AMD SUPER GAMING Ryzen 7 5700X3D - RTX 4060 8GB OC ( ALL NEW - Bảo hành 36 Tháng)', 'pc', '1743323682PC-AMD-SUPER-GAMING-Ryzen-7-5700X3D---RTX-4060-8GB-OC-(-ALL-NEW---Bảo-hành-36-Tháng).jpg', 1, 14, 17, 'pc', 20, 36999000),
+(107, 'PC AMD Ryzen 9 9900X - RTX 3060 12GB OC (All NEW - Bảo hành 36 tháng)', 'pc', '1743323865PC_AMD_FPS_GAMING_PRO_Ryzen_7_5700X3D_RX_6600_8GB.jpg', 1, 14, 17, 'pc', 20, 38999000),
+(108, 'PC AMD GAMING PRO Ryzen 7 5700X3D - RTX 3060 8GB DUAL (All NEW - Bảo hành 36 tháng)', 'pc', '1743323950PC-AMD-GAMING-PRO-RYZEN-9-9950X---RTX-4060-Ti-16GB-(All-NEW---Bảo-hành-36-tháng).jpg', 1, 14, 17, 'pc', 20, 17999000),
+(109, 'PC ASUS GAMING PERFORMANCE RTX 4060 - I5 12400F ( Toàn bộ linh kiện All New - Bảo hành 36 tháng)', 'pc', '1743324219PC-TTG-GAMING-LUXURY-i5-13400F---RTX-5070-12GB-OC-(All-NEW---Bảo-hành-36-tháng).png', 1, 15, 18, 'pc', 19, 15999000),
+(110, 'PC 4K GAMING RTX 4070, I5 12400F (ALL NEW - BH 36 tháng).png', 'pc', '1743324096PC-4K-GAMING-RTX-4070-12400F-(ALL-NEW---BH-36-tháng).png', 1, 15, 18, 'pc', 18, 23999000),
+(111, 'PC BEST FOR GAMING i3 10105F - RTX 3050 6GB DUAL (All NEW - Bảo hành 36 tháng)', 'pc', '1743324133PC-BEST-FOR-GAMING-i3-10105F---RTX-3050-6GB-DUAL-(All-NEW---Bảo-hành-36-tháng).png', 1, 15, 18, 'pc', 20, 8999000),
+(112, 'PC BEST FOR GAMING i5 10400F- GTX 1660 Super 6GB(Tất cả linh kiện đều All New - bảo hành 36 tháng)', 'pc', '1743324236PC-TTG-GAMING-PRO-i5-13400F---RTX-5070-12GB-(ALL-NEW---Bảo-hành-36-tháng).jpg', 1, 15, 18, 'pc', 20, 9999000),
+(113, 'PC CHƠI GAME HIỆU SUẤT CAO RTX 3060 12GB - I5 12400F ( ALL NEW - Bảo hành 36 tháng)', 'pc', '1743324328PC-CHƠI-GAME-HIỆU-SUẤT-CAO-RTX-3060-12GB---12400F-(-ALL-NEW---Bảo-hành-36-tháng).png', 1, 15, 18, 'pc', 20, 15999000),
+(114, 'PC MINI LUV GAMING LUXURY i5 13400F - RTX 5070 12GB OC WHITE (Toàn bộ linh kiện All New - Bảo hành 36 tháng)', 'pc', '1743324397PC-MINI-TTG-GAMING-LUXURY-i5-13400F---RTX-5070-12GB-OC-WHITE.png', 1, 15, 18, 'pc', 20, 37999000),
+(116, 'PC ROG STRIX GAMING PERFORMANCE RTX 4060 8GB - I5 12400F ( Toàn bộ linh kiện All New - Bảo hành 36 tháng)', 'pc', '1743324540PC-TTG-GAMING-PRO-i5-13400F---RTX-5070-12GB-(ALL-NEW---Bảo-hành-36-tháng).jpg', 1, 15, 18, 'pc', 20, 19999000),
+(117, 'PC LUV GAMING I5 12400F - RTX 3060 8GB (All New - Bảo hành 36 Tháng)', 'pc', '1743324634PC-TTG-GAMING-I5-12400F---RTX-3060-8GB-(All-New---Bảo-hành-36-Tháng).png', 1, 15, 18, 'pc', 20, 15999000),
+(118, 'PC LUV GAMING i5 12400F - RX 6500 XT 4GB OC (All New - Bảo hành 36 Tháng)', 'pc', '1743324710PC-TTG-GAMING-i5-12400F---RX-6500-XT-4GB-OC-(All-New---Bảo-hành-36-Tháng).jpg', 1, 15, 18, 'pc', 20, 10999000),
+(119, 'PC LUV GAMING i5 13400F - RTX 5070 12GB OC WHITE (All NEW - Bảo hành 36 tháng)', 'pc', '1743324756PC-TTG-GAMING-i5-13400F---RTX-5070-12GB-OC-WHITE-(All-NEW---Bảo-hành-36-tháng).png', 1, 15, 18, 'pc', 20, 37999000),
+(120, 'PC LUV GAMING i5 13400F- 16GB DDR5- RTX 4070 SUPER 12GB OC (All NEW - Bảo hành 36 tháng)', 'pc', '1743324987PC-TTG-GAMING-PRO-i9-14900KF---RX-9070-XT-16GB-OC-(-ALL-NEW---Bảo-hành-36-tháng).png', 1, 15, 18, 'pc', 20, 35999000),
+(122, 'PC LUV GAMING i5 14600KF - RTX 5080 16GB OC WHITE (ALL NEW - Bảo hành 36 tháng)', 'pc', '1743325159PC-TTG-GAMING-i5-14600KF---RTX-5080-16GB-OC-WHITE-(ALL-NEW---Bảo-hành-36-tháng).png', 1, 15, 18, 'pc', 20, 57999000),
+(123, 'PC LUV GAMING I5 12400F - RTX 3060 8GB (All New - Bảo hành 36 Tháng)', 'pc', '1743325297PC-TTG-GAMING-I5-12400F---RTX-3060-8GB-(All-New---Bảo-hành-36-Tháng).png', 1, 15, 18, 'pc', 20, 37999000),
+(124, 'PC LUV GAMING LUXURY i5 13400F - RTX 5070 12GB OC (All NEW - Bảo hành 36 tháng).png', 'pc', '1743325584PC-TTG-GAMING-LUXURY-i5-13400F---RTX-5070-12GB-OC-(All-NEW---Bảo-hành-36-tháng).png', 1, 15, 18, 'pc', 20, 36999000),
+(125, 'PC LUV GAMING LUXURY i5 14600KF - RTX 5070 12GB OC ULTRA WHITE (All NEW - Bảo hành 36 tháng)', 'pc', '1743325664PC-TTG-GAMING-LUXURY-i5-14600KF---RTX-5070-12GB-OC-WHITE-(All-NEW---Bảo-hành-36-tháng).png', 1, 15, 18, 'pc', 20, 40999000),
+(126, 'PC LUV GAMING PRO i5 13400F - RTX 5070 12GB (ALL NEW - Bảo hành 36 tháng)', 'pc', '1743325742PC-TTG-GAMING-PRO-i5-13400F---RTX-5070-12GB-(ALL-NEW---Bảo-hành-36-tháng).jpg', 1, 15, 18, 'pc', 20, 28999000),
+(127, 'PC LUV GAMING PRO i5 14600KF - RTX 5070 12GB (ALL NEW - Bảo hành 36 tháng)', 'pc', '1743325846PC-TTG-GAMING-PRO-i5-14600KF---RTX-5070-12GB-(ALL-NEW---Bảo-hành-36-tháng).jpg', 1, 15, 18, 'pc', 20, 33999000),
+(128, 'PC LUV GAMING PRO i7 14700KF - RX 9070 XT 16GB OC (ALL NEW - Bảo hành 36 tháng)', 'pc', '1743325882PC-TTG-GAMING-PRO-i7-14700KF---RX-9070-XT-16GB-OC-(ALL-NEW---Bảo-hành-36-tháng).png', 1, 15, 18, 'pc', 20, 42999000),
+(129, 'STEAM GAMING PC RTX 3060 12GB - 12400F ( All new - Bảo hành 36 tháng)', 'pc', '1743325953STEAM-GAMING-PC-RTX-3060-12GB---12400F-(-All-new---Bảo-hành-36-tháng).png', 1, 15, 18, 'pc', 20, 14999000),
+(130, 'PC LUV GAMING PRO i9 14900KF - RX 9070 XT 16GB OC ( ALL NEW - Bảo hành 36 tháng)', 'pc', '1743326023PC-TTG-GAMING-PRO-i9-14900KF---RX-9070-XT-16GB-OC-(-ALL-NEW---Bảo-hành-36-tháng).png', 1, 15, 18, 'pc', 20, 46999000),
+(131, 'PC MINI LUV i3 10105F- RAM 16GB-GTX 1650 4GB', 'pc', '1743326183PC_MINI_TTG_i3_10105F__RAM_16GB_GTX_1650_4GB.jpg', 1, 20, 18, 'pc', 20, 9999000),
+(132, 'PC MINI LUV i3 10105F- RAM 16GB-RTX 3050 6GB OC', 'pc', '1743326241PC_MINI_TTG_i3_10105F__RAM_16GB_GTX_1650_4GB.jpg', 1, 20, 18, 'pc', 19, 10999000),
+(133, 'PC MINI LUV i3 12100F-RAM 16GB - RTX 3050 6GB OC', 'pc', '1743326277PC_MINI_TTG_i3_10105F__RAM_16GB_GTX_1650_4GB.jpg', 1, 20, 18, 'pc', 20, 11999000),
+(134, 'PC MINI LUV i3 12100F-RAM 16GB - RX 6600 8GB BLACK', 'pc', '1743326329PC_MINI_TTG_i5_12400F__RAM_16GB__RTX_3070_8GB_OC.jpg', 1, 20, 18, 'pc', 20, 12999000),
+(135, 'PC MINI LUV i5 12400F- RAM 16GB- RTX 3060 12GB OC', 'pc', '1743326383PC_MINI_TTG_i5_12400F__RAM_16GB__RTX_3070_8GB_OC.jpg', 1, 20, 18, 'pc', 20, 17999000),
+(136, 'PC MINI LUV i5 12400F- RAM 16GB- RTX 3070 8GB OC', 'pc', '1743326431PC_MINI_TTG_i5_12400F__RAM_16GB__RTX_3070_8GB_OC.jpg', 1, 20, 18, 'pc', 19, 20999000),
+(137, 'PC MINI LUV i5 12400F- RAM 16GB- RTX 4060 8GB OC', 'pc', '1743326566PC_MINI_TTG_i5_12400F__RAM_16GB__RTX_3070_8GB_OC.jpg', 1, 20, 18, 'pc', 20, 17999000),
+(138, 'PC MINI LUV i5 12400F- RAM 16GB-RTX 3050 6GB OC', 'pc', '1743326623PC_MINI_TTG_i5_12400F__RAM_16GB_RTX_3050_6GB_OC.jpg', 1, 20, 18, 'pc', 19, 14999000),
+(139, 'PC MINI LUV i5 14500- RAM 16GB- RTX 3060 12GB OC', 'pc', '1743326714PC_MINI_TTG_i5_12400F__RAM_16GB__RTX_3070_8GB_OC.jpg', 1, 20, 18, 'pc', 20, 20999000),
+(140, 'PC MINI LUV i5 14500- RAM 16GB- RTX 3070 8GB OC', 'pc', '1743326758PC_MINI_TTG_i5_12400F__RAM_16GB__RTX_3070_8GB_OC.jpg', 1, 20, 18, 'pc', 20, 23999000),
+(141, 'PC MINI LUV i5 14500- RAM 32GB- RTX 4060 Ti 16GB TWIN X2 OC BLACK', 'pc', '1743326828PC_MINI_TTG_i5_12400F__RAM_16GB__RTX_3070_8GB_OC.jpg', 1, 20, 18, 'pc', 20, 27999000),
+(142, 'PC MINI LUV i7 13700K- RAM 32GB- RTX 3060 12GB OC', 'pc', '1743326871PC_MINI_TTG_i5_12400F__RAM_16GB_RTX_3050_6GB_OC.jpg', 1, 20, 18, 'pc', 20, 29999000),
+(143, 'Bộ máy chơi game PS5 hai tay cầm', 'ps5', '1743327333Bộ-máy-chơi-game-PS5-hai-tay-cầm.png', 1, 21, 12, 'ps5', 17, 15999000),
+(144, 'Death Stranding Director\'s Cut Digital Edition', 'ps5', '1743327392Death-Stranding-Directors-Cut.png', 1, 21, 12, 'ps5', 19, 1299000),
+(145, 'Đĩa game PS5 God of War Ragnarok PS5 Standard Edition', 'ps5', '1743327456Đĩa-game-PS5-God-of-War-Ragnarok-PS5-Standard-Edition.png', 1, 21, 12, 'ps5', 17, 1799000),
+(146, 'Đĩa PS5 Astro Bot Digital Edition', 'ps5', '1743327494Đĩa-PS5-Astro-Bot.png', 1, 21, 12, 'ps5', 19, 1499000),
+(147, 'Đĩa PS5 Final Fantasy XVI STD Digital Edition', 'ps5', '1743327527Đĩa-PS5-Final-Fantasy-XVI-STD.png', 1, 21, 12, 'ps5', 19, 1299000),
+(150, 'Đĩa PS5 Rise of the Ronin Digital Edition', 'ps5', '1743327646Đĩa-PS5-Rise-of-the-Ronin.png', 1, 21, 12, 'ps5', 19, 1299000),
+(151, 'Đĩa PS5 Spider-Man 2 Standard Edition', 'ps5', '1743327676Đĩa-PS5-Spider-Man-2-Standard.png', 1, 21, 12, 'ps5', 18, 1299000),
+(152, 'Đĩa PS5 The Last of Us II Remastered', 'ps5', '1743327702Đĩa-PS5-The-Last-of-Us-II-Remastered.png', 1, 21, 12, 'ps5', 19, 1799000),
+(153, 'Đĩa PS5 Until Dawn Digital Edition', 'ps5', '1743327731Đĩa-PS5-Until-Dawn.png', 1, 21, 12, 'ps5', 20, 1299000),
+(154, 'Máy chơi game PlayStation 5 Slim', 'ps5', '1743327775Máy-chơi-game-PlayStation-5-Slim.png', 1, 21, 12, 'ps5', 18, 13999000),
+(155, 'Ốp bọc PlayStation 5 Grey Camo', 'ps5', '1743327816Ốp-bọc-PlayStation®5-Grey-Camo.png', 1, 21, 12, 'ps5', 15, 1499000),
+(156, 'Ốp bọc PS5 Cobalt Blue PlayStation 5', 'ps5', '1743327844Ốp-bọc-PS5-Cobalt-Blue.png', 1, 21, 12, 'ps5', 19, 1499000),
+(157, 'Ốp bọc PS5 Volcanic Red PlayStation 5', 'ps5', '1743327869Ốp-bọc-PS5-Volcanic-Red.png', 1, 21, 12, 'ps5', 20, 1499000),
+(158, 'Tai nghe không dây dùng cho máy chơi game Playstation 5', 'ps5', '1743327961Tai-nghe-không-dây-dùng-cho-máy-chơi-game-Playstation-5.png', 1, 21, 12, 'ps5', 19, 2499000),
+(159, 'Tai nghe PULSE 3D Gray Camouflage', 'ps5', '1743327997Tai-nghe-PULSE-3D-Gray-Camouflage.png', 1, 21, 12, 'ps5', 19, 2699000),
+(160, 'Tai nghe Playstation Pulse Explore Wireless Earbuds', 'ps5', '1743328087Tai-nghe-Pulse-Explore.png', 1, 21, 12, 'ps5', 19, 5699000),
+(161, 'Tay cầm Dualsense Chroma Pearl', 'ps5', '1743328123Tay-cầm-Dualsense-Chroma-Pearl.png', 1, 21, 12, 'ps5', 20, 2299000),
+(162, 'Tay cầm Dualsense Sterling Silver (CFI-ZCT1G 08)', 'ps5', '1743328148Tay-cầm-Dualsense-Sterling-Silver-(CFI-ZCT1G-08).png', 1, 21, 12, 'ps5', 8, 2299000),
+(163, 'Tay cầm không dây Dualsense - Chorma Indigo', 'ps5', '1743328179Tay-cầm-không-dây-Dualsense---Chorma-Indigo.png', 1, 21, 12, 'ps5', 19, 2299000),
+(164, 'Tay cầm không dây Dualsense - Đen', 'ps5', '1743328229Tay-cầm-không-dây-Dualsense---Đen.png', 1, 21, 12, 'ps5', 20, 1799000),
+(165, 'Tay cầm không dây Dualsense - Tím', 'ps5', '1743328251Tay-cầm-không-dây-Dualsense---Tím.png', 1, 21, 12, 'ps5', 19, 1799000),
+(166, 'Tay cầm không dây Dualsense Edge', 'ps5', '1743328275Tay-cầm-không-dây-Dualsense-Edge.png', 1, 21, 12, 'ps5', 20, 5699000),
+(167, 'Tay cầm không dây điều khiển máy game PlayStation 5 (CFI-ZCT1G)', 'ps5', '1743328302Tay-cầm-không-dây-điều-khiển-máy-game-PlayStation-5-(CFI-ZCT1G).png', 1, 21, 12, 'ps5', 17, 1799000),
+(168, 'PC AMD GAMING PRO RYZEN 9 9900X - RTX 5070 TWIN X2 12GB (All NEW - Bảo hành 36 tháng)', 'pc', '1743328775PC-AMD-GAMING-PRO-RYZEN-9-9900X---RTX-5070-TWIN-X2-12GB-(All-NEW---Bảo-hành-36-tháng).jpg', 1, 14, 17, 'pc', 20, 57999000),
+(169, 'PC AMD GAMING PRO RYZEN 9 9900X- RTX 5070 Ti 16GB OC (All NEW - Bảo hành 36 tháng)', 'pc', '1743328851PC-AMD-GAMING-PRO-RYZEN-9-9900X--RTX-5070-Ti-16GB-OC-(All-NEW---Bảo-hành-36-tháng).jpg', 1, 14, 17, 'pc', 20, 48999000),
+(170, 'PC LUV GAMING ULTRA 7 265K - RTX 4080 SUPER 16GB OC (All NEW - Bảo hành 36 tháng)', 'pc', '1743329649PC-LUV-GAMING-ULTRA-7-265K---RTX-4080-SUPER-16GB-OC-(All-NEW---Bảo-hành-36-tháng).png', 1, 16, 18, 'pc', 20, 59999000),
+(171, 'PC LUV GAMING ULTRA 7 265K - RTX 5080 16GB X3 (ALL NEW - Bảo hành 36 tháng)', 'pc', '1743329692PC-LUV-GAMING-ULTRA-7-265K---RTX-5080-16GB-X3-(ALL-NEW---Bảo-hành-36-tháng).png', 1, 16, 18, 'pc', 20, 62999000),
+(172, 'PC LUV GAMING ULTRA 7 265KF - RTX 4070 SUPER 12GB OC (ALL NEW - Bảo hành 36 tháng)', 'pc', '1743329743PC-LUV-GAMING-ULTRA-7-265KF---RTX-4070-SUPER-12GB-OC-(ALL-NEW---Bảo-hành-36-tháng).png', 1, 16, 18, 'pc', 20, 41999000),
+(173, 'PC LUV GAMING ULTRA 7 265KF - RTX 4070 SUPER OC 12GB (All new - Bảo hành 36 Tháng)', 'pc', '1743329792PC-LUV-GAMING-ULTRA-7-265KF---RTX-4070-SUPER-OC-12GB-(All-new---Bảo-hành-36-Tháng).png', 1, 16, 18, 'pc', 20, 49999000),
+(174, 'PC LUV GAMING ULTRA 7 265KF - RTX 5080 16GB SOLID OC (ALL NEW - Bảo hành 36 tháng)', 'pc', '1743329833PC-LUV-GAMING-ULTRA-7-265KF---RTX-5080-16GB-SOLID-OC-(ALL-NEW---Bảo-hành-36-tháng).png', 1, 16, 18, 'pc', 20, 62999000),
+(175, 'PC LUV GAMING ULTRA 7 265K - RTX 5080 16GB OC WHITE (ALL NEW - Bảo hành 36 tháng)', 'pc', '1743329877PC-TTG-GAMING-ULTRA-7-265K---RTX-5080-16GB-OC-WHITE-(ALL-NEW---Bảo-hành-36-tháng).png', 1, 16, 18, 'pc', 20, 66999000),
+(176, 'PC LUV GAMING ULTRA 9 285K - RTX 4080 SUPER 16GB OC WHITE (All NEW - Bảo hành 36 tháng)', 'pc', '1743329993PC-TTG-GAMING-ULTRA-9-285K---RTX-4090-24GB-OC-WHITE_11zon.png', 1, 16, 18, 'pc', 19, 79999000),
+(177, 'PC LUV GAMING ULTRA 9 285K - RTX 4090 24GB OC WHITE', 'pc', '1743329952PC-TTG-GAMING-ULTRA-9-285K---RTX-4090-24GB-OC-WHITE_11zon.png', 1, 16, 18, 'pc', 20, 126999000),
+(178, 'Card màn hình ASROCK AMD Radeon RX 7900 XTX TAICHI WHITE 24GB OC', 'card', '1743331092Card-màn-hình-ASROCK-AMD-Radeon-RX-7900-XTX-TAICHI-WHITE-24GB-OC.png', 1, 18, 17, 'card', 19, 329999000),
+(179, 'Card màn hình ASUS ROG Astral GeForce RTX 5080 16GB GDDR7 OC Edition', 'card', '1743331266Card-màn-hình-ASUS-ROG-Astral-GeForce-RTX-5080-16GB-GDDR7-OC-Edition.png', 1, 18, 10, 'card', 20, 53999000),
+(180, 'Card màn hình ASUS ROG Astral GeForce RTX 5090 32GB GDDR7 OC Edition', 'card', '1743331312Card-màn-hình-ASUS-ROG-Astral-GeForce-RTX-5090-32GB-GDDR7-OC-Edition.png', 1, 18, 10, 'card', 20, 159999000),
+(181, 'Card Màn Hình ASUS ROG STRIX RTX 4090 O24G White', 'card', '1743331370Card-Màn-Hình-ASUS-ROG-STRIX-RTX-4090-O24G-White.png', 1, 18, 10, 'card', 20, 65999000),
+(182, 'Card màn hình Asus ROG STRIX-RTX 4090-O24G-GAMING', 'card', '1743331407Card-màn-hình-Asus-ROG-STRIX-RTX-4090-O24G-GAMING.png', 1, 18, 10, 'card', 20, 64999000),
+(183, 'Card màn hình ASUS TUF Gaming GeForce RTX 5090 32GB GDDR7 OC', 'card', '1743331455Card-màn-hình-ASUS-TUF-Gaming-GeForce-RTX-5090-32GB-GDDR7-OC.png', 1, 18, 10, 'card', 20, 110999000),
+(184, 'Card màn hình Colorful iGame RTX 4090 Neptune OC-V', 'card', '1743331496Card-màn-hình-Colorful-iGame-RTX-4090-Neptune-OC-V.png', 1, 18, 10, 'card', 20, 59999000),
+(185, 'Card màn hình GIGABYTE AORUS GeForce RTX 5090 MASTER 32GB GDDR7', 'card', '1743331545Card-màn-hình-GIGABYTE-AORUS-GeForce-RTX-5090-MASTER-32GB-GDDR7.png', 1, 18, 10, 'card', 20, 139999000),
+(186, 'Card màn hình MSI RTX 4090 SUPRIM LIQUID X 24G.png', 'card', '1743331586Card-màn-hình-MSI-RTX-4090-SUPRIM-LIQUID-X-24G.png', 1, 18, 10, 'card', 20, 55999000),
+(188, 'CPU AMD Ryzen 9 9900X3D (12 nhân 24 luồng, up to 5.5GHz ,140MB Cache , AM5)', 'cpu', '1743331789CPU-AMD-Ryzen-9-9900X3D-(12-nhân-24-luồng,-up-to-5_5GHz-,140MB-Cache-,-AM5).png', 1, 18, 17, 'cpu', 20, 16999000),
+(189, 'CPU AMD Ryzen 9 9950X3D (16 nhân 32 luồng, up to 5.7GHz ,144MB Cache , AM5)', 'cpu', '1743331820CPU-AMD-Ryzen-9-9950X3D-(16-nhân-32-luồng,-up-to-5_7GHz-,144MB-Cache-,-AM5).png', 1, 18, 17, 'cpu', 20, 20999000),
+(190, 'CPU Intel Core i9 12900K (3.2GHz turbo up to 5.2Ghz, 16 nhân 24 luồng, 30MB Cache, 125W) - Socket Intel LGA 1700,Alder Lake)', 'cpu', '1743332012CPU-INTEL-CORE-I9-14900-(UP-TO-5_8GHZ,-24-NHÂN-32-LUỒNG,-36MB-CACHE,-65W).png', 1, 18, 18, 'cpu', 20, 10999000),
+(191, 'CPU INTEL CORE I9 14900 (UP TO 5.8GHZ, 24 NHÂN 32 LUỒNG, 36MB CACHE, 65W)', 'cpu', '1743331885CPU-INTEL-CORE-I9-14900-(UP-TO-5_8GHZ,-24-NHÂN-32-LUỒNG,-36MB-CACHE,-65W).png', 1, 18, 18, 'cpu', 20, 15999000),
+(192, 'CPU Intel Core i9 14900KS ( up to 6.2GHz , 24 nhân 32 luồng ,36MB, 150W, LGA 1700 )', 'cpu', '1743331920CPU-Intel-Core-i9-14900KS-(-up-to-6_2GHz-,-24-nhân-32-luồng-,36MB,-150W,-LGA-1700-).png', 1, 18, 17, 'cpu', 20, 18999000),
+(193, 'CPU Intel Core Ultra 7 265K (Up to 5.5GHz , 20 nhân 20 luồng, 30MB Cache, Arrow Lake)', 'cpu', '1743331963CPU-Intel-Core-Ultra-7-265K-(Up-to-5_5GHz-,-20-nhân-20-luồng,-30MB-Cache,-Arrow-Lake).png', 1, 18, 18, 'cpu', 20, 12999000),
+(194, 'Mainboard ASUS ROG MAXIMUS Z890 APEX', 'main', '1743332129Mainboard-ASUS-ROG-MAXIMUS-Z890-APEX_11zon.png', 1, 18, 10, 'main', 20, 20999000),
+(195, 'Mainboard ASUS ROG MAXIMUS Z890 EXTREME', 'main', '1743332161Mainboard-ASUS-ROG-MAXIMUS-Z890-EXTREME_11zon.png', 1, 18, 10, 'main', 20, 28999000),
+(196, 'Card màn hình ASUS ROG Astral GeForce RTX 5080 16GB GDDR7 OC Edition', 'card', '1743332341Card-màn-hình-ASUS-ROG-Astral-GeForce-RTX-5080-16GB-GDDR7-OC-Edition.png', 1, 18, 19, 'card', 20, 59999000),
+(197, 'Card màn hình ASUS ROG Astral GeForce RTX 5090 32GB GDDR7 OC Edition', 'card', '1743332381Card-màn-hình-ASUS-ROG-Astral-GeForce-RTX-5090-32GB-GDDR7-OC-Edition.png', 1, 18, 19, 'card', 20, 159999000),
+(198, 'Card Màn Hình ASUS ROG STRIX RTX 4090 O24G White', 'card', '1743332409Card-Màn-Hình-ASUS-ROG-STRIX-RTX-4090-O24G-White.png', 1, 18, 19, 'card', 20, 65999000),
+(199, 'Card màn hình Asus ROG STRIX-RTX 4090-O24G-GAMING', 'card', '1743332434Card-màn-hình-Asus-ROG-STRIX-RTX-4090-O24G-GAMING.png', 1, 18, 19, 'card', 20, 64999000),
+(200, 'Card màn hình ASUS TUF Gaming GeForce RTX 5090 32GB GDDR7 OC', 'card', '1743332470Card-màn-hình-ASUS-TUF-Gaming-GeForce-RTX-5090-32GB-GDDR7-OC.png', 1, 18, 19, 'card', 20, 110999000),
+(201, 'Card màn hình Colorful iGame RTX 4090 Neptune OC-V', 'card', '1743332498Card-màn-hình-Colorful-iGame-RTX-4090-Neptune-OC-V.png', 1, 18, 19, 'card', 20, 59999000),
+(202, 'Card màn hình GIGABYTE AORUS GeForce RTX 5090 MASTER 32GB GDDR7', 'card', '1743332541Card-màn-hình-GIGABYTE-AORUS-GeForce-RTX-5090-MASTER-32GB-GDDR7.png', 1, 18, 19, 'card', 20, 139999000),
+(203, 'Card màn hình MSI RTX 4090 SUPRIM LIQUID X 24G', 'card', '1743332567Card-màn-hình-MSI-RTX-4090-SUPRIM-LIQUID-X-24G.png', 1, 18, 19, 'card', 20, 55999000),
+(204, 'Mainboard ASUS ROG MAXIMUS Z890 APEX', 'main', '1743332605Mainboard-ASUS-ROG-MAXIMUS-Z890-APEX_11zon.png', 1, 18, 19, 'main', 20, 20999000),
+(205, 'Mainboard ASUS ROG MAXIMUS Z890 EXTREME_11zon.png', 'main', '1743332632Mainboard-ASUS-ROG-MAXIMUS-Z890-EXTREME_11zon.png', 1, 18, 19, 'main', 20, 28999000),
+(206, 'Mainboard ASUS ROG STRIX CROSSHAIR X870E HERO', 'main', '1743332682Mainboard-ASUS-ROG-STRIX-CROSSHAIR-X870E-HERO_11zon.png', 1, 18, 19, 'main', 20, 18999000),
+(207, 'MAINBOARD GIGABYTE Z790 AORUS XTREME X DDR5', 'main', '1743332712MAINBOARD-GIGABYTE-Z790-AORUS-XTREME-X-DDR5_11zon.png', 1, 18, 19, 'main', 20, 26999000),
+(208, 'Mainboard MSI MEG Z890 GODLIKE DDR5', 'main', '1743332742Mainboard-MSI-MEG-Z890-GODLIKE-DDR5_11zon.png', 1, 18, 19, 'main', 20, 40999000),
+(209, 'Mainboard MSI MEG Z890 UNIFY-X (Intel Z890, Socket 1851, ATX, RAM DDR5)', 'main', '1743332778Mainboard-MSI-MEG-Z890-UNIFY-X-(Intel-Z890,-Socket-1851,-ATX,-RAM-DDR5)_11zon.png', 1, 18, 19, 'main', 20, 21999000),
+(211, 'NGUỒN ASUS ROG THOR - 1600T GAMING TITANIUM - 1600W ( 80 PLUS Titanium , Full Modular)', 'source', '1743332865NGUỒN-ASUS-ROG-THOR---1600T-GAMING-TITANIUM---1600W-(-80-PLUS-Titanium-,-Full-Modular).png', 1, 18, 19, 'source', 20, 8999000),
+(212, 'Nguồn Corsair RM1000e PCIe 5.0 850w 80 Plus Gold', 'source', '1743332906Nguồn-Corsair-RM1000e-PCIe-5_0-850w-80-Plus-Gold.png', 1, 18, 19, 'source', 20, 4999000),
+(213, 'Nguồn máy tính Asus ROG THOR 1200W Platinum III', 'source', '1743332959Nguồn-máy-tính-Asus-ROG-THOR-1200W-Platinum-III.png', 1, 18, 19, 'source', 20, 12999000),
+(214, 'Nguồn máy tính Corsair RM1000x Shift White 1000W 80 Plus Gold CP-9020275-NA', 'source', '1743332995Nguồn-máy-tính-Corsair-RM1000x-Shift-White-1000W-80-Plus-Gold-CP-9020275-NA.png', 1, 18, 19, 'source', 20, 4999000),
+(216, 'Nguồn SFX-L ASUS ROG LOKI 1000P 1000W PLATINUM ( PCI GEN 5.0 - Full Modular )', 'source', '1743333054Nguồn-SFX-L-ASUS-ROG-LOKI-1000P-1000W-PLATINUM-(-PCI-GEN-5_0---Full-Modular-).png', 1, 18, 19, 'source', 20, 5999000),
+(217, 'Nguồn Super Flower Leadex Titanium 1600W Full Modular', 'source', '1743333082Nguồn-Super-Flower-Leadex-Titanium-1600W-Full-Modular.png', 1, 18, 19, 'source', 20, 9999000),
+(218, 'Ổ CỨNG HDD SEAGATE IRONWOLF 4TB ( 3.5 INCH, 5400RPM, SATA3, 256MB CACHE )', 'ssd', '1743333128Ổ-CỨNG-HDD-SEAGATE-IRONWOLF-4TB-(-3_5-INCH,-5400RPM,-SATA3,-256MB-CACHE-).png', 1, 18, 19, 'ssd', 20, 3999000),
+(219, 'Ổ CỨNG HDD SEAGATE IRONWOLF 6TB (3.5 INCH, 5400RPM, SATA3, 256 MB CACHE)', 'ssd', '1743333206Ổ-CỨNG-HDD-SEAGATE-IRONWOLF-6TB-(3_5-INCH,-5400RPM,-SATA3,-256-MB-CACHE).png', 1, 18, 19, 'ssd', 20, 4999000),
+(220, 'Ổ CỨNG SSD GIGABYTE AORUS GEN5 10000 2TB PCIE 5.0 X 4', 'ssd', '1743333238Ổ-CỨNG-SSD-GIGABYTE-AORUS-GEN5-10000-2TB-PCIE-5_0-X-4.png', 1, 18, 19, 'ssd', 20, 9999000),
+(221, 'Ổ cứng SSD Kingston KC3000 2048GB NVMe M.2 2280 PCIe Gen 4x4', 'ssd', '1743333277Ổ-cứng-SSD-Kingston-KC3000-2048GB-NVMe-M_2-2280-PCIe-Gen-4x4.png', 1, 18, 19, 'ssd', 20, 4999000),
+(222, 'Ổ cứng SSD Kingston NV3 2TB PCIe 4.0 x4 M.2 NVMe', 'ssd', '1743333313Ổ-cứng-SSD-Kingston-NV3-2TB-PCIe-4_0-x4-M_2-NVMe.png', 1, 18, 19, 'ssd', 20, 3999000),
+(223, 'Ổ CỨNG SSD SAMSUNG 980 PRO 1TB PCIE NVME 4.0X4', 'ssd', '1743333346Ổ-CỨNG-SSD-SAMSUNG-980-PRO-1TB-PCIE-NVME-4_0X4.png', 1, 18, 19, 'ssd', 20, 3999000),
+(224, 'Ổ CỨNG SSD SAMSUNG 990 PRO 2TB PCIE NVME 4.0X4', 'ssd', '1743333448Ổ-CỨNG-SSD-SAMSUNG-990-PRO-2TB-PCIE-NVME-4_0X4-.png', 1, 18, 19, 'ssd', 20, 6999000),
+(225, 'Ổ CỨNG SSD SAMSUNG 990 PRO 4TB PCIE NVME 4.0X4', 'ssd', '1743333480Ổ-CỨNG-SSD-SAMSUNG-990-PRO-4TB-PCIE-NVME-4_0X4.png', 1, 18, 19, 'ssd', 20, 10999000),
+(227, 'RAM CORSAIR DOMINATOR PLATINUM RGB BLACK 64GB (2X32GB) DDR5 5600MHZ', 'ssd', '1743333549RAM-CORSAIR-DOMINATOR-PLATINUM-RGB-BLACK-64GB-(2X32GB)-DDR5-5600MHZ_11zon.png', 1, 18, 19, 'ssd', 20, 6999000),
+(230, 'RAM CORSAIR VENGEANCE RGB 64GB (2x32GB) DDR5 5600Mhz (CMH64GX5M2B5600C40)', 'ssd', '1743333656RAM-CORSAIR-VENGEANCE-RGB-64GB-(2x32GB)-DDR5-5600Mhz-(CMH64GX5M2B5600C40)_11zon.png', 1, 18, 19, 'ssd', 20, 5999000),
+(234, 'Tản nhiệt khí CPU Deepcool AG620 ARGB BLACK', 'tan nhiet', '1743336280Tản-nhiệt-khí-CPU-Deepcool-AG620-ARGB-BLACK.png', 1, 18, 19, 'tan nhiet', 20, 1590000),
+(235, 'Tản nhiệt khí Deepcool AG620 Digital BK', 'tan nhiet', '1743336312Tản-nhiệt-khí-Deepcool-AG620-Digital-BK.png', 1, 18, 19, 'tan nhiet', 20, 1490000),
+(236, 'Tản nhiệt nước AIO Jonsbo TH-240 ARGB Black (LCD hiển thị nhiệt độ)', 'tan nhiet', '1743336388Tản-nhiệt-nước-AIO-Jonsbo-TH-240-ARGB-Black-(LCD-hiển-thị-nhiệt-độ).png', 1, 18, 19, 'tan nhiet', 20, 1590000),
+(237, 'Tản nhiệt nước AIO Jonsbo TH-240 ARGB White (LCD hiển thị nhiệt độ).png', 'tan nhiet', '1743336415Tản-nhiệt-nước-AIO-Jonsbo-TH-240-ARGB-White-(LCD-hiển-thị-nhiệt-độ).png', 1, 18, 19, 'tan nhiet', 20, 1590000),
+(238, 'Tản nhiệt nước AIO Thermalright Hyper Vision 360 BLACK ARGB', 'tan nhiet', '1743336455Tản-nhiệt-nước-AIO-Thermalright-Hyper-Vision-360-BLACK-ARGB.png', 1, 18, 19, 'tan nhiet', 20, 3590000),
+(239, 'Tản nhiệt nước AIO Thermalright Hyper Vision 360 WHITE ARGB.png', 'tan nhiet', '1743336493Tản-nhiệt-nước-AIO-Thermalright-Hyper-Vision-360-WHITE-ARGB.png', 1, 18, 19, 'tan nhiet', 20, 3590000),
+(240, 'Tản nhiệt nước AIO Thermalright Mjolnir Vision 360 White - ARGB', 'tan nhiet', '1743336524Tản-nhiệt-nước-AIO-Thermalright-Mjolnir-Vision-360-White---ARGB.png', 1, 18, 19, 'tan nhiet', 20, 3680000),
+(241, 'TẢN NHIỆT NƯỚC ASUS ROG RYUJIN III 360 ARGB WHITE', 'tan nhiet', '1743336577TẢN-NHIỆT-NƯỚC-ASUS-ROG-RYUJIN-III-360-ARGB-WHITE.png', 1, 18, 19, 'tan nhiet', 20, 9490000),
+(242, 'TẢN NHIỆT NƯỚC JONSBO TF2-360SC WHITE ARGB', 'tan nhiet', '1743336617TẢN-NHIỆT-NƯỚC-JONSBO-TF2-360SC-WHITE-ARGB.png', 1, 18, 19, 'tan nhiet', 20, 3390000),
+(243, 'VỎ CASE ASUS GR701 ROG HYPERION WHITE EDITION (EATX,FULL TOWER, MÀU TRẮNG)', 'case', '1743336648VỎ-CASE-ASUS-GR701-ROG-HYPERION-WHITE-EDITION-(EATX,FULL-TOWER,-MÀU-TRẮNG).png', 1, 18, 19, 'case', 20, 10999000),
+(244, 'VỎ CASE ASUS ROG HYPERION GR701 (FULL TOWER , MÀU ĐEN )', 'case', '1743336675VỎ-CASE-ASUS-ROG-HYPERION-GR701-(FULL-TOWER-,-MÀU-ĐEN-).png', 1, 18, 19, 'case', 20, 10999000),
+(246, 'VỎ CASE HYTE Y60 BLACK (EATX.MID TOWER,MÀU ĐEN)', 'case', '1743336740VỎ-CASE-HYTE-Y60-BLACK-(EATX_MID-TOWER,MÀU-ĐEN).png', 1, 18, 19, 'case', 20, 5590000),
+(247, 'VỎ CASE HYTE Y60 SNOW WHITE (EATX, MID TOWER, MÀU TRẮNG)', 'case', '1743336801VỎ-CASE-HYTE-Y60-SNOW-WHITE-(EATX,-MID-TOWER,-MÀU-TRẮNG).png', 1, 18, 19, 'case', 20, 5590000),
+(248, 'Vỏ Case Segotep Slath Mini ITX (Mini Tower,Màu Bạc)', 'case', '1743336828Vỏ-Case-Segotep-Slath-Mini-ITX-(Mini-Tower,Màu-Bạc).png', 1, 18, 19, 'case', 20, 4899000),
+(255, 'Màn hình Asus ROG Swift PG32UCDP 32\" WOLED 4K 240Hz HDR10 Gsync chuyên game', 'Màn hình', '1743337289Asus_ROG_PG32UCDM.png', 1, 19, 19, 'Màn hình', 31, 40999000),
+(256, 'Màn Hình Gaming Asus ROG Swift OLED PG32UCDM (32 Inch/ 4K/ QD-OLED/ 240Hz/ 0.03ms)', 'Màn hình', '1743337316Asus_ROG_PG32UCDP.png', 1, 19, 19, 'Màn hình', 18, 39999000),
+(257, 'Màn hình LG 27GP95R-B 27Inch UltraGear 4K 1Ms144Hz/160Hz(OC) Nano IPS', 'Màn hình', '1743337364LG_27GP95R-B.png', 1, 19, 19, 'Màn hình', 16, 19999000),
+(258, 'Màn hình LG OLED 45GS95QE-B (45 inch/OLED/QHD/240Hz/0.03ms/Cong)', 'Màn hình', '1743337393LG_45GS95QE-B.png', 1, 19, 19, 'Màn hình', 17, 30999000),
+(259, 'Màn Hình ASUS TUF GAMING VG279QM (27 inch FHD, IPS , 280Hz , G-SYNC Compatible , DisplayHDR™ 400)', 'Màn hình', '1743337529Asus_ROG_PG32UCDP.png', 1, 19, 19, 'Màn hình', 18, 6980000),
+(260, 'Màn hình BenQ ZOWIE XL2546K (24inch,FHD,TN,240Hz,0.5ms)', 'Màn hình', '1743337467Màn-hình-BenQ-ZOWIE-XL2546K-(24inch,FHD,TN,240Hz,0_5ms).png', 1, 19, 19, 'Màn hình', 17, 10999000),
+(262, 'MÀN HÌNH GAMING LG 32GR93U-B (32 INCH,UHD,IPS,144HZ,1MS)', 'Màn hình', '1743337572MÀN-HÌNH-GAMING-LG-32GR93U-B-(32-INCH,UHD,IPS,144HZ,1MS).png', 1, 19, 19, 'Màn hình', 17, 15999000),
+(263, 'MÀN HÌNH VIEWSONIC VX3219-2K-PRO-2 (31.5 INCH,QHD,IPS,165HZ,0.43MS)', 'Màn hình', '1743337620MÀN-HÌNH-VIEWSONIC-VX3219-2K-PRO-2-(31_5-INCH,QHD,IPS,165HZ,0_43MS).png', 1, 19, 19, 'Màn hình', 18, 7999000),
+(264, 'MÀN HÌNH GAMING MSI MPG 491CQP QD-OLED (49 INCH/DQHD/OLED/144HZ/0.03MS/CONG)', 'Màn hình', '1743337682MSI_MPG_491CQP.png', 1, 19, 19, 'Màn hình', 19, 36999000),
+(265, 'MÀN HÌNH GAMING MSI MPG 321URX QD-OLED (31.5 INCH/ UHD/ QD-OLED/ 240HZ/ 0.03MS)', 'Màn hình', '1743337727MSI_MPG_321UPX.png', 1, 19, 19, 'Màn hình', 20, 35999000),
+(266, 'Màn hình cong Samsung Odyssey G8 LS34BG850 34\" OLED 2K 175Hz', 'Màn hình', '1743337763Samsung_Odyssey_G8.png', 1, 19, 19, 'Màn hình', 19, 27999000),
+(267, 'MÀN HÌNH GAMING MSI MPG 271QRX QD-OLED (27 INCH/WQHD/QD-OLED/360HZ/0.03MS)', 'Màn hình', '1743337794MSI_MPG_321UPX.png', 1, 19, 19, 'Màn hình', 20, 28999000),
+(269, 'PC AMD GAMING PRO Ryzen 5 7800x3D - RX 9070 XT 16GB OC (ALL NEW - Bảo hành 36 tháng)', 'pc', '1743337934PC-AMD-GAMING-PRO-Ryzen-5-7500F---RX-9070-XT-16GB-OC-(ALL-NEW---Bảo-hành-36-tháng).jpg', 1, 8, 19, 'pc', 19, 40999000),
+(271, 'PC AMD GAMING PRO RYZEN 5 7500F - RTX 5070 12GB OC', 'pc', '1743338746PC-AMD-GAMING-PRO-RYZEN-5-7500F---RTX-5070-12GB-OC_11zon.png', 1, 17, 17, 'pc', 20, 32999000),
+(272, 'PC Đồ Họa 2D i5 12400F - GTX 1660 Super 6GB ( ALL NEW - Bảo hành 36 Tháng)', 'pc', '1743338785PC-Đồ-Họa-2D-i5-12400F---GTX-1660-Super-6GB-(-ALL-NEW---Bảo-hành-36-Tháng).png', 1, 17, 18, 'pc', 20, 12999000),
+(273, 'PC Đồ Họa 2D-3D i5 12400F- RTX 3050 6GB OC ( ALL NEW - Bảo hành 36 tháng)', 'pc', '1743338814PC-Đồ-Họa-2D-3D-i5-12400F--RTX-3050-6GB-OC-(-ALL-NEW---Bảo-hành-36-tháng).png', 1, 17, 18, 'pc', 20, 12999000),
+(274, 'PC Đồ Họa Hiệu Suất Cao i5 14500-GTX 1660 Super 6GB ( ALL NEW - Bảo hành 36 Tháng)', 'pc', '1743338845PC-Đồ-Họa-Hiệu-Suất-Cao-i5-14500-GTX-1660-Super-6GB-(-ALL-NEW---Bảo-hành-36-Tháng).png', 1, 17, 18, 'pc', 20, 16999000),
+(275, 'PC Workstation - Edit Video i7 12700KF- RTX 3050 6GB OC (All NEW - Bảo hành 36 tháng)', 'pc', '1743338884PC-Workstation---Edit-Video-i7-12700KF--RTX-3050-6GB-OC-(All-NEW---Bảo-hành-36-tháng).png', 1, 17, 18, 'ps5', 20, 16999000),
+(276, 'PC Workstation 2D 3D- Edit Video i5 12600K - RTX 3050 6GB OC (ALL NEW - Bảo hành 36 Tháng)', 'pc', '1743339003PC-AMD-GAMING-PRO-Ryzen-7-5700X3D---RX-9070-XT-16GB-OC-(ALL-NEW---Bảo-hành-36-tháng).jpg', 1, 17, 18, 'pc', 20, 18999000),
+(277, 'PC Workstation 2D 3D- Edit Video i5 12600K - RTX 4060 8GB OC (ALL NEW - Bảo hành 36 Tháng)', 'pc', '1743339015PC-AMD-GAMING-PRO-RYZEN-9-9900X---RTX-5090-32GB-OC-(All-NEW---Bảo-hành-36-tháng).jpg', 1, 17, 18, 'pc', 20, 17999000),
+(278, 'PC Workstation 2D 3D- Edit Video i5 14600K - GTX 1660 Super 6GB OC', 'pc', '1743339089PC-Workstation-2D-3D--Edit-Video-i5-14600K---GTX-1660-Super-6GB-OC_11zon.png', 1, 17, 18, 'pc', 19, 31999000);
 
 -- --------------------------------------------------------
 
@@ -329,78 +408,8 @@ CREATE TABLE `review` (
 --
 
 INSERT INTO `review` (`id`, `name`, `email`, `review`, `status`, `product_id`) VALUES
-(1, 'Ngô Xuân Quý', 'luvngo27@gmail.com', 'Sản phẩm gaming này thực sự xuất sắc. Thiết kế tinh tế, hình ảnh và âm thanh cực kỳ chất lượng. Hiệu suất ổn định và pin dùng lâu. Một lựa chọn tuyệt vời cho mọi game thủ.', 1, 27),
-(2, 'Ngô Quý', 'luvngo27@gmail.com', 'Sản phẩm gaming này thực sự xuất sắc. Thiết kế tinh tế, hình ảnh và âm thanh cực kỳ chất lượng. Hiệu suất ổn định và pin dùng lâu. Một lựa chọn tuyệt vời cho mọi game thủ.', 1, 15),
-(5, 'Ngô Xuân Quý', 'luvngo27@gmail.com', 'Sản phẩm tốt lắm, cấu hình cao render video nhanh, sẽ giới thiệu cho người quen <3', 1, 16),
-(8, 'nga ', '1@gmail.com', 'đáng để mua và dùng thử', 1, 77),
-(9, 'nga ', '1@gmail.com', 'đáng để mua và dùng thử', 1, 77),
-(10, 'Nga Xuân Quý 1', 'luvngo2237@gmail.com', 'Đúng thứ tôi cần mua thật tuyệt', 1, 19),
-(11, 'Nghiêm Xuân Quý 2', 'luvngo223237@gmail.com', 'Thứ tôi ao ước đây rồi', 1, 20),
-(12, 'Ngọc Xuân Quý 3', 'luvngohh27@gmail.com', 'quá tuyệt ', 1, 21),
-(13, 'Quỳnh Xuân Quý4', 'luvngoqqwqw27@gmail.com', 'sao mình không biết web này sớm hơn nhỉ', 1, 22),
-(14, 'Lan Xuân Quý 5', 'luvngosdsd27@gmail.com', 'cấu hình quá kinh khủng', 1, 23),
-(15, 'Khiêm Xuân Quý 6', 'luvngo2sdsd7@gmail.com', 'Vỏ case này đẹp nha', 1, 24),
-(16, 'Điệp Xuân Quý 7', 'luvngo2cxc7@gmail.com', 'Chuột gì mà cầm sướng thế', 1, 25),
-(17, 'Quyền Xuân Quý8', 'luvngo2sdsd7@gmail.com', 'logitech vẫn quá ngon', 1, 26),
-(18, 'Mạnh Xuân Quý9', 'luvngocv27@gmail.com', 'tôi chỉ thích chuột nhà razer', 1, 28),
-(19, 'Yếu Xuân Quý10', 'luvngoqd27@gmail.com', ' Khách ruột của razer', 1, 29),
-(20, 'Quỳnh Xuân Quý11', 'luvngosds27@gmail.com', ' hở là hết', 1, 30),
-(21, 'Hưng Xuân Quý12', 'luvngo233137@gmail.com', ' đứa con của zowie', 1, 31),
-(22, 'Đông Xuân Quý13', 'luvngo27@gmail.com', ' fan asus', 1, 32),
-(23, 'Tây Xuân Quý14', 'luvngo213137@gmail.com', 'chỉ tin dùng ghế razer ', 1, 33),
-(24, 'Nam Xuân Quý15', 'luvngo23137@gmail.com', ' ghế samsung này đẹp', 1, 34),
-(25, 'Bắc Xuân Quý16', 'luvngo213137@gmail.com', ' ghế này ưng nha', 1, 35),
-(26, 'Xuân Xuân Quý17', 'luvngo242427@gmail.com', ' tốt', 1, 36),
-(27, 'Hạ Xuân Quý18', 'luvngo2713@gmail.com', ' Loa này nghe thích quá', 1, 37),
-(28, 'Thu Xuân Quý19', 'luvngo235357@gmail.com', ' từ khi mua xong nghe 24 tiếng', 1, 38),
-(29, 'Đông Xuân Quý20', 'luvngo2aaaa7@gmail.com', ' loa này tôi dùng đc 5 năm r vẫn tốt nha', 1, 39),
-(30, 'Alex Xuân Quý21', 'luvngovfvf27@gmail.com', 'màn này nhìn đẹp ác', 1, 40),
-(31, 'Lê Xuân Quý22', 'luvngo2ntn7@gmail.com', ' màn hình cong dùng đã quá', 1, 41),
-(32, 'Thái Xuân Quý23', 'luvngo2tnn7@gmail.com', ' quá đã', 1, 42),
-(33, 'Việt Xuân Quý24', 'luvngo27@gmail.com', ' không bị đau tai nha mn', 1, 43),
-(34, 'Chính Xuân Quý25', 'luvngoeeee27@gmail.com', ' chỉ mua đồ razer', 1, 44),
-(35, 'Huy Xuân Quý26', 'luvngo2qqq7@gmail.com', ' tiện quá', 1, 45),
-(36, 'Quang Xuân Quý27', 'luvngoqaqa27@gmail.com', ' yêu asus', 1, 46),
-(37, 'Minh Xuân Quý28', 'luvngoqqq27@gmail.com', ' đẹp lại rẻ', 1, 47),
-(38, 'Lương Xuân Quý29', 'luvngqzqo27@gmail.com', ' chống ồn tốt quá', 1, 48),
-(39, 'Chúc Xuân Quý31', 'luvngo2zqz7@gmail.com', 'cứ logitech là mua', 1, 49),
-(40, 'Mạc Xuân Quý32', 'luvnzqgo27@gmail.com', ' bấm sướng tay lắm', 1, 50),
-(41, 'Khê Xuân Quý334', 'luvzqngzqzo27@gmail.com', ' không nên mua', 1, 51),
-(42, 'Wibu Xuân Quý33', 'luvnzqgo27@gmail.com', ' cũng được', 1, 52),
-(43, 'Quất Xuân Quý33', 'luvnzqzgo27@gmail.com', ' tạm ổn', 1, 53),
-(44, 'Đào Xuân Quý5555', 'luvnzqgo27@gmail.com', 'tốt ', 1, 54),
-(45, 'Mai Xuân Quý113', 'luvngozq27@gmail.com', ' xấu', 1, 55),
-(46, 'Liêm Xuân Quý66', 'luvngzqo27@gmail.com', ' không nên mua', 1, 56),
-(47, 'Ronaldo Xuân Quý424', 'luvngozq27@gmail.com', ' thất vọng', 1, 57),
-(48, 'Bích Xuân Quý4', 'luvngozq27@gmail.com', ' yêu tuf', 1, 58),
-(49, 'Châm Xuân Quý555552', 'luvzqngo27@gmail.com', ' tạm ổn', 1, 59),
-(50, 'Chiến Xuân Quý232', 'luvzqngozq27@gmail.com', ' chê nha', 1, 60),
-(51, 'Hải Xuân Quý2525', 'luvngzqzqzo27@gmail.com', 'dùng mãi không hết hiệu năng ', 1, 61),
-(52, 'Quên Xuân Quý1111', 'z@gmail.com', ' đỉnh', 1, 62),
-(53, 'Bạc Xuân Quý00', 'luvngzqzqo27@gmail.com', 'bảo hành tốt ', 1, 63),
-(54, 'Sắt Xuân Quý1112', 'luvzqzqngo27@gmail.com', ' xấu quá', 1, 64),
-(55, 'Đồng Xuân Quý3434', 'luvnzqzgo27@gmail.com', ' gì mà đắt thế', 1, 65),
-(56, 'Vàng Xuân Quý5334', 'luvnzqzgo27@gmail.com', ' nặng quá', 1, 66),
-(57, 'Kim cương Xuân Quý56', 'luvnzqzqgo27@gmail.com', ' không qlai lần 2', 1, 67),
-(58, 'Cao thủ Xuân Quý78', 'luvngo2zqz7@gmail.com', ' bền đẹp', 1, 68),
-(59, 'Thách đấu Xuân Quý70', 'luvngo2zqzq7@gmail.com', ' máy gì chạy như bò rống', 1, 69),
-(60, 'Điên Xuân Quý112', 'luvnzqzgo27@gmail.com', 'làm đồ họa mê ly ', 1, 70),
-(61, 'Vô dịch Xuân Quý113', 'luvnzqzgo27@gmail.com', 'cầm nhẹ tay thích ', 1, 71),
-(62, 'Heloo Xuân Quý114', 'luvnzqgo27@gmail.com', ' bấm nút tay cầm này thích quá', 1, 72),
-(63, 'Hi Xuân Quý155', 'luvngzqo27@gmail.com', ' tay cầm chán', 1, 73),
-(64, 'Minh Xuân Quý116', 'luvnzqzgo27@gmail.com', ' tay cầm oke', 1, 74),
-(65, 'Chinh Xuân Quý117', 'luvnqzgo27@gmail.com', ' tốt ', 1, 75),
-(66, 'Thao Xuân Quý118', 'luvngzqzqo27@gmail.com', ' đã mua và trải nghiệm', 1, 76),
-(67, 'Thao Xuân Quý12323218', 'luvngzqzqo27@gmail.com', ' đĩa mới mua chưa trải nghiệm', 1, 78),
-(68, 'Thao Xuân Quý1111128', 'luvngzqzqo27@gmail.com', ' đĩa thơm quá', 1, 79),
-(69, 'Thao Xuân Quý1118', 'luvngzqzqo27@gmail.com', ' đĩa gì mà nét thế', 1, 80),
-(70, 'Thao Xuân Quý11a8', 'luvngzqzqo27@gmail.com', ' gói hàng cẩn thận quá ạ', 1, 81),
-(71, 'Thao Xuân Quý11bb8', 'luvngzqzqo27@gmail.com', 'game mới ra mua luôn đĩa mới', 1, 82),
-(72, 'Thao Xuân Quý118ssd', 'luvngzqzqo27@gmail.com', ' mua đĩa ở shop được mấy lần rồi', 1, 83),
-(73, 'Thao Xuân Quý118s', 'luvngzqzqo27@gmail.com', ' đã mua để tặng thằng bạn nghiện game', 1, 84),
-(74, 'Thao Xuân Quý118qqq', 'luvngzqzqo27@gmail.com', ' quá tệ', 1, 85),
-(75, 'Nguyễn Xuân Huy', 'huy277003@gmail.com', 'dàn pc này chiến game bao đã', 1, 17),
-(76, 'Nguyễn Xuân Huy', 'huy277003@gmail.com', 'cấu hình này vừa mạnh lại còn giá hợp lý nữa, đúng là món hời', 1, 18);
+(77, 'Người dùng ẩn danh', 'abc@gmail.com', 'Bộ PC này là một cỗ máy gaming khủng, trang bị Ryzen 7 9800X3D với bộ nhớ đệm 3D V-Cache giúp tối ưu hiệu năng game, kết hợp RTX 5090 32GB cho khả năng chơi game 4K max setting mượt mà. RAM 32GB đảm bảo đa nhiệm tốt, phù hợp cả streamer lẫn content creato', 1, 86),
+(78, 'Người dùng A', 'ngoluv8@gmail.com', 'Giá cả phải chăng mà hiệu năng cho ra lại cực kì bất ngờ, tôi vẫn có thể chiến các tựa game AAA ở cấu hình tốt mà vẫn giữ được 60fps. Shop 10/10', 1, 113);
 
 -- --------------------------------------------------------
 
@@ -422,34 +431,12 @@ CREATE TABLE `shipping` (
 --
 
 INSERT INTO `shipping` (`id`, `name`, `phone`, `location`, `email`, `method`) VALUES
-(1, 'Ngô Xuân Quý', '0889033006', 'Hà Nội', 'luvngo27@gmail.com', 'cod'),
-(2, 'Ngô Xuân Quý', '0889033006', 'Hà Nội', 'luvngo27@gmail.com', 'cod'),
-(3, 'Ngô Xuân Quý', '0889033006', 'Hà Nội', 'luvngo27@gmail.com', 'cod'),
-(4, 'Ngô Xuân Quý', '0889033006', 'Hà Nội', 'luvngo27@gmail.com', 'cod'),
-(5, 'Ngô Xuân Quý', '0889033006', 'Hà Nội', 'luvngo27@gmail.com', 'cod'),
-(6, 'Ngô Xuân Quý', '0889033006', 'Hà Nội', 'luvngo27@gmail.com', 'cod'),
-(7, 'Ngô Xuân Quý', '0889033006', 'Hà Nội', 'luvngo27@gmail.com', 'cod'),
-(8, 'Ngô Xuân Quý', '0889033006', 'Hà Nội', 'luvngo27@gmail.com', 'cod'),
-(9, 'Ngô Xuân Quý', '0889033006', 'Hà Nội', 'luvngo27@gmail.com', 'cod'),
-(10, 'Ngô Xuân Quý', '0889033006', 'Hà Nội', 'luvngo27@gmail.com', 'cod'),
-(11, 'Ngô Văn Quý', '0948926993', 'Hưng Yên', 'ngoluv8@gmail.com', 'cod'),
-(12, 'Ngô Văn Quý', '0948926993', 'Hưng Yên', 'ngoluv8@gmail.com', 'cod'),
-(13, 'Ngô Văn Quý', '0948926993', 'Hưng Yên', 'ngoluv8@gmail.com', 'cod'),
-(14, 'Ngô Văn Quý', '0948926993', 'Hưng Yên', 'ngoluv8@gmail.com', 'cod'),
-(15, 'Ngô Văn Quý', '0948926993', 'Hưng Yên', 'ngoluv8@gmail.com', 'cod'),
-(16, 'Ngô Văn Quý', '0948926993', 'Hưng Yên', 'ngoluv8@gmail.com', 'cod'),
-(17, 'Ngô Văn Quý', '0948926993', 'Hưng Yên', 'ngoluv8@gmail.com', 'cod'),
-(18, 'Ngô Văn Quý', '0948926993', 'Hưng Yên', 'ngoluv8@gmail.com', 'cod'),
-(19, 'Ngô Văn Quý', '0948926993', 'Hưng Yên', 'ngoluv8@gmail.com', 'cod'),
-(20, 'Ngô Văn Quý', '0948926993', 'Hưng Yên', 'ngoluv8@gmail.com', 'cod'),
-(21, 'Ngô Văn Quý', '0948926993', 'Hưng Yên', 'ngoluv8@gmail.com', 'cod'),
-(22, 'Ngô Văn Quý', '0948926993', 'Hưng Yên', 'ngoluv8@gmail.com', 'cod'),
-(23, 'Ngô Văn Quý', '0948926993', 'Hưng Yên', 'ngoluv8@gmail.com', 'cod'),
-(24, 'Ngô Văn Quý', '0948926993', 'Hưng Yên', 'ngoq6155@gmail.com', 'cod'),
-(25, 'Ngô Xuân Quý', '0889033006', 'Hà Nội', 'luvngo27@gmail.com', 'cod'),
-(26, 'Ngô Xuân Quý', '0889033006', 'Hà Nội', 'luvngo27@gmail.com', 'cod'),
-(27, 'Ngô Xuân Quý', '0889033006', 'Hà Nội', 'luvngo27@gmail.com', 'cod'),
-(28, 'Ngô Xuân Quý', '0889033006', 'Hà Nội', 'luvngo27@gmail.com', 'cod');
+(29, 'Ngô Xuân Quý', '0889033006', 'Lưu Xá, Quất Động, Thường Tín, Hà Nội', 'luvngo27@gmail.com', 'cod'),
+(30, 'Ngô Xuân Quý', '0889033006', 'Lưu Xá, Quất Động, Thường Tín, Hà Nội', 'luvngo27@gmail.com', 'cod'),
+(31, 'Ngô Xuân Quý', '0889033006', 'Lưu Xá, Quất Động, Thường Tín, Hà Nội', 'luvngo27@gmail.com', 'cod'),
+(32, 'Ngô Xuân Quý', '0889033006', 'Lưu Xá, Quất Động, Thường Tín, Hà Nội', 'luvngo27@gmail.com', 'cod'),
+(33, 'Ngô Xuân Quý', '0889033006', 'Lưu Xá, Quất Động, Thường Tín, Hà Nội', 'luvngo27@gmail.com', 'cod'),
+(34, 'Ngô Xuân Quý', '0889033006', 'Lưu Xá, Quất Động, Thường Tín, Hà Nội', 'luvngo27@gmail.com', 'cod');
 
 -- --------------------------------------------------------
 
@@ -464,20 +451,6 @@ CREATE TABLE `sliders` (
   `status` int(11) NOT NULL,
   `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `sliders`
---
-
-INSERT INTO `sliders` (`id`, `title`, `description`, `status`, `image`) VALUES
-(1, 'Laptop Asus 2', 'slider của asus', 1, '1736513227ASUS2.jpg'),
-(2, 'Asus TUF 14', 'slider của asus', 1, '1736513303ASUS.jpg'),
-(3, 'Màn hình MSI', 'slider của msi', 1, '1736513341MSI.jpg'),
-(4, 'Chuột Asus', 'slider của asus', 1, '1736513404asus9.jpg'),
-(5, 'Bàn phím Asus', 'slider của asus', 1, '1736513422asus8.jpg'),
-(6, 'PC Asus', 'slider của asus', 1, '1736513436asus7.jpg'),
-(7, 'Màn hình Asus', 'slider của asus', 1, '1736513453asus6.jpg'),
-(8, 'Laptop Asus', 'slider của asus', 1, '1736513467asus5.png');
 
 -- --------------------------------------------------------
 
@@ -581,13 +554,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT cho bảng `brands`
 --
 ALTER TABLE `brands`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT cho bảng `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT cho bảng `contact`
@@ -599,37 +572,37 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT cho bảng `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT cho bảng `order_details`
 --
 ALTER TABLE `order_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=279;
 
 --
 -- AUTO_INCREMENT cho bảng `review`
 --
 ALTER TABLE `review`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
 -- AUTO_INCREMENT cho bảng `shipping`
 --
 ALTER TABLE `shipping`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT cho bảng `sliders`

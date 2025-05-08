@@ -1,4 +1,11 @@
 ###################
+   Cách lấy CSDL
+###################
+Sử dụng MySQL, đầu tiên sau khi tải về vào file frontend.
+Ở trong đó có file "1.sql", vào MySQL rồi import nó vào MySQL.
+
+
+###################
 What is CodeIgniter
 ###################
 
